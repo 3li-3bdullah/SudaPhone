@@ -78,52 +78,6 @@ class LogInState extends State<LogIn> {
 
   // }
 
-  String validusername(String user) {
-    if (user.trim().isEmpty) {
-      return "لا يمكن ان يكون إسم المستخدم فارغ";
-    }
-    if (user.trim().length < 4) {
-      return "لا يمكن ان يكون إسم المستحدم اقل من 4 حروف";
-    }
-    if (user.trim().length > 20) {
-      return "لا يمكن ان يكون إسم المستحدم اكثر من 20 حرف";
-    }
-  }
-
-  String validpassword(String pass) {
-    if (pass.trim().isEmpty) {
-      return "لا يمكن ان تكون كلمة المرور فارغة";
-    }
-    if (pass.trim().length < 4) {
-      return "لا يمكن ان تكون كلمة المرور اقل من 4 حروف";
-    }
-    if (pass.trim().length > 20) {
-      return "لا يمكن ان يكون إسم المستحدم اكثر من 20 حرف";
-    }
-  }
-
-  String validconfirmpassword(String val) {
-    if (val != password.text) {
-      return "كلمة المرور غير متطابقة";
-    }
-  }
-
-  String validemail(String val) {
-    if (val.trim().isEmpty) {
-      return "لا يمكن ان يكون البريد الألكتروني فارغ";
-    }
-    if (val.trim().length < 10) {
-      return "لا يمكن ان يكون البريد الألكتروني اقل من 18 حرف";
-    }
-    if (val.trim().length > 35) {
-      return "لا يمكن ان يكون البريد الألكتروني اكبر من 35 حرف";
-    }
-    // RegExp regex = new RegExp(pattern);
-    // if (!regex.hasMatch(val)) {
-    //   return "عنوان البريد غير صحيح يجب ان يكون علي سبيل المثال مثل (example@gmail.com)";
-    // }
-  }
-
   signin() async {
     var formdata = formstatesignin.currentState;
     if (formdata.validate()) {
@@ -373,7 +327,9 @@ class LogInState extends State<LogIn> {
                           /// _email = value;
                         },
                         controller: email,
-                        validator: validemail,
+                        validator: (val) {
+                          return validInput(val, 30, 15, "email");
+                        },
                         decoration: InputDecoration(
                             contentPadding: EdgeInsets.all(4),
                             hintText: "ادخل البريد الالكتروني هنا",
@@ -408,7 +364,9 @@ class LogInState extends State<LogIn> {
                           ///  _password = value;
                         },
                         controller: password,
-                        validator: validpassword,
+                        validator: (val) {
+                          return validInput(val, 20, 8, "password");
+                        },
                         obscureText: true,
                         decoration: InputDecoration(
                             contentPadding: EdgeInsets.all(4),
