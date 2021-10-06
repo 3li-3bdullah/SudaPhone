@@ -1,5 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:mobetech/compount/validinput.dart';
 import '../pages/screen.dart';
 // import 'package:shared_preferences/shared_preferences.dart';
 //import '../services/auth.dart';
@@ -473,7 +474,7 @@ class LogInState extends State<LogIn> {
                           false,
                           "أدخل اسم المستخدم",
                           Icons.person_outline_rounded,
-                          username,
+                          "username",
                           validusername, (value) {
                         username = value;
                       }),
@@ -489,7 +490,7 @@ class LogInState extends State<LogIn> {
                         false,
                         "أدخل عنوان البريد الالكتروني",
                         Icons.email_outlined,
-                        email,
+                        "email",
                         validemail,
                         (value) {
                           ///  _email = value;
@@ -506,7 +507,7 @@ class LogInState extends State<LogIn> {
                           true,
                           "أدخل كلمة المرور",
                           Icons.lock_outlined,
-                          password,
+                          "password",
                           validpassword, (value) {
                         ///  _password = value;
                       }),
@@ -520,7 +521,7 @@ class LogInState extends State<LogIn> {
                           true,
                           "تأكيد كلمة المرور",
                           Icons.lock_outlined,
-                          confirmpassword,
+                          "confirmpassword",
                           validconfirmpassword, (value) {
                         //  _password = value;
                       }),
@@ -532,13 +533,8 @@ class LogInState extends State<LogIn> {
             )));
   }
 
-  TextFormField buildTextFormFieldAll(
-      bool pass,
-      String myhinttext,
-      final IconData icon,
-      TextEditingController myContorller,
-      myvalid,
-      onClick) {
+  TextFormField buildTextFormFieldAll(bool pass, String myhinttext,
+      final IconData icon, TextEditingController myContorller, type, onClick) {
     return TextFormField(
       ///autovalidateMode: AutovalidateMode.always,
       onSaved: (value) {
@@ -546,7 +542,22 @@ class LogInState extends State<LogIn> {
       },
       controller: myContorller,
       obscureText: pass,
-      validator: myvalid,
+      validator: (val) {
+        if (type == "username") {
+          return validInput(val, 20, 4, "username");
+        }
+        if (type == "email") {
+          return validInput(val, 30, 15, "email");
+        }
+        if (type == "password") {
+          return validInput(val, 20, 6, "password");
+        }
+        if (type == "confirmpassword") {
+          if (type != password.text) {
+            return "The password isn\'t identical";
+          }
+        }
+      },
       decoration: InputDecoration(
           contentPadding: EdgeInsets.all(4),
           hintText: myhinttext,
