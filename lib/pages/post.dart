@@ -1,30 +1,29 @@
 import 'package:flutter/material.dart';
 import '../compount/comments.dart';
-import 'dart:io';
-import 'package:image_picker/image_picker.dart';
+//import 'package:image_picker/image_picker.dart';
 
 //import 'package:shared_preferences/shared_preferences.dart';
 
 class Post extends StatefulWidget {
-  const Post({Key key}) : super(key: key);
 
   @override
   _PostState createState() => _PostState();
 }
 
 class _PostState extends State<Post> {
-  File _file;
-  final ImagePicker picker = ImagePicker();
+  ///-------
+  // File _file;
+  // final ImagePicker picker = ImagePicker();
 
-  /// Start Upload image
-  Future pickercamera() async {
-    final myfile = await picker.pickImage(source: ImageSource.gallery);
-    setState(() {
-      _file = File(myfile.path);
-      print(_file);
-    });
-  }
-
+  // /// Start Upload image
+  // Future pickercamera() async {
+  //   final myfile = await picker.pickImage(source: ImageSource.gallery);
+  //   setState(() {
+  //     _file = File(myfile.path);
+  //     print(_file);
+  //   });
+  // }
+    ///-----
   // final ImagePicker _picker = ImagePicker();
   // Future pcamera() async {
   //   final File image = await _picker.pickImage(source: ImageSource.gallery);
@@ -123,7 +122,8 @@ class _PostState extends State<Post> {
             ),
             IconButton(
               icon: Icon(Icons.camera_alt_outlined),
-              onPressed: () => pickercamera(),
+              onPressed: () {},
+              ///=> pickercamera(),
             ),
             Row(children: <Widget>[
               Expanded(
