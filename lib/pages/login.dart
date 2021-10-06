@@ -474,8 +474,8 @@ class LogInState extends State<LogIn> {
                           false,
                           "أدخل اسم المستخدم",
                           Icons.person_outline_rounded,
-                          "username",
-                          validusername, (value) {
+                          username,
+                          "validusername", (value) {
                         username = value;
                       }),
                       //End User Name----------
@@ -490,8 +490,8 @@ class LogInState extends State<LogIn> {
                         false,
                         "أدخل عنوان البريد الالكتروني",
                         Icons.email_outlined,
-                        "email",
-                        validemail,
+                        email,
+                        "validemail",
                         (value) {
                           ///  _email = value;
                         },
@@ -507,8 +507,8 @@ class LogInState extends State<LogIn> {
                           true,
                           "أدخل كلمة المرور",
                           Icons.lock_outlined,
-                          "password",
-                          validpassword, (value) {
+                          password,
+                          "validpassword", (value) {
                         ///  _password = value;
                       }),
                       //Start User Password Confirm----------
@@ -521,8 +521,8 @@ class LogInState extends State<LogIn> {
                           true,
                           "تأكيد كلمة المرور",
                           Icons.lock_outlined,
-                          "confirmpassword",
-                          validconfirmpassword, (value) {
+                          confirmpassword,
+                          "validconfirmpassword", (value) {
                         //  _password = value;
                       }),
                       //End User Password Confirm----------
@@ -543,16 +543,16 @@ class LogInState extends State<LogIn> {
       controller: myContorller,
       obscureText: pass,
       validator: (val) {
-        if (type == "username") {
+        if (type == "validusername") {
           return validInput(val, 20, 4, "username");
         }
-        if (type == "email") {
+        if (type == "validemail") {
           return validInput(val, 30, 15, "email");
         }
-        if (type == "password") {
+        if (type == "validpassword") {
           return validInput(val, 20, 6, "password");
         }
-        if (type == "confirmpassword") {
+        if (type == "validconfirmpassword") {
           if (type != password.text) {
             return "The password isn\'t identical";
           }
