@@ -106,7 +106,7 @@ class LogInState extends State<LogIn> {
   }
 
   TapGestureRecognizer _changesign;
-  bool showsignin = true;
+  bool? showsignin = true;
 
   @override
   void dispose() {
@@ -336,10 +336,10 @@ class LogInState extends State<LogIn> {
                             prefixIcon:
                                 Icon(Icons.email_outlined, color: Colors.blue),
                             filled: true,
-                            fillColor: Colors.grey[300],
+                            fillColor: Color(0xffe0e0e0),
                             enabledBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
-                                    color: Colors.grey[400],
+                                    color: Color(0xffbdbdbd),
                                     style: BorderStyle.solid,
                                     width: 1)),
                             focusedBorder: OutlineInputBorder(
@@ -374,10 +374,10 @@ class LogInState extends State<LogIn> {
                             prefixIcon:
                                 Icon(Icons.lock_outline, color: Colors.blue),
                             filled: true,
-                            fillColor: Colors.grey[300],
+                            fillColor: Color(0xffe0e0e0),
                             enabledBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
-                                    color: Colors.grey[400],
+                                    color: Color(0xffbdbdbd),
                                     style: BorderStyle.solid,
                                     width: 1)),
                             focusedBorder: OutlineInputBorder(
@@ -521,10 +521,10 @@ class LogInState extends State<LogIn> {
           hintText: myhinttext,
           prefixIcon: Icon(icon, color: Colors.green),
           filled: true,
-          fillColor: Colors.grey[300],
+          fillColor: Color(0xffe0e0e0),
           enabledBorder: OutlineInputBorder(
               borderSide: BorderSide(
-                  color: Colors.green[400],
+                  color: Color(0xffbdbdbd),
                   style: BorderStyle.solid,
                   width: 1)),
           focusedBorder: OutlineInputBorder(
@@ -532,7 +532,7 @@ class LogInState extends State<LogIn> {
                   color: Colors.purple, style: BorderStyle.solid, width: 1)),
           border: OutlineInputBorder(
               borderSide: BorderSide(
-                  color: Colors.green[400],
+                  color: Color(0xffbdbdbd),
                   style: BorderStyle.solid,
                   width: 1))),
     );
@@ -596,7 +596,7 @@ class LogInState extends State<LogIn> {
           width: mdw,
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(mdw),
-              color: showsignin ? Colors.grey[800] : Colors.green),
+              color: showsignin ? Color(0xff424242) : Colors.green),
         ),
       ),
     ));
