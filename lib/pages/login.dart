@@ -2,15 +2,15 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import '../pages/screen.dart';
 // import 'package:shared_preferences/shared_preferences.dart';
-import '../services/auth.dart';
+//import '../services/auth.dart';
 
 class LogIn extends StatefulWidget {
- /// Function get onClick => null;
+  /// Function get onClick => null;
 
   @override
   State<StatefulWidget> createState() {
-   // var logInState = LogInState(onClick);
-        return LogInState();
+    // var logInState = LogInState(onClick);
+    return LogInState();
   }
 }
 
@@ -43,40 +43,19 @@ showdialogall(context, String mycontent) {
 
 class LogInState extends State<LogIn> {
   ///LogInState(this.onClick);
-  final _auth = Auth();
-  String _email, _password;
-   Function onClick;
-  // = (value, String val) {
-  //   val = value;
-  // };
-
-  // onclicke(value) {
-  //   _email = value;
-  // }
-
-  // onclickp(value) {
-  //   _password = value;
-  // }
-
-  // onclick(val) {
-  //   onClick:
-  //   (value) {
-  //     val = value;
-  //   };
-  // }
-
-  // onclickd(val) {
-  //   onClick:
-  //   (value) {};
-  // }
+  ///----
+  // final _auth = Auth();
+  // String _email, _password;
+  //  Function? onClick;
+  ///------
 
   /// bool isLoading = false;
 
   ///Start Controller
-  TextEditingController username = new TextEditingController();
-  TextEditingController email = new TextEditingController();
-  TextEditingController password = new TextEditingController();
-  TextEditingController confirmpassword = new TextEditingController();
+  late TextEditingController username = new TextEditingController();
+  late TextEditingController email = new TextEditingController();
+  late TextEditingController password = new TextEditingController();
+  late TextEditingController confirmpassword = new TextEditingController();
 
   GlobalKey<FormState> formstatesignin = new GlobalKey<FormState>();
   GlobalKey<FormState> formstatesignup = new GlobalKey<FormState>();
@@ -148,14 +127,14 @@ class LogInState extends State<LogIn> {
     var formdata = formstatesignin.currentState;
     if (formdata.validate()) {
       formdata.save();
-      print(_email);
-      print(_password);
-      final authResult = await _auth.signIn(_email, _password);
-      setState(() {
-        
-      });
-      print(authResult.user.uid);
-       showdialogall(context, "تم تسجيل دخولك بنجاح");
+      // print(_email);
+      // print(_password);
+      // final authResult = await _auth.signIn(_email, _password);
+      // setState(() {
+
+      // });
+      // print(authResult.user.uid);
+      showdialogall(context, "تم تسجيل دخولك بنجاح");
     }
   }
 
@@ -163,11 +142,11 @@ class LogInState extends State<LogIn> {
     var formdata = formstatesignup.currentState;
     if (formdata.validate()) {
       formdata.save();
-      print(_email);
-      print(_password);
-      final authResult = await _auth.signUp(_email, _password);
-      print(authResult.user.uid);
-       showdialogall(context, "تم إنشاء الحساب بنجاح");
+      //print(_email);
+      // print(_password);
+      // final authResult = await _auth.signUp(_email, _password);
+      // print(authResult.user.uid);
+      showdialogall(context, "تم إنشاء الحساب بنجاح");
     }
   }
 
@@ -390,7 +369,7 @@ class LogInState extends State<LogIn> {
                       const SizedBox(height: 10),
                       TextFormField(
                         onSaved: (value) {
-                          _email = value;
+                          /// _email = value;
                         },
                         controller: email,
                         validator: validemail,
@@ -425,7 +404,7 @@ class LogInState extends State<LogIn> {
                       SizedBox(height: 10),
                       TextFormField(
                         onSaved: (value) {
-                          _password = value;
+                          ///  _password = value;
                         },
                         controller: password,
                         validator: validpassword,
@@ -513,7 +492,7 @@ class LogInState extends State<LogIn> {
                         email,
                         validemail,
                         (value) {
-                          _email = value;
+                          ///  _email = value;
                         },
                       ),
                       //End User E-mail ----------
@@ -529,7 +508,7 @@ class LogInState extends State<LogIn> {
                           Icons.lock_outlined,
                           password,
                           validpassword, (value) {
-                        _password = value;
+                        ///  _password = value;
                       }),
                       //Start User Password Confirm----------
                       Text("تأكيد كلمة المرور",
@@ -543,7 +522,7 @@ class LogInState extends State<LogIn> {
                           Icons.lock_outlined,
                           confirmpassword,
                           validconfirmpassword, (value) {
-                        _password = value;
+                        //  _password = value;
                       }),
                       //End User Password Confirm----------
                     ],
@@ -562,7 +541,9 @@ class LogInState extends State<LogIn> {
       onClick) {
     return TextFormField(
       ///autovalidateMode: AutovalidateMode.always,
-      onSaved: onClick,
+      onSaved: (value) {
+        onClick();
+      },
       controller: myContorller,
       obscureText: pass,
       validator: myvalid,
@@ -579,9 +560,7 @@ class LogInState extends State<LogIn> {
                   width: 1)),
           focusedBorder: OutlineInputBorder(
               borderSide: BorderSide(
-                  color: Colors.purple,
-                   style: BorderStyle.solid,
-                    width: 1)),
+                  color: Colors.purple, style: BorderStyle.solid, width: 1)),
           border: OutlineInputBorder(
               borderSide: BorderSide(
                   color: Colors.green[400],
@@ -657,7 +636,7 @@ class LogInState extends State<LogIn> {
   Positioned buildPositionedBottom(double mdw) {
     return Positioned(
       //top : 300
-      top: mdw * 1.3, // this will go down
+      top: mdw * 1.2, // this will go down
       right: mdw / 1.5,
       child: AnimatedContainer(
         duration: Duration(milliseconds: 500),
