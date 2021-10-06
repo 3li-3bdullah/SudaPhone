@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-valiInput(String val, int max, int min , String type) {
+validInput(String val, int max, int min , String type) {
   if (val.trim().isEmpty) {
     return "The field is empty";
   }
