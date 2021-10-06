@@ -79,9 +79,9 @@ class LogInState extends State<LogIn> {
   // }
 
   signin() async {
-    var formdata = formstatesignin.currentState;
-    if (formdata.validate()) {
-      formdata.save();
+   /// var formdata = formstatesignin.currentState;
+    if (formstatesignin.currentState.validate()) {
+      formstatesignin.currentState.save();
       // print(_email);
       // print(_password);
       // final authResult = await _auth.signIn(_email, _password);
@@ -93,10 +93,10 @@ class LogInState extends State<LogIn> {
     }
   }
 
-  Future signup() async {
-    var formdata = formstatesignup.currentState;
-    if (formdata.validate()) {
-      formdata.save();
+   signup() async {
+    ///var formdata = formstatesignup.currentState;
+    if (formstatesignin.currentState.validate()) {
+      formstatesignin.currentState.save();
       //print(_email);
       // print(_password);
       // final authResult = await _auth.signUp(_email, _password);
@@ -106,7 +106,7 @@ class LogInState extends State<LogIn> {
   }
 
   TapGestureRecognizer _changesign;
-  bool? showsignin = true;
+  bool showsignin = true;
 
   @override
   void dispose() {
