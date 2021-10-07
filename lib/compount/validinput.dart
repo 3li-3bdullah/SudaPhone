@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 
 validInput(String val, int max, int min , String type) {
   if (val.trim().isEmpty) {
