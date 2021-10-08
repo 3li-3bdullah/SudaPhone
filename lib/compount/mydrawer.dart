@@ -43,7 +43,6 @@ class _MyDrawerState extends State<MyDrawer> {
                   image: AssetImage("example/images/slider/ali.jpg")), shape:BoxShape.circle),
             ),
             decoration: BoxDecoration(
-               /// shape: BoxShape.circle,
                 color: Colors.blue,
                 image: DecorationImage(
                     image: AssetImage("example/images/slider/drawer.jpg"),
