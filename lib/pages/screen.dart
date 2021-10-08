@@ -114,8 +114,8 @@ class ScreenState extends State<Screen> {
                     ),
                     itemCount: imagesCarousel.length,
                     itemBuilder: (context, index, realIndex) {
-                      final imagesCarousel = imagesCarousel[index];
-                      return buildImage(imagesCarousel, index);
+                      String imagesCar = imagesCarousel[index];
+                      return buildImage(imagesCar, index);
                     },
                   ),
                   footer: Container(
