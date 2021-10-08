@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import '../compount/mydrawer.dart';
+import 'dart:core';
 
 class Screen extends StatefulWidget {
   @override
@@ -28,36 +29,35 @@ class ScreenState extends State<Screen> {
   //   super.initState();
   // }
   int activeIndex = 0;
-  final controller = CarouselController();
-
-  final images = [
-    AssetImage("example/images/slider/1.jpg"),
-    AssetImage("example/images/slider/2.jpg"),
-    AssetImage("example/images/slider/3.jpg"),
-    AssetImage("example/images/slider/4.jpg"),
-    AssetImage("example/images/slider/6.jpg"),
+  //final controller = CarouselController();
+  
+  final imagesCarousel = [
+    Image.asset("example/images/slider/1.jpg"),
+    Image.asset("example/images/slider/2.jpg"),
+    Image.asset("example/images/slider/3.jpg"),
+    Image.asset("example/images/slider/4.jpg"),
+    Image.asset("example/images/slider/6.jpg"),
   ];
-  Widget buildImage(String images, int index) => Container(
+  Widget buildImage(String imagesCarousel, int index) => Container(
       margin: EdgeInsets.symmetric(horizontal: 2),
       color: Colors.grey,
       width: double.infinity,
       child: Image.asset(
-        images,
+        imagesCarousel,
         fit: BoxFit.cover,
       ));
   Widget buildIndicator() => AnimatedSmoothIndicator(
-    activeIndex: activeIndex,
-    count: images.length,
-    //JumpingDotEffiect
-    effect: ExpandingDotsEffect(
-      dotWidth: 15,
-      dotHeight: 15,
-      
-      activeDotColor: Colors.blue,
-      dotColor: Colors.white,
-    ),
-  );
-
+        activeIndex: activeIndex,
+        count: imagesCarousel.length,
+        //JumpingDotEffiect
+        effect: JumpingDotEffect(
+          dotWidth: 15,
+          dotHeight: 15,
+          //spacing:20,
+          activeDotColor: Colors.blue,
+          dotColor: Colors.white,
+        ),
+      );
 
   @override
   Widget build(BuildContext context) {
@@ -78,30 +78,6 @@ class ScreenState extends State<Screen> {
                     icon: Icon(Icons.search),
                     onPressed: () {
                       showSearch(context: context, delegate: DataSearch());
-                      // return showDialog(
-                      //     context: context,
-                      //     builder: (context) {
-                      //       return AlertDialog(
-                      //         title: Text("search"),
-                      //         content: Container(
-                      //             height: 120,
-                      //             child: Column(children: <Widget>[
-                      //               Text("ادخل اسم الجوال الذي تريد البحث عنه"),
-                      //               TextFormField(
-                      //                 decoration:
-                      //                     InputDecoration(hintText: "اكتب هنا"),
-                      //               ),
-                      //             ])),
-                      //         actions: <Widget>[
-                      //           FlatButton(onPressed: () {}, child: Text("تم")),
-                      //           FlatButton(
-                      //               onPressed: () {
-                      //                return Navigator.of(context).pop();
-                      //               },
-                      //               child: Text("إلغاء")),
-                      //         ],
-                      //       );
-                      //     });
                     })
               ],
 
@@ -110,15 +86,14 @@ class ScreenState extends State<Screen> {
             drawer: MyDrawer(),
             body: ListView(children: <Widget>[
               Container(
-                  height: 300,
-                 // width: double.infinity,
-                  child: GridTile(
-                    child: CarouselSlider.builder(
-                    carouselController: controller,
+                height: 300,
+                // width: double.infinity,
+                child: GridTile(
+                  child: CarouselSlider.builder(
+                    // carouselController: controller,
                     options: CarouselOptions(
-                      
                       height: 300,
-                      initialPage: 0,
+                      //initialPage: 0,
                       // This will show up one picture on the page
                       viewportFraction: 1,
                       // This will show the pictures the left and right in small shape
@@ -130,21 +105,20 @@ class ScreenState extends State<Screen> {
                       onPageChanged: (index, reason) =>
                           setState(() => activeIndex = index),
                     ),
-                    itemCount: images.length,
+                    itemCount: imagesCarousel.length,
                     itemBuilder: (context, index, realIndex) {
-                      final images = images[index];
-                      return buildImage(images, index);
+                      final imagesCarousel = imagesCarousel[index];
+                      return buildImage(imagesCarousel, index);
                     },
                   ),
                   footer: Container(
-                    height:60,
+                    height: 60,
                     color: Colors.black.withOpacity(0.4),
-                     child: buildIndicator(),
+                    child: buildIndicator(),
                   ),
-                  ) ,
-                  //const sizedBox(height:32),
-                 
-                  ), 
+                ),
+                //const sizedBox(height:32),
+              ),
               Container(
                 padding: EdgeInsets.all(10),
                 child: Text("الأقسام",
