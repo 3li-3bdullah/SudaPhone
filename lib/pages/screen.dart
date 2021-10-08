@@ -30,13 +30,20 @@ class ScreenState extends State<Screen> {
   // }
   int activeIndex = 0;
   //final controller = CarouselController();
-  
-  final imagesCarousel = [
-    Image.asset("example/images/slider/1.jpg"),
-    Image.asset("example/images/slider/2.jpg"),
-    Image.asset("example/images/slider/3.jpg"),
-    Image.asset("example/images/slider/4.jpg"),
-    Image.asset("example/images/slider/6.jpg"),
+
+  // final imagesCarousel = [
+  //   Image.asset("example/images/slider/1.jpg"),
+  //   Image.asset("example/images/slider/2.jpg"),
+  //   Image.asset("example/images/slider/3.jpg"),
+  //   Image.asset("example/images/slider/4.jpg"),
+  //   Image.asset("example/images/slider/6.jpg"),
+  // ];
+  List<String> imagesCarousel = [
+    "example/images/slider/1.jpg",
+    "example/images/slider/2.jpg",
+    "example/images/slider/3.jpg",
+    "example/images/slider/4.jpg"
+    "example/images/slider/6.jpg"
   ];
   Widget buildImage(String imagesCarousel, int index) => Container(
       margin: EdgeInsets.symmetric(horizontal: 2),
