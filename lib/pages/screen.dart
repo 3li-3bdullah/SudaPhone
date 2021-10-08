@@ -26,10 +26,17 @@ class ScreenState extends State<Screen> {
   //   getData();
   //   super.initState();
   // }
-
+  final images = [
+    AssetImage("example/images/slider/1.jpg"),
+    AssetImage("example/images/slider/2.jpg"),
+    AssetImage("example/images/slider/3.jpg"),
+    AssetImage("example/images/slider/4.jpg"),
+    AssetImage("example/images/slider/6.jpg"),
+  ];
+  Widget buildImage(String images, int index) => Container();
   @override
   Widget build(BuildContext context) {
-   // ThemeData(fontFamily: 'Cairo');
+    // ThemeData(fontFamily: 'Cairo');
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "Mobetech",
@@ -79,16 +86,15 @@ class ScreenState extends State<Screen> {
             body: ListView(children: <Widget>[
               Container(
                   //Start this container
-                  height: 300,
+                  //height: 300,
                   width: double.infinity,
-                  child: Carousel(
-                    images: [
-                      AssetImage("example/images/slider/1.jpg"),
-                      AssetImage("example/images/slider/2.jpg"),
-                      AssetImage("example/images/slider/3.jpg"),
-                      AssetImage("example/images/slider/4.jpg"),
-                      AssetImage("example/images/slider/6.jpg"),
-                    ],
+                  child: CarouselSlider.builder(
+                    options: CarouselOptions(height: 300),
+                    itemCount: images.length,
+                    itemBuilder: (context, index, realIndex) {
+                      final images = images[index];
+                      return buildImage(images, index);
+                    },
                     dotSize: 8,
                     dotIncreaseSize: 2,
                     dotSpacing: 20,
@@ -144,7 +150,7 @@ class ScreenState extends State<Screen> {
                                           textAlign: TextAlign.center)))),
                           onTap: () {},
                         ),
-                         InkWell(
+                        InkWell(
                           child: Container(
                               height: 100,
                               width: 100,
@@ -224,7 +230,6 @@ class ScreenState extends State<Screen> {
                                           textAlign: TextAlign.center)))),
                           onTap: () {},
                         ),
-                       
                         InkWell(
                           child: Container(
                               height: 100,
@@ -241,7 +246,6 @@ class ScreenState extends State<Screen> {
                                           textAlign: TextAlign.center)))),
                           onTap: () {},
                         ),
-                        
                       ])),
               // End The Long Container....
               Container(
@@ -294,7 +298,6 @@ class ScreenState extends State<Screen> {
                       ),
                       InkWell(
                         child: GridTile(
-                         
                             child: Image.asset(
                                 "example/images/product/xiaomi.jpg"),
                             footer: Container(
@@ -358,12 +361,12 @@ class ScreenState extends State<Screen> {
             ]),
           )),
     );
+    
   }
+  
 }
 
-
 class DataSearch extends SearchDelegate<String> {
-  
   @override
   List<Widget> buildActions(BuildContext context) {
     // Action for AppBar
@@ -397,19 +400,19 @@ class DataSearch extends SearchDelegate<String> {
   @override
   Widget buildSuggestions(BuildContext context) {
     // Show when someone searchers for something
-      return Text("Body Search");
-      //  ListView.builder(
-      //     itemCount: searchlist.length,
-      //     itemBuilder: (context, i) {
-      //       return ListTile(
-      //         leading: Icon(Icons.mobile_screen_share),
-      //         title: Text(name),
-      //         onTap: () {
-      //           query = name;
-      //           showResults(context);
-      //         },
-      //       );
-      //     });
+    return Text("Body Search");
+    //  ListView.builder(
+    //     itemCount: searchlist.length,
+    //     itemBuilder: (context, i) {
+    //       return ListTile(
+    //         leading: Icon(Icons.mobile_screen_share),
+    //         title: Text(name),
+    //         onTap: () {
+    //           query = name;
+    //           showResults(context);
+    //         },
+    //       );
+    //     });
     // Text("Body Search");
   }
 }
