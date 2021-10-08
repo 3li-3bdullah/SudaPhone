@@ -41,6 +41,12 @@ class ScreenState extends State<Screen> {
         images,
         fit: BoxFit.cover,
       ));
+  Widget buildIndicator() => AnimatedSmoothIndicator(
+    activeIndex: activeIndex,
+    count: images.length,
+  );
+
+
   @override
   Widget build(BuildContext context) {
     // ThemeData(fontFamily: 'Cairo');
@@ -92,7 +98,6 @@ class ScreenState extends State<Screen> {
             drawer: MyDrawer(),
             body: ListView(children: <Widget>[
               Container(
-                  //Start this container
                   //height: 300,
                   width: double.infinity,
                   child: CarouselSlider.builder(
@@ -122,7 +127,12 @@ class ScreenState extends State<Screen> {
                     // dotBgColor: Colors.black.withOpacity(0.5),
                     // boxFit: BoxFit.cover,
                     // dotIncreasedColor: Colors.blue,
-                  )), // end this container
+                  ),
+                  //const sizedBox(height:32),
+                  buildIndicator(
+
+                  ),
+                  ), 
               Container(
                 padding: EdgeInsets.all(10),
                 child: Text("الأقسام",
