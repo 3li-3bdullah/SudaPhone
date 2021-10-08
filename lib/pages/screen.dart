@@ -42,8 +42,8 @@ class ScreenState extends State<Screen> {
     "example/images/slider/1.jpg",
     "example/images/slider/2.jpg",
     "example/images/slider/3.jpg",
-    "example/images/slider/4.jpg"
-    "example/images/slider/6.jpg"
+    "example/images/slider/4.jpg",
+    "example/images/slider/6.jpg",
   ];
   Widget buildImage(String imagesCarousel, int index) => Container(
      // margin: EdgeInsets.symmetric(horizontal: 2),
@@ -121,7 +121,11 @@ class ScreenState extends State<Screen> {
                   footer: Container(
                     height: 60,
                     color: Colors.black.withOpacity(0.4),
-                    child: Center(child: buildIndicator()),
+                    child: Row(
+                      children: [
+                        Expanded(child: buildIndicator()),
+                      ],
+                    ),
                   ),
                 ),
                 //const sizedBox(height:32),
