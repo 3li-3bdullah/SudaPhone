@@ -24,7 +24,7 @@ class AboutApp extends StatelessWidget {
                       children: <TextSpan>[
                         TextSpan(
                             text:
-                                "... يعرض لك هذا التطبيق احدث الأجهزة المحمولة من معظم شركات الموبايلات ، و سعرها بالدولار\n ",
+                                "بعرض لك هذا التطبيق معظم انواع التلفوات وسعرها بالجنية السوداني",
                             style: TextStyle(
                                 fontWeight: FontWeight.w700,
                                 color: Colors.black)),
