@@ -40,6 +40,7 @@ class ScreenState extends State<Screen> {
   Widget buildImage(String images, int index) => Container(
       margin: EdgeInsets.symmetric(horizontal: 2),
       color: Colors.grey,
+      width: double.infinity,
       child: Image.asset(
         images,
         fit: BoxFit.cover,
@@ -51,6 +52,7 @@ class ScreenState extends State<Screen> {
     effect: ExpandingDotsEffect(
       dotWidth: 15,
       dotHeight: 15,
+      
       activeDotColor: Colors.blue,
       dotColor: Colors.white,
     ),
@@ -108,9 +110,10 @@ class ScreenState extends State<Screen> {
             drawer: MyDrawer(),
             body: ListView(children: <Widget>[
               Container(
-                  //height: 300,
-                  width: double.infinity,
-                  child: CarouselSlider.builder(
+                  height: 300,
+                 // width: double.infinity,
+                  child: GridTile(
+                    child: CarouselSlider.builder(
                     carouselController: controller,
                     options: CarouselOptions(
                       
@@ -132,18 +135,14 @@ class ScreenState extends State<Screen> {
                       final images = images[index];
                       return buildImage(images, index);
                     },
-                    // dotSize: 8,
-                    // dotIncreaseSize: 2,
-                    // dotSpacing: 20,
-                    // dotColor: Colors.white,
-                    // dotBgColor: Colors.black.withOpacity(0.5),
-                    // boxFit: BoxFit.cover,
-                    // dotIncreasedColor: Colors.blue,
                   ),
+                  footer: Container(
+                    height:60,
+                     child: buildIndicator(),
+                  ),
+                  ) ,
                   //const sizedBox(height:32),
-                  buildIndicator(
-
-                  ),
+                 
                   ), 
               Container(
                 padding: EdgeInsets.all(10),
