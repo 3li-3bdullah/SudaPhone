@@ -26,6 +26,7 @@ class ScreenState extends State<Screen> {
   //   getData();
   //   super.initState();
   // }
+  int activeIndex = 0;
   final images = [
     AssetImage("example/images/slider/1.jpg"),
     AssetImage("example/images/slider/2.jpg"),
@@ -33,7 +34,13 @@ class ScreenState extends State<Screen> {
     AssetImage("example/images/slider/4.jpg"),
     AssetImage("example/images/slider/6.jpg"),
   ];
-  Widget buildImage(String images, int index) => Container();
+  Widget buildImage(String images, int index) => Container(
+      margin: EdgeInsets.symmetric(horizontal: 2),
+      color: Colors.grey,
+      child: Image.asset(
+        images,
+        fit: BoxFit.cover,
+      ));
   @override
   Widget build(BuildContext context) {
     // ThemeData(fontFamily: 'Cairo');
@@ -89,19 +96,32 @@ class ScreenState extends State<Screen> {
                   //height: 300,
                   width: double.infinity,
                   child: CarouselSlider.builder(
-                    options: CarouselOptions(height: 300),
+                    options: CarouselOptions(
+                      
+                      height: 300,
+                      // This will show up one picture on the page
+                      viewportFraction: 1,
+                      // This will show the pictures the left and right in small shape
+                      enlargeCenterPage: true,
+                      // This will show up in animated pictures
+                      enlargeStrategy: CenterPageEnlargeStrategy.height,
+                      autoPlay: true,
+                      autoPlayInterval: Duration(seconds: 2),
+                      onPageChanged: (index, reason) =>
+                          setState(() => activeIndex = index),
+                    ),
                     itemCount: images.length,
                     itemBuilder: (context, index, realIndex) {
                       final images = images[index];
                       return buildImage(images, index);
                     },
-                    dotSize: 8,
-                    dotIncreaseSize: 2,
-                    dotSpacing: 20,
-                    dotColor: Colors.white,
-                    dotBgColor: Colors.black.withOpacity(0.5),
-                    boxFit: BoxFit.cover,
-                    dotIncreasedColor: Colors.blue,
+                    // dotSize: 8,
+                    // dotIncreaseSize: 2,
+                    // dotSpacing: 20,
+                    // dotColor: Colors.white,
+                    // dotBgColor: Colors.black.withOpacity(0.5),
+                    // boxFit: BoxFit.cover,
+                    // dotIncreasedColor: Colors.blue,
                   )), // end this container
               Container(
                 padding: EdgeInsets.all(10),
@@ -361,9 +381,7 @@ class ScreenState extends State<Screen> {
             ]),
           )),
     );
-    
   }
-  
 }
 
 class DataSearch extends SearchDelegate<String> {
