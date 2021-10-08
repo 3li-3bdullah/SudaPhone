@@ -46,7 +46,7 @@ class ScreenState extends State<Screen> {
     "example/images/slider/6.jpg"
   ];
   Widget buildImage(String imagesCarousel, int index) => Container(
-      margin: EdgeInsets.symmetric(horizontal: 2),
+     // margin: EdgeInsets.symmetric(horizontal: 2),
       color: Colors.grey,
       width: double.infinity,
       child: Image.asset(
@@ -56,7 +56,7 @@ class ScreenState extends State<Screen> {
   Widget buildIndicator() => AnimatedSmoothIndicator(
         activeIndex: activeIndex,
         count: imagesCarousel.length,
-        //JumpingDotEffiect
+        
         effect: JumpingDotEffect(
           dotWidth: 15,
           dotHeight: 15,
