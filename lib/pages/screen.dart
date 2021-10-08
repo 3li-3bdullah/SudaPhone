@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:carousel_pro/carousel_pro.dart';
+import 'package:carousel_slider/carousel_slider.dart';
 import '../compount/mydrawer.dart';
 
 class Screen extends StatefulWidget {
@@ -44,6 +44,13 @@ class ScreenState extends State<Screen> {
   Widget buildIndicator() => AnimatedSmoothIndicator(
     activeIndex: activeIndex,
     count: images.length,
+    //JumpingDotEffiect
+    effect: ExpandingDotsEffect(
+      dotWidth: 15,
+      dotHeight: 15,
+      activeDotColor: Colors.blue,
+      dotColor: Colors.white,
+    ),
   );
 
 
