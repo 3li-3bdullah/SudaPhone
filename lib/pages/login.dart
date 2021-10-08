@@ -95,8 +95,8 @@ class LogInState extends State<LogIn> {
 
    signup() async {
     ///var formdata = formstatesignup.currentState;
-    if (formstatesignin.currentState.validate()) {
-      formstatesignin.currentState.save();
+    if (formstatesignup.currentState.validate()) {
+      formstatesignup.currentState.save();
       //print(_email);
       // print(_password);
       // final authResult = await _auth.signUp(_email, _password);
