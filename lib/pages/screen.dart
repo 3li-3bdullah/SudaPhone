@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import '../compount/mydrawer.dart';
 
 class Screen extends StatefulWidget {
@@ -27,6 +28,8 @@ class ScreenState extends State<Screen> {
   //   super.initState();
   // }
   int activeIndex = 0;
+  final controller = CarouselController();
+
   final images = [
     AssetImage("example/images/slider/1.jpg"),
     AssetImage("example/images/slider/2.jpg"),
@@ -108,7 +111,7 @@ class ScreenState extends State<Screen> {
                   //height: 300,
                   width: double.infinity,
                   child: CarouselSlider.builder(
-                    
+                    carouselController: controller,
                     options: CarouselOptions(
                       
                       height: 300,
