@@ -108,9 +108,11 @@ class ScreenState extends State<Screen> {
                   //height: 300,
                   width: double.infinity,
                   child: CarouselSlider.builder(
+                    
                     options: CarouselOptions(
                       
                       height: 300,
+                      initialPage: 0,
                       // This will show up one picture on the page
                       viewportFraction: 1,
                       // This will show the pictures the left and right in small shape
