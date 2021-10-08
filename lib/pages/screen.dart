@@ -121,7 +121,7 @@ class ScreenState extends State<Screen> {
                   footer: Container(
                     height: 60,
                     color: Colors.black.withOpacity(0.4),
-                    child: buildIndicator(),
+                    child: Center(child: buildIndicator()),
                   ),
                 ),
                 //const sizedBox(height:32),
