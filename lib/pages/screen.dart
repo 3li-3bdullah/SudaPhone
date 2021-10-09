@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import '../compount/data_search.dart';
 import '../widgets/last_product.dart';
 import '../widgets/build_categories_logo.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
@@ -228,12 +229,12 @@ class ScreenState extends State<Screen> {
                       ),
                       LastProduct(
                         imageProduct: "example/images/product/xiaomi.jpg",
-                        text: "Xaiomi Mi 10T  : 1100\$" ,
+                        text: "Xaiomi Mi 10T  : 1050\$" ,
                         onTap: (){},
                       ),
                       LastProduct(
                         imageProduct: "example/images/product/oppo.jpg",
-                        text: "Oppo F17 Pro : 1250\$",
+                        text: "Oppo F17 Pro : 1100\$",
                         onTap: (){},
                       ),
                       LastProduct(
@@ -243,12 +244,12 @@ class ScreenState extends State<Screen> {
                       ),
                      LastProduct(
                         imageProduct:  "example/images/product/realme.jpg",
-                        text: "Realme race teaser : 1200\$",
+                        text: "Realme race teaser : 900\$",
                         onTap: (){},
                       ),
                       LastProduct(
                         imageProduct: "example/images/product/tecno.jpg",
-                        text: "Tecno Spark6 : 1200\$",
+                        text: "Tecno Spark6 : 850\$",
                         onTap: (){},
                       ),
                     ]),
@@ -261,53 +262,3 @@ class ScreenState extends State<Screen> {
 
 
 
-class DataSearch extends SearchDelegate<String> {
-  @override
-  List<Widget> buildActions(BuildContext context) {
-    // Action for AppBar
-    return [
-      IconButton(
-          onPressed: () {
-            query = " ";
-          },
-          icon: Icon(Icons.clear))
-    ];
-  }
-
-  @override
-  Widget buildLeading(BuildContext context) {
-    // Icon Leading
-    return (IconButton(
-      onPressed: () {
-        Navigator.of(context).pop();
-        //close(context, null);
-      },
-      icon: Icon(Icons.arrow_back),
-    ));
-  }
-
-  @override
-  Widget buildResults(BuildContext context) {
-    // Result Search
-    return Text(query);
-  }
-
-  @override
-  Widget buildSuggestions(BuildContext context) {
-    // Show when someone searchers for something
-    return Text("Body Search");
-    //  ListView.builder(
-    //     itemCount: searchlist.length,
-    //     itemBuilder: (context, i) {
-    //       return ListTile(
-    //         leading: Icon(Icons.mobile_screen_share),
-    //         title: Text(name),
-    //         onTap: () {
-    //           query = name;
-    //           showResults(context);
-    //         },
-    //       );
-    //     });
-    // Text("Body Search");
-  }
-}
