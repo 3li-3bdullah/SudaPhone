@@ -160,6 +160,12 @@ class ScreenState extends State<Screen> {
                           text: "Huawei",
                           onTap: (){},
                         ),
+                        BuildCategoriesLogo(
+                          imageLogo: "example/images/logo/iphone.jpg",
+                          text: "Apple",
+                          onTap: (){},
+                        ),
+
                         InkWell(
                           child: Container(
                               height: 100,
