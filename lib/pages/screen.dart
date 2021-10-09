@@ -190,23 +190,12 @@ class ScreenState extends State<Screen> {
                           text: "Oppo",
                           onTap: (){},
                         ),
-                       
-                        InkWell(
-                          child: Container(
-                              height: 100,
-                              width: 100,
-                              child: ListTile(
-                                  title: Image.asset(
-                                    "example/images/logo/tecno.png",
-                                    height: 80,
-                                    width: 80,
-                                    fit: BoxFit.cover,
-                                  ),
-                                  subtitle: Container(
-                                      child: Text("Tecno",
-                                          textAlign: TextAlign.center)))),
-                          onTap: () {},
+                       BuildCategoriesLogo(
+                          imageLogo: "example/images/logo/tecno.png",
+                          text: "Tecno",
+                          onTap: (){},
                         ),
+                        
                       ])),
               // End The Long Container....
               Container(
