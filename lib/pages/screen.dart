@@ -29,6 +29,15 @@ class ScreenState extends State<Screen> {
   //   super.initState();
   // }
   int activeIndex = 0;
+  final controller = PageController(viewportFraction: 0.8, keepPage: true);
+  final colors = const [
+  Colors.red,
+  Colors.green,
+  Colors.greenAccent,
+  Colors.amberAccent,
+  Colors.blue,
+  Colors.amber,
+];
   //final controller = CarouselController();
 
   // final imagesCarousel = [
@@ -53,18 +62,18 @@ class ScreenState extends State<Screen> {
         imagesCarousel,
         fit: BoxFit.cover,
       ));
-  Widget buildIndicator() => AnimatedSmoothIndicator(
-        activeIndex: activeIndex,
+  Widget buildIndicator() => Container(
+    child:SmoothPageIndicator(
+       // activeIndex: activeIndex,
+        controller:controller,
         count: imagesCarousel.length,
         
-        effect: JumpingDotEffect(
-          dotWidth: 15,
-          dotHeight: 15,
-          //spacing:20,
-          activeDotColor: Colors.blue,
-          dotColor: Colors.white,
-        ),
-      );
+        effect: SwapEffect(
+                    dotHeight: 16,
+                    dotWidth: 16,
+                    type: SwapType.yRotation,
+                  ),
+                ));
 
   @override
   Widget build(BuildContext context) {
@@ -122,8 +131,9 @@ class ScreenState extends State<Screen> {
                     height: 60,
                     color: Colors.black.withOpacity(0.4),
                     child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Expanded(child: buildIndicator()),
+                       buildIndicator(),
                       ],
                     ),
                   ),
