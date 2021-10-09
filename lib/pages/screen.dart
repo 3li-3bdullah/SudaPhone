@@ -201,7 +201,7 @@ class ScreenState extends State<Screen> {
               // End The Long Container....
               Container(
                 padding: EdgeInsets.all(10),
-                child: Text("أحدث الموبايلات",
+                child: Text("أحدث التلفونات",
                     style: TextStyle(fontSize: 30, color: Colors.blue)),
               ),
 
@@ -211,18 +211,8 @@ class ScreenState extends State<Screen> {
                     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                         crossAxisCount: 2),
                     children: <Widget>[
-                      InkWell(
-                        child: GridTile(
-                            child: Image.asset(
-                                "example/images/product/huawei.jpg"),
-                            footer: Container(
-                                height: 25,
-                                color: Colors.black.withOpacity(0.4),
-                                child: Text("Huawei Mate 40 Pro : 1200\$",
-                                    style: TextStyle(color: Colors.white),
-                                    textAlign: TextAlign.center))),
-                        onTap: () {},
-                      ),
+
+                      LastProduct(),
                       InkWell(
                         child: GridTile(
                             child: Image.asset(
@@ -311,6 +301,28 @@ class ScreenState extends State<Screen> {
               ),
             ]),
           )),
+    );
+  }
+}
+
+class LastProduct extends StatelessWidget {
+  const LastProduct({
+    Key key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+      child: GridTile(
+          child: Image.asset(
+              "example/images/product/huawei.jpg"),
+          footer: Container(
+              height: 25,
+              color: Colors.black.withOpacity(0.4),
+              child: Text("Huawei Mate 40 Pro : 1200\$",
+                  style: TextStyle(color: Colors.white),
+                  textAlign: TextAlign.center))),
+      onTap: () {},
     );
   }
 }
