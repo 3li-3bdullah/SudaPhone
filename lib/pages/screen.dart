@@ -245,18 +245,10 @@ class ScreenState extends State<Screen> {
                         text: "Realme race teaser : 1200\$",
                         onTap: (){},
                       ),
-                      
-                      InkWell(
-                        child: GridTile(
-                            child:
-                                Image.asset("example/images/product/tecno.jpg"),
-                            footer: Container(
-                                height: 25,
-                                color: Colors.black.withOpacity(0.4),
-                                child: Text("Tecno Spark6 : 1200\$",
-                                    style: TextStyle(color: Colors.white),
-                                    textAlign: TextAlign.center))),
-                        onTap: () {},
+                      LastProduct(
+                        imageProduct: "example/images/product/tecno.jpg",
+                        text: "Tecno Spark6 : 1200\$",
+                        onTap: (){},
                       ),
                     ]),
               ),
