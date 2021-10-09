@@ -213,14 +213,17 @@ class ScreenState extends State<Screen> {
                       LastProduct(
                         imageProduct: "example/images/product/huawei.jpg",
                         text: "Huawei Mate 40 Pro : 1200\$",
+                        onTap: (){},
                       ),
                       LastProduct(
                         imageProduct: "example/images/product/samsung.jpg",
                         text: "Samsung S20 Ultra : 1100\$",
+                        onTap: (){},
                       ),
                       LastProduct(
                         imageProduct: "example/images/product/iphone.jpg",
                         text: "iPhone 12 pro max : 1399\$",
+                        onTap: (){},
                       ),
                       InkWell(
                         child: GridTile(
@@ -304,10 +307,12 @@ class ScreenState extends State<Screen> {
 
 class LastProduct extends StatelessWidget {
   const LastProduct({
-     this.imageProduct, this.text,
+    this.imageProduct,
+    this.text, this.onTap,
   });
   final String imageProduct;
   final String text;
+  final Function onTap;
   @override
   Widget build(BuildContext context) {
     return InkWell(
@@ -319,7 +324,7 @@ class LastProduct extends StatelessWidget {
               child: Text(text,
                   style: TextStyle(color: Colors.white),
                   textAlign: TextAlign.center))),
-      onTap: () {},
+      onTap: onTap,
     );
   }
 }
