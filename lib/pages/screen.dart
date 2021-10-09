@@ -222,51 +222,30 @@ class ScreenState extends State<Screen> {
                       ),
                       LastProduct(
                         imageProduct: "example/images/product/iphone.jpg",
-                        text: "Xaiomi Mi 10T  : 1100\$",
+                        text: "iPhone 12 pro max : 1399\$",
                         onTap: (){},
                       ),
                       LastProduct(
                         imageProduct: "example/images/product/xiaomi.jpg",
-                        text: "iPhone 12 pro max : 1399\$",
+                        text: "Xaiomi Mi 10T  : 1100\$" ,
+                        onTap: (){},
+                      ),
+                      LastProduct(
+                        imageProduct: "example/images/product/oppo.jpg",
+                        text: "Oppo F17 Pro : 1250\$",
+                        onTap: (){},
+                      ),
+                      LastProduct(
+                        imageProduct:  "example/images/product/lenovo.jpg",
+                        text: "Lenovo K12 Pro : 1400\$",
+                        onTap: (){},
+                      ),
+                     LastProduct(
+                        imageProduct:  "example/images/product/realme.jpg",
+                        text: "Realme race teaser : 1200\$",
                         onTap: (){},
                       ),
                       
-                      InkWell(
-                        child: GridTile(
-                            child:
-                                Image.asset("example/images/product/oppo.jpg"),
-                            footer: Container(
-                                height: 25,
-                                color: Colors.black.withOpacity(0.4),
-                                child: Text("Oppo F17 Pro : 1250\$",
-                                    style: TextStyle(color: Colors.white),
-                                    textAlign: TextAlign.center))),
-                        onTap: () {},
-                      ),
-                      InkWell(
-                        child: GridTile(
-                            child: Image.asset(
-                                "example/images/product/lenovo.jpg"),
-                            footer: Container(
-                                height: 25,
-                                color: Colors.black.withOpacity(0.4),
-                                child: Text("Lenovo K12 Pro : 1400\$",
-                                    style: TextStyle(color: Colors.white),
-                                    textAlign: TextAlign.center))),
-                        onTap: () {},
-                      ),
-                      InkWell(
-                        child: GridTile(
-                            child: Image.asset(
-                                "example/images/product/realme.jpg"),
-                            footer: Container(
-                                height: 25,
-                                color: Colors.black.withOpacity(0.4),
-                                child: Text("Realme race teaser : 1200\$",
-                                    style: TextStyle(color: Colors.white),
-                                    textAlign: TextAlign.center))),
-                        onTap: () {},
-                      ),
                       InkWell(
                         child: GridTile(
                             child:
