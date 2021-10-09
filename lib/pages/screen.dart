@@ -31,13 +31,13 @@ class ScreenState extends State<Screen> {
   int activeIndex = 0;
   final controller = PageController(viewportFraction: 0.8, keepPage: true);
   final colors = const [
-  Colors.red,
-  Colors.green,
-  Colors.greenAccent,
-  Colors.amberAccent,
-  Colors.blue,
-  Colors.amber,
-];
+    Colors.red,
+    Colors.green,
+    Colors.greenAccent,
+    Colors.amberAccent,
+    Colors.blue,
+    Colors.amber,
+  ];
   //final controller = CarouselController();
 
   // final imagesCarousel = [
@@ -55,7 +55,7 @@ class ScreenState extends State<Screen> {
     "example/images/slider/6.jpg",
   ];
   Widget buildImage(String imagesCarousel, int index) => Container(
-     // margin: EdgeInsets.symmetric(horizontal: 2),
+      // margin: EdgeInsets.symmetric(horizontal: 2),
       color: Colors.grey,
       width: double.infinity,
       child: Image.asset(
@@ -63,17 +63,17 @@ class ScreenState extends State<Screen> {
         fit: BoxFit.cover,
       ));
   Widget buildIndicator() => Container(
-    child:SmoothPageIndicator(
-       // activeIndex: activeIndex,
-        controller:controller,
+          child: SmoothPageIndicator(
+        // activeIndex: activeIndex,
+        controller: controller,
         count: imagesCarousel.length,
-        
+
         effect: SwapEffect(
-                    dotHeight: 16,
-                    dotWidth: 16,
-                    type: SwapType.yRotation,
-                  ),
-                ));
+          dotHeight: 16,
+          dotWidth: 16,
+          type: SwapType.yRotation,
+        ),
+      ));
 
   @override
   Widget build(BuildContext context) {
@@ -133,7 +133,7 @@ class ScreenState extends State<Screen> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                       buildIndicator(),
+                        buildIndicator(),
                       ],
                     ),
                   ),
@@ -155,22 +155,7 @@ class ScreenState extends State<Screen> {
                   child: ListView(
                       scrollDirection: Axis.horizontal,
                       children: <Widget>[
-                        InkWell(
-                          child: Container(
-                              height: 100,
-                              width: 100,
-                              child: ListTile(
-                                  title: Image.asset(
-                                    "example/images/logo/huawei.png",
-                                    height: 80,
-                                    width: 80,
-                                    fit: BoxFit.cover,
-                                  ),
-                                  subtitle: Container(
-                                      child: Text("Huawei",
-                                          textAlign: TextAlign.center)))),
-                          onTap: () {},
-                        ),
+                        buildCategoriesLogo(),
                         InkWell(
                           child: Container(
                               height: 100,
@@ -397,6 +382,27 @@ class ScreenState extends State<Screen> {
               ),
             ]),
           )),
+    );
+  }
+
+  InkWell buildCategoriesLogo() {
+    final String imageLogo;
+    final String text;
+    final Function onTap;
+    return InkWell(
+      child: Container(
+          height: 100,
+          width: 100,
+          child: ListTile(
+              title: Image.asset(
+                "example/images/logo/huawei.png",
+                height: 80,
+                width: 80,
+                fit: BoxFit.cover,
+              ),
+              subtitle: Container(
+                  child: Text("Huawei", textAlign: TextAlign.center)))),
+      onTap: () {},
     );
   }
 }
