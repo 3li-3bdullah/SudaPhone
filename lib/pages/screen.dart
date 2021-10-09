@@ -165,39 +165,12 @@ class ScreenState extends State<Screen> {
                           text: "Apple",
                           onTap: (){},
                         ),
-
-                        InkWell(
-                          child: Container(
-                              height: 100,
-                              width: 100,
-                              child: ListTile(
-                                  title: Image.asset(
-                                    "example/images/logo/iphone.jpg",
-                                    height: 80,
-                                    width: 80,
-                                    fit: BoxFit.cover,
-                                  ),
-                                  subtitle: Container(
-                                      child: Text("Apple",
-                                          textAlign: TextAlign.center)))),
-                          onTap: () {},
+                        BuildCategoriesLogo(
+                          imageLogo: "example/images/logo/realme.png",
+                          text: "Realme",
+                          onTap: (){},
                         ),
-                        InkWell(
-                          child: Container(
-                              height: 100,
-                              width: 100,
-                              child: ListTile(
-                                  title: Image.asset(
-                                    "example/images/logo/realme.png",
-                                    height: 80,
-                                    width: 80,
-                                    fit: BoxFit.cover,
-                                  ),
-                                  subtitle: Container(
-                                      child: Text("Realme",
-                                          textAlign: TextAlign.center)))),
-                          onTap: () {},
-                        ),
+                        
                         InkWell(
                           child: Container(
                               height: 100,
