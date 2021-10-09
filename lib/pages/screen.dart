@@ -159,44 +159,43 @@ class ScreenState extends State<Screen> {
                         BuildCategoriesLogo(
                           imageLogo: "example/images/logo/huawei.png",
                           text: "Huawei",
-                          onTap: (){},
+                          onTap: () {},
                         ),
                         BuildCategoriesLogo(
                           imageLogo: "example/images/logo/iphone.jpg",
                           text: "Apple",
-                          onTap: (){},
+                          onTap: () {},
                         ),
                         BuildCategoriesLogo(
                           imageLogo: "example/images/logo/realme.png",
                           text: "Realme",
-                          onTap: (){},
+                          onTap: () {},
                         ),
                         BuildCategoriesLogo(
                           imageLogo: "example/images/logo/lenovo.png",
                           text: "Lenovo",
-                          onTap: (){},
+                          onTap: () {},
                         ),
                         BuildCategoriesLogo(
                           imageLogo: "example/images/logo/samsung.jpg",
                           text: "Samsung",
-                          onTap: (){},
+                          onTap: () {},
                         ),
                         BuildCategoriesLogo(
                           imageLogo: "example/images/logo/xiaomi.png",
                           text: "Xiaomi",
-                          onTap: (){},
+                          onTap: () {},
                         ),
-                       BuildCategoriesLogo(
+                        BuildCategoriesLogo(
                           imageLogo: "example/images/logo/oppo.jpg",
                           text: "Oppo",
-                          onTap: (){},
+                          onTap: () {},
                         ),
-                       BuildCategoriesLogo(
+                        BuildCategoriesLogo(
                           imageLogo: "example/images/logo/tecno.png",
                           text: "Tecno",
-                          onTap: (){},
+                          onTap: () {},
                         ),
-                        
                       ])),
               // End The Long Container....
               Container(
@@ -211,20 +210,15 @@ class ScreenState extends State<Screen> {
                     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                         crossAxisCount: 2),
                     children: <Widget>[
-
-                      LastProduct(),
-                      InkWell(
-                        child: GridTile(
-                            child: Image.asset(
-                                "example/images/product/samsung.jpg"),
-                            footer: Container(
-                                height: 25,
-                                color: Colors.black.withOpacity(0.4),
-                                child: Text("Samsung S20 Ultra : 1100\$",
-                                    style: TextStyle(color: Colors.white),
-                                    textAlign: TextAlign.center))),
-                        onTap: () {},
+                      LastProduct(
+                        imageProduct: "example/images/product/huawei.jpg",
+                        text: "Huawei Mate 40 Pro : 1200\$",
                       ),
+                      LastProduct(
+                        imageProduct: "example/images/product/samsung.jpg",
+                        text: "Samsung S20 Ultra : 1100\$",
+                      ),
+                      
                       InkWell(
                         child: GridTile(
                             child: Image.asset(
@@ -307,27 +301,25 @@ class ScreenState extends State<Screen> {
 
 class LastProduct extends StatelessWidget {
   const LastProduct({
-    Key key,
-  }) : super(key: key);
-
+     this.imageProduct, this.text,
+  });
+  final String imageProduct;
+  final String text;
   @override
   Widget build(BuildContext context) {
     return InkWell(
       child: GridTile(
-          child: Image.asset(
-              "example/images/product/huawei.jpg"),
+          child: Image.asset(imageProduct),
           footer: Container(
               height: 25,
               color: Colors.black.withOpacity(0.4),
-              child: Text("Huawei Mate 40 Pro : 1200\$",
+              child: Text(text,
                   style: TextStyle(color: Colors.white),
                   textAlign: TextAlign.center))),
       onTap: () {},
     );
   }
 }
-
-
 
 class DataSearch extends SearchDelegate<String> {
   @override
