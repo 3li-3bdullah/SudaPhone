@@ -218,7 +218,10 @@ class ScreenState extends State<Screen> {
                         imageProduct: "example/images/product/samsung.jpg",
                         text: "Samsung S20 Ultra : 1100\$",
                       ),
-                      
+                      LastProduct(
+                        imageProduct: "example/images/product/iphone.jpg",
+                        text: "iPhone 12 pro max : 1399\$",
+                      ),
                       InkWell(
                         child: GridTile(
                             child: Image.asset(
