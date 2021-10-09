@@ -222,33 +222,15 @@ class ScreenState extends State<Screen> {
                       ),
                       LastProduct(
                         imageProduct: "example/images/product/iphone.jpg",
+                        text: "Xaiomi Mi 10T  : 1100\$",
+                        onTap: (){},
+                      ),
+                      LastProduct(
+                        imageProduct: "example/images/product/xiaomi.jpg",
                         text: "iPhone 12 pro max : 1399\$",
                         onTap: (){},
                       ),
-                      InkWell(
-                        child: GridTile(
-                            child: Image.asset(
-                                "example/images/product/iphone.jpg"),
-                            footer: Container(
-                                height: 25,
-                                color: Colors.black.withOpacity(0.4),
-                                child: Text("iPhone 12 pro max : 1399\$",
-                                    style: TextStyle(color: Colors.white),
-                                    textAlign: TextAlign.center))),
-                        onTap: () {},
-                      ),
-                      InkWell(
-                        child: GridTile(
-                            child: Image.asset(
-                                "example/images/product/xiaomi.jpg"),
-                            footer: Container(
-                                height: 25,
-                                color: Colors.black.withOpacity(0.4),
-                                child: Text("Xaiomi Mi 10T  : 1100\$",
-                                    style: TextStyle(color: Colors.white),
-                                    textAlign: TextAlign.center))),
-                        onTap: () {},
-                      ),
+                      
                       InkWell(
                         child: GridTile(
                             child:
