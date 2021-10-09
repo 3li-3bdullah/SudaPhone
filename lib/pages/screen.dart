@@ -155,7 +155,11 @@ class ScreenState extends State<Screen> {
                   child: ListView(
                       scrollDirection: Axis.horizontal,
                       children: <Widget>[
-                        BuildCategoriesLogo(),
+                        BuildCategoriesLogo(
+                          imageLogo: "example/images/logo/huawei.png",
+                          text: "Huawei",
+                          onTap: (){},
+                        ),
                         InkWell(
                           child: Container(
                               height: 100,
