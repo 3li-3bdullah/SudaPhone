@@ -97,21 +97,10 @@ class _MyDrawerState extends State<MyDrawer> {
             icon: Icons.settings_outlined,
             onTap: (){},
           ),
-          InkWell(
-            child: ListTile(
-              title: Text("الإعدادات",
-                  style: TextStyle(color: Colors.black, fontSize: 18)),
-              leading: Icon(Icons.settings, color: Colors.blue, size: 25),
-            ),
-            onTap: () {},
-          ),
-          InkWell(
-            child: ListTile(
-              title: Text("تسجيل الدخول",
-                  style: TextStyle(color: Colors.black, fontSize: 18)),
-              leading: Icon(Icons.exit_to_app, color: Colors.blue, size: 25),
-            ),
-            onTap: () {
+          CustomDrawerItems(
+            text: "تسجيل الدخول",
+            icon: Icons.exit_to_app_outlined,
+            onTap: (){
               Navigator.of(context).push(MaterialPageRoute(builder: (context) {
                 return LogIn();
               }));
