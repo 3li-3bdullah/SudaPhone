@@ -92,23 +92,12 @@ class _MobileDetailsState extends State<MobileDetails> {
                       text2:   " IP68 مقاوم للماء , Gorilla Glass 6",
                       containerColor: kcontainerColor2,
                     ),
+                   TextOfDetails(
+                      text1:  "دقة الشاشة :",
+                      text2:   "6.9 بوصة بدقة QHD + بها ثقب صغير",
+                      containerColor: kcontainerColor1,
+                    ),
                    
-                    Container(
-                        width: MediaQuery.of(context).size.width,
-                        padding: EdgeInsets.all(10),
-                        child: RichText(
-                            text: TextSpan(
-                                style: TextStyle(fontFamily: 'Cairo'),
-                                children: <TextSpan>[
-                              TextSpan(
-                                  text: "دقة الشاشة :",
-                                  style: TextStyle(
-                                      fontSize: 18, color: Colors.black)),
-                              TextSpan(
-                                  text: "6.9 بوصة بدقة QHD + بها ثقب صغير",
-                                  style: TextStyle(
-                                      fontSize: 18, color: Colors.blue))
-                            ]))),
                     Container(
                         width: MediaQuery.of(context).size.width,
                         padding: EdgeInsets.all(10),
