@@ -82,41 +82,12 @@ class _MobileDetailsState extends State<MobileDetails> {
                       text2:  "Super Amoled 5.5",
                       containerColor: kcontainerColor2,
                     ),
-                    Container(
-                      width: MediaQuery.of(context).size.width,
-                      padding: EdgeInsets.all(10),
-                      color: Colors.blue,
-                      child: RichText(
-                          text: TextSpan(
-                              style: TextStyle(fontFamily: 'Cairo'),
-                              children: <TextSpan>[
-                            TextSpan(
-                                text: "الشاشة :",
-                                style: TextStyle(
-                                    fontSize: 18, color: Colors.black)),
-                            TextSpan(
-                                text: "Super Amoled 5.5",
-                                style: TextStyle(
-                                    fontSize: 18, color: Colors.white))
-                          ])),
+                    TextOfDetails(
+                      text1:  "نظام التشغيل :",
+                      text2:  "Android 10, One UI 2",
+                      containerColor: kcontainerColor1,
                     ),
-                    Container(
-                      width: MediaQuery.of(context).size.width,
-                      padding: EdgeInsets.all(10),
-                      child: RichText(
-                          text: TextSpan(
-                              style: TextStyle(fontFamily: 'Cairo'),
-                              children: <TextSpan>[
-                            TextSpan(
-                                text: "نظام التشغيل :",
-                                style: TextStyle(
-                                    fontSize: 18, color: Colors.black)),
-                            TextSpan(
-                                text: "Android 10, One UI 2",
-                                style:
-                                    TextStyle(fontSize: 18, color: Colors.blue))
-                          ])),
-                    ),
+                    
                     Container(
                         width: MediaQuery.of(context).size.width,
                         padding: EdgeInsets.all(10),
