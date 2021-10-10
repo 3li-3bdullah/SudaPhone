@@ -219,25 +219,10 @@ class _MobileDetailsState extends State<MobileDetails> {
                       text2:   "لا يمكن استخدام شريحتين و كارت ميموري في نفس الوقت",
                       containerColor: kcontainerColor1,
                     ),
-                    
-                    Container(
-                      width: MediaQuery.of(context).size.width,
-                      padding: EdgeInsets.all(10),
-                      color: Colors.blue,
-                      child: RichText(
-                          text: TextSpan(
-                              style: TextStyle(fontFamily: 'Cairo'),
-                              children: <TextSpan>[
-                            TextSpan(
-                                text: "الشاشة :",
-                                style: TextStyle(
-                                    fontSize: 18, color: Colors.black)),
-                            TextSpan(
-                                text:
-                                    "كبيرة جدا في اليد وستحتاج إلي بعض الوقت للاعتياد عليها",
-                                style: TextStyle(
-                                    fontSize: 18, color: Colors.white)),
-                          ])),
+                    TextOfDetails(
+                      text1:"الشاشة : ",
+                      text2:   "كبيرة جدا في اليد وستحتاج إلي بعض الوقت للاعتياد عليها",
+                      containerColor: kcontainerColor2,
                     ),
                   ],
                 )),
