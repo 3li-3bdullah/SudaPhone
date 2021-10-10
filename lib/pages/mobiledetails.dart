@@ -151,41 +151,12 @@ class _MobileDetailsState extends State<MobileDetails> {
                       text2:  "ممتازة وكبيرة و بدقة عالية ومعدل تحديث 120 هرتز",
                       containerColor: kcontainerColor1,
                     ),
-                    Container(
-                        width: MediaQuery.of(context).size.width,
-                        padding: EdgeInsets.all(10),
-                        child: RichText(
-                            text: TextSpan(
-                                style: TextStyle(fontFamily: 'Cairo'),
-                                children: <TextSpan>[
-                              TextSpan(
-                                  text: "الشاشة  : ",
-                                  style: TextStyle(
-                                      fontSize: 18, color: Colors.black)),
-                              TextSpan(
-                                  text:
-                                      "ممتازة وكبيرة و بدقة عالية ومعدل تحديث 120 هرتز .",
-                                  style: TextStyle(
-                                      fontSize: 18, color: Colors.blue))
-                            ]))),
-                    Container(
-                        width: MediaQuery.of(context).size.width,
-                        padding: EdgeInsets.all(10),
-                        color: Colors.blue,
-                        child: RichText(
-                            text: TextSpan(
-                                style: TextStyle(fontFamily: 'Cairo'),
-                                children: <TextSpan>[
-                              TextSpan(
-                                  text: "البطارية : ",
-                                  style: TextStyle(
-                                      fontSize: 18, color: Colors.black)),
-                              TextSpan(
-                                  text:
-                                      "كبيرة جدا والتي يتم توفيرها لأول مرة يهذه السعة في سلسلة ال S .",
-                                  style: TextStyle(
-                                      fontSize: 18, color: Colors.white))
-                            ]))),
+                    TextOfDetails(
+                      text1:   "البطارية : ",
+                      text2: "كبيرة جدا والتي يتم توفيرها لأول مرة يهذه السعة في سلسلة ال S",
+                      containerColor: kcontainerColor2,
+                    ),
+                    
                     Container(
                       width: MediaQuery.of(context).size.width,
                       padding: EdgeInsets.all(10),
