@@ -50,18 +50,7 @@ class _MyDrawerState extends State<MyDrawer> {
                 //     fit: BoxFit.cover)
                     ),
           ),
-          InkWell(
-              child: ListTile(
-                title: Text("الصفحة الرئيسية",
-                    style: TextStyle(color: Colors.black, fontSize: 18)),
-                leading: Icon(Icons.home, color:khomeBar, size: 25),
-              ),
-              onTap: () {
-                Navigator.of(context)
-                    .push(MaterialPageRoute(builder: (context) {
-                  return Screen();
-                }));
-              }),
+          CustomDrawerItems(),
           InkWell(
               child: ListTile(
                 title: Text("الأقسام",
@@ -124,5 +113,27 @@ class _MyDrawerState extends State<MyDrawer> {
         ],
       ),
     );
+  }
+}
+
+class CustomDrawerItems extends StatelessWidget {
+  const CustomDrawerItems({
+    Key key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+        child: ListTile(
+          title: Text("الصفحة الرئيسية",
+              style: TextStyle(color: Colors.black, fontSize: 18)),
+          leading: Icon(Icons.home, color:khomeBar, size: 25),
+        ),
+        onTap: () {
+          Navigator.of(context)
+              .push(MaterialPageRoute(builder: (context) {
+            return Screen();
+          }));
+        });
   }
 }
