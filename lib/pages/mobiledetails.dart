@@ -73,38 +73,38 @@ class _MobileDetailsState extends State<MobileDetails> {
                 child: Column(
                   children: <Widget>[
                     TextOfDetails(
-                      text1: "الموديل :",
+                      text1: "الموديل : ",
                       text2: "S20 Ultra",
                       containerColor: kcontainerColor1,
                     ),
                      TextOfDetails(
-                      text1:  "الشاشة :",
+                      text1:  "الشاشة : ",
                       text2:  "Super Amoled 5.5",
                       containerColor: kcontainerColor2,
                     ),
                     TextOfDetails(
-                      text1:  "نظام التشغيل :",
+                      text1:  "نظام التشغيل : ",
                       text2:  "Android 10, One UI 2",
                       containerColor: kcontainerColor1,
                     ),
                     TextOfDetails(
-                      text1:  "الحماية  :",
+                      text1:  "الحماية  : ",
                       text2:   " IP68 مقاوم للماء , Gorilla Glass 6",
                       containerColor: kcontainerColor2,
                     ),
                    TextOfDetails(
-                      text1:  "دقة الشاشة :",
+                      text1:  "دقة الشاشة : ",
                       text2:   "6.9 بوصة بدقة QHD + بها ثقب صغير",
                       containerColor: kcontainerColor1,
                     ),
                    TextOfDetails(
-                      text1:  "المعالج :",
+                      text1:  "المعالج : ",
                       text2:   "Snapdragon 865, Eiyons 990",
                       containerColor: kcontainerColor2,
                     ),
                   TextOfDetails(
-                      text1: "البطارية :",
-                      text2: " 5000 MAH " + "" + "شحن سريع w15",
+                      text1: "البطارية : ",
+                      text2: "5000 MAH " + "" + "شحن سريع w15",
                       containerColor: kcontainerColor1,
                     ),
                     
@@ -131,23 +131,15 @@ class _MobileDetailsState extends State<MobileDetails> {
                       text2: "يقرب حتي 100 مرة أثناء التصوير بالكاميرا الزوم",
                       containerColor: kcontainerColor1,
                     ),
-                    Container(
-                      width: MediaQuery.of(context).size.width,
-                      padding: EdgeInsets.all(10),
-                      color: Colors.blue,
-                      child: RichText(
-                          text: TextSpan(
-                              style: TextStyle(fontFamily: 'Cairo'),
-                              children: <TextSpan>[
-                            TextSpan(
-                                text: "دعم التصوير : ",
-                                style: TextStyle(
-                                    fontSize: 18, color: Colors.black)),
-                            TextSpan(
-                                text: "يدعم تصوير الفيديوهات بجودة ال 8K.",
-                                style: TextStyle(
-                                    fontSize: 18, color: Colors.white))
-                          ])),
+                    TextOfDetails(
+                      text1:  "دعم التصوير : ",
+                      text2: "يدعم تصوير الفيديوهات بجودة ال 8K",
+                      containerColor: kcontainerColor2,
+                    ),
+                    TextOfDetails(
+                      text1:  "الذاكرة العشوائية : ",
+                      text2: "كبيرة جدا تعطيك مرونه في فتح الكثير من التطبيقات ولكن فعليا هل سنحتاج إلي كل هذه المساحة بالاخص مع قدومها من نوع LPDDR5",
+                      containerColor: kcontainerColor1,
                     ),
                     Container(
                       width: MediaQuery.of(context).size.width,
@@ -157,7 +149,7 @@ class _MobileDetailsState extends State<MobileDetails> {
                               style: TextStyle(fontFamily: 'Cairo'),
                               children: <TextSpan>[
                             TextSpan(
-                                text: " الذاكرة العشوائية : ",
+                                text: "الذاكرة العشوائية : ",
                                 style: TextStyle(
                                     fontSize: 18, color: Colors.black)),
                             TextSpan(
