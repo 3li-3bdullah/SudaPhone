@@ -189,7 +189,11 @@ class _MobileDetailsState extends State<MobileDetails> {
                       text2: "مرتفع وحجمة ثقيل",
                       containerColor: kcontainerColor1,
                     ),
-                    
+                    TextOfDetails(
+                      text1: "المنافذ :",
+                      text2: "لا يوجد منفذ 3.5 ملم",
+                      containerColor: kcontainerColor2,
+                    ),
                     Container(
                       width: MediaQuery.of(context).size.width,
                       padding: EdgeInsets.all(10),
