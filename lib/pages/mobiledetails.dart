@@ -112,37 +112,25 @@ class _MobileDetailsState extends State<MobileDetails> {
                 )),
             //start the second container
             Container(
-              color: Colors.green,
+              color: kappDetails,
               padding: EdgeInsets.all(10),
               child: Center(
                   child: Text(
                 "المميزات",
-                style: TextStyle(fontSize: 18, fontFamily: 'Cairo'),
+                style: TextStyle(color:Colors.white ,fontSize: 18, fontFamily: 'Cairo'),
               )),
             ),
             //Start Column Specfiction
-
             Container(
                 padding: EdgeInsets.all(10),
                 child: Column(
                   children: <Widget>[
-                    Container(
-                        width: MediaQuery.of(context).size.width,
-                        padding: EdgeInsets.all(10),
-                        color: Colors.white,
-                        child: RichText(
-                            text: TextSpan(
-                                style: TextStyle(
-                                    fontSize: 18, fontFamily: 'Cairo'),
-                                children: <TextSpan>[
-                              TextSpan(
-                                  text: "التقريب : ",
-                                  style: TextStyle(color: Colors.black)),
-                              TextSpan(
-                                  text:
-                                      ".يقرب حتي 100 مرة أثناء التصوير بالكاميرا الزوم",
-                                  style: TextStyle(color: Colors.blue)),
-                            ]))),
+
+                     TextOfDetails(
+                      text1:  "التقريب : ",
+                      text2: "يقرب حتي 100 مرة أثناء التصوير بالكاميرا الزوم",
+                      containerColor: kcontainerColor1,
+                    ),
                     Container(
                       width: MediaQuery.of(context).size.width,
                       padding: EdgeInsets.all(10),
