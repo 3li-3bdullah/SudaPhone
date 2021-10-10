@@ -210,30 +210,16 @@ class _MobileDetailsState extends State<MobileDetails> {
                       containerColor: kcontainerColor1,
                     ),
                    TextOfDetails(
-                      text1: "الألوان :",
+                      text1: "الألوان : ",
                       text2:  "محددة",
                       containerColor: kcontainerColor2,
                     ),
-                    
-                    Container(
-                      width: MediaQuery.of(context).size.width,
-                      padding: EdgeInsets.all(10),
-                      color: Colors.white,
-                      child: RichText(
-                          text: TextSpan(
-                              style: TextStyle(fontFamily: 'Cairo'),
-                              children: <TextSpan>[
-                            TextSpan(
-                                text: "الشرايح :",
-                                style: TextStyle(
-                                    fontSize: 18, color: Colors.black)),
-                            TextSpan(
-                                text:
-                                    "لا يمكن استخدام شريحتين و كارت ميموري في نفس الوقت",
-                                style: TextStyle(
-                                    fontSize: 18, color: Colors.blue)),
-                          ])),
+                    TextOfDetails(
+                      text1: "الشرايح : ",
+                      text2:   "لا يمكن استخدام شريحتين و كارت ميموري في نفس الوقت",
+                      containerColor: kcontainerColor1,
                     ),
+                    
                     Container(
                       width: MediaQuery.of(context).size.width,
                       padding: EdgeInsets.all(10),
