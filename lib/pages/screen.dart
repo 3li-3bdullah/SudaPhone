@@ -187,42 +187,42 @@ class ScreenState extends State<Screen> {
                     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                         crossAxisCount: 2),
                     children: <Widget>[
-                      LastProduct(
+                      CustomLastProduct(
                         imageProduct: "example/images/product/huawei.jpg",
                         text: "Huawei Mate 40 Pro : 1200\$",
                         onTap: (){},
                       ),
-                      LastProduct(
+                      CustomLastProduct(
                         imageProduct: "example/images/product/samsung.jpg",
                         text: "Samsung S20 Ultra : 1100\$",
                         onTap: (){},
                       ),
-                      LastProduct(
+                      CustomLastProduct(
                         imageProduct: "example/images/product/iphone.jpg",
                         text: "iPhone 12 pro max : 1399\$",
                         onTap: (){},
                       ),
-                      LastProduct(
+                      CustomLastProduct(
                         imageProduct: "example/images/product/xiaomi.jpg",
                         text: "Xaiomi Mi 10T  : 1050\$" ,
                         onTap: (){},
                       ),
-                      LastProduct(
+                      CustomLastProduct(
                         imageProduct: "example/images/product/oppo.jpg",
                         text: "Oppo F17 Pro : 1100\$",
                         onTap: (){},
                       ),
-                      LastProduct(
+                      CustomLastProduct(
                         imageProduct:  "example/images/product/lenovo.jpg",
                         text: "Lenovo K12 Pro : 1400\$",
                         onTap: (){},
                       ),
-                     LastProduct(
+                     CustomLastProduct(
                         imageProduct:  "example/images/product/realme.jpg",
                         text: "Realme race teaser : 900\$",
                         onTap: (){},
                       ),
-                      LastProduct(
+                      CustomLastProduct(
                         imageProduct: "example/images/product/tecno.jpg",
                         text: "Tecno Spark6 : 850\$",
                         onTap: (){},
