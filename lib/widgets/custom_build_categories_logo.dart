@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 
 class CustomBuildCategoriesLogo extends StatelessWidget {
   const CustomBuildCategoriesLogo({
-     this.imageLogo, this.text, this.onTap,
+    required this.imageLogo,
+    required  this.text, 
+    required  this.onTap,
   });
   final String imageLogo;
   final String text;
