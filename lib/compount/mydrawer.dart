@@ -61,18 +61,17 @@ class _MyDrawerState extends State<MyDrawer> {
           }));
             },
           ),
-          InkWell(
-              child: ListTile(
-                title: Text("الأقسام",
-                    style: TextStyle(color: Colors.black, fontSize: 18)),
-                leading: Icon(Icons.category, color: Colors.blue, size: 25),
-              ),
-              onTap: () {
-                Navigator.of(context)
+          CustomDrawerItems(
+            text: "الأقسام",
+            icon: Icons.category_outlined,
+            onTap: (){
+             Navigator.of(context)
                     .push(MaterialPageRoute(builder: (context) {
                   return Categories();
                 }));
-              }),
+            },
+          ),
+          
           InkWell(
             child: ListTile(
               title: Text("إضافة منشور",
