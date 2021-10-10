@@ -164,7 +164,7 @@ class _MobileDetailsState extends State<MobileDetails> {
                     TextOfDetails(
                       text1:   "أداء المعالج : ",
                       text2: "قوي و يمتاز بأنه قوي من حيث الأداء",
-                      containerColor: kcontainerColor1,
+                      containerColor: kcontainerColor2,
                     ),
                   ],
                 )),
@@ -184,23 +184,12 @@ class _MobileDetailsState extends State<MobileDetails> {
                 padding: EdgeInsets.all(10),
                 child: Column(
                   children: <Widget>[
+                    TextOfDetails(
+                      text1:  "السعر : ",
+                      text2: "مرتفع وحجمة ثقيل",
+                      containerColor: kcontainerColor1,
+                    ),
                     
-                    Container(
-                        width: MediaQuery.of(context).size.width,
-                        padding: EdgeInsets.all(10),
-                        color: Colors.white,
-                        child: RichText(
-                            text: TextSpan(
-                                style: TextStyle(
-                                    fontSize: 18, fontFamily: 'Cairo'),
-                                children: <TextSpan>[
-                              TextSpan(
-                                  text: "السعر :",
-                                  style: TextStyle(color: Colors.black)),
-                              TextSpan(
-                                  text: "مرتفع وحجمة ثقيل",
-                                  style: TextStyle(color: Colors.blue)),
-                            ]))),
                     Container(
                       width: MediaQuery.of(context).size.width,
                       padding: EdgeInsets.all(10),
