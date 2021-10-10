@@ -52,55 +52,55 @@ class _MyDrawerState extends State<MyDrawer> {
               //     fit: BoxFit.cover)
             ),
           ),
-          CustomDrawerItems(
-            text: "الصفحة الرئيسية",
-            icon: Icons.home_outlined,
-            onTap: (){
+          drawerItems(
+            "الصفحة الرئيسية",
+            Icons.home_outlined,
+            () {
               Navigator.of(context).push(MaterialPageRoute(builder: (context) {
-            return Screen();
-          }));
+                return Screen();
+              }));
             },
           ),
-          CustomDrawerItems(
-            text: "الأقسام",
-            icon: Icons.category_outlined,
-            onTap: (){
-             Navigator.of(context)
-                    .push(MaterialPageRoute(builder: (context) {
-                  return Categories();
-                }));
+          drawerItems(
+            "الأقسام",
+            Icons.category_outlined,
+            () {
+              Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+                return Categories();
+              }));
             },
           ),
-          CustomDrawerItems(
-            text: "إضافة منشور",
-            icon: Icons.post_add_outlined,
-            onTap: (){
-             Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+          drawerItems(
+            "إضافة منشور",
+            Icons.post_add_outlined,
+            () {
+              Navigator.of(context).push(MaterialPageRoute(builder: (context) {
                 return Post();
               }));
             },
           ),
+          
           Divider(
             color: khomeBar,
           ),
-          CustomDrawerItems(
-            text: "حول التطبيق",
-            icon: Icons.info_outline,
-            onTap: (){
-             Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+          drawerItems(
+            "حول التطبيق",
+            Icons.info_outline,
+            () {
+              Navigator.of(context).push(MaterialPageRoute(builder: (context) {
                 return AboutApp();
               }));
             },
           ),
-          CustomDrawerItems(
-            text: "الإعدادات",
-            icon: Icons.settings_outlined,
-            onTap: (){},
+          drawerItems(
+            "الإعدادات",
+            Icons.settings_outlined,
+            () {},
           ),
-          CustomDrawerItems(
-            text: "تسجيل الدخول",
-            icon: Icons.exit_to_app_outlined,
-            onTap: (){
+          drawerItems(
+            "تسجيل الدخول",
+            Icons.exit_to_app_outlined,
+             () {
               Navigator.of(context).push(MaterialPageRoute(builder: (context) {
                 return LogIn();
               }));
@@ -110,26 +110,14 @@ class _MyDrawerState extends State<MyDrawer> {
       ),
     );
   }
-}
 
-class CustomDrawerItems extends StatelessWidget {
-  const CustomDrawerItems({
-    this.text,
-    this.icon,
-     this.onTap,
-  });
-  final String text;
-  final IconData icon;
-  final Function onTap;
-  @override
-  Widget build(BuildContext context) {
+  InkWell drawerItems(String text, IconData icon, Function onTap) {
     return InkWell(
-        child: ListTile(
-          title:
-              Text(text, style: TextStyle(color: Colors.black, fontSize: 18)),
-          leading: Icon(icon, color: khomeBar, size: 25),
-        ),
-        onTap: onTap,
-        );
+      child: ListTile(
+        title: Text(text, style: TextStyle(color: Colors.black, fontSize: 18)),
+        leading: Icon(icon, color: khomeBar, size: 25),
+      ),
+      onTap: onTap,
+    );
   }
 }
