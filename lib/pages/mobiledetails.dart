@@ -77,6 +77,11 @@ class _MobileDetailsState extends State<MobileDetails> {
                       text2: "S20 Ultra",
                       containerColor: kcontainerColor1,
                     ),
+                     TextOfDetails(
+                      text1:  "الشاشة :",
+                      text2:  "Super Amoled 5.5",
+                      containerColor: kcontainerColor2,
+                    ),
                     Container(
                       width: MediaQuery.of(context).size.width,
                       padding: EdgeInsets.all(10),
