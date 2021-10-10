@@ -194,41 +194,13 @@ class _MobileDetailsState extends State<MobileDetails> {
                       text2: "لا يوجد منفذ 3.5 ملم",
                       containerColor: kcontainerColor2,
                     ),
-                    Container(
-                      width: MediaQuery.of(context).size.width,
-                      padding: EdgeInsets.all(10),
-                      color: Colors.blue,
-                      child: RichText(
-                          text: TextSpan(
-                              style: TextStyle(fontFamily: 'Cairo'),
-                              children: <TextSpan>[
-                            TextSpan(
-                                text: "المنافذ :",
-                                style: TextStyle(
-                                    fontSize: 18, color: Colors.black)),
-                            TextSpan(
-                                text: "لا يوجد منفذ 3.5 ملم",
-                                style: TextStyle(
-                                    fontSize: 18, color: Colors.white))
-                          ])),
+                    TextOfDetails(
+                      text1: "لمبة إشعارات :",
+                      text2: "لا توجد به لمبه إشعارات",
+                      containerColor: kcontainerColor1,
                     ),
-                    Container(
-                      width: MediaQuery.of(context).size.width,
-                      padding: EdgeInsets.all(10),
-                      child: RichText(
-                          text: TextSpan(
-                              style: TextStyle(fontFamily: 'Cairo'),
-                              children: <TextSpan>[
-                            TextSpan(
-                                text: " لمبة إشعارات :",
-                                style: TextStyle(
-                                    fontSize: 18, color: Colors.black)),
-                            TextSpan(
-                                text: "لا توجد به لمبه إشعارات",
-                                style:
-                                    TextStyle(fontSize: 18, color: Colors.blue))
-                          ])),
-                    ),
+                    
+                    
                     Container(
                         width: MediaQuery.of(context).size.width,
                         padding: EdgeInsets.all(10),
