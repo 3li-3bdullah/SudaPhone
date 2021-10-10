@@ -146,7 +146,11 @@ class _MobileDetailsState extends State<MobileDetails> {
                       text2:  "كامبرا قوية جدا قادرة علي المنافسة وكاد تكون الأفضل في 2020 ... مع كاميرا سيلفي مميزة 40 ميجا بيكسل",
                       containerColor: kcontainerColor2,
                     ),
-                    
+                    TextOfDetails(
+                      text1:  "الشاشة  : ",
+                      text2:  "ممتازة وكبيرة و بدقة عالية ومعدل تحديث 120 هرتز",
+                      containerColor: kcontainerColor1,
+                    ),
                     Container(
                         width: MediaQuery.of(context).size.width,
                         padding: EdgeInsets.all(10),
