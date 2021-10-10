@@ -200,27 +200,16 @@ class _MobileDetailsState extends State<MobileDetails> {
                       containerColor: kcontainerColor1,
                     ),
                     TextOfDetails(
-                      text1: "الشبكة  : ",
+                      text1: "الشبكة : ",
                       text2: "لا توجد به لمبه إشعارات",
                       containerColor: kcontainerColor2,
                     ),
-                    
-                    Container(
-                        width: MediaQuery.of(context).size.width,
-                        padding: EdgeInsets.all(10),
-                        child: RichText(
-                            text: TextSpan(
-                                style: TextStyle(fontFamily: 'Cairo'),
-                                children: <TextSpan>[
-                              TextSpan(
-                                  text: "الكاميرا  :",
-                                  style: TextStyle(
-                                      fontSize: 18, color: Colors.black)),
-                              TextSpan(
-                                  text: "بروز كبير في الشكل",
-                                  style: TextStyle(
-                                      fontSize: 18, color: Colors.blue))
-                            ]))),
+                    TextOfDetails(
+                      text1: "الكاميرا : ",
+                      text2:  "بروز كبير في الشكل",
+                      containerColor: kcontainerColor1,
+                    ),
+                   
                     Container(
                         width: MediaQuery.of(context).size.width,
                         padding: EdgeInsets.all(10),
