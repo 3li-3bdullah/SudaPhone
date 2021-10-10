@@ -190,35 +190,21 @@ class _MobileDetailsState extends State<MobileDetails> {
                       containerColor: kcontainerColor1,
                     ),
                     TextOfDetails(
-                      text1: "المنافذ :",
+                      text1: "المنافذ : ",
                       text2: "لا يوجد منفذ 3.5 ملم",
                       containerColor: kcontainerColor2,
                     ),
                     TextOfDetails(
-                      text1: "لمبة إشعارات :",
+                      text1: "لمبة إشعارات : ",
                       text2: "لا توجد به لمبه إشعارات",
                       containerColor: kcontainerColor1,
                     ),
+                    TextOfDetails(
+                      text1: "الشبكة  : ",
+                      text2: "لا توجد به لمبه إشعارات",
+                      containerColor: kcontainerColor2,
+                    ),
                     
-                    
-                    Container(
-                        width: MediaQuery.of(context).size.width,
-                        padding: EdgeInsets.all(10),
-                        color: Colors.blue,
-                        child: RichText(
-                            text: TextSpan(
-                                style: TextStyle(fontFamily: 'Cairo'),
-                                children: <TextSpan>[
-                              TextSpan(
-                                  text: "الشبكة  :",
-                                  style: TextStyle(
-                                      fontSize: 18, color: Colors.black)),
-                              TextSpan(
-                                  text:
-                                      "لا يدعم الجيل الخامس في النسخة العربية",
-                                  style: TextStyle(
-                                      fontSize: 18, color: Colors.white))
-                            ]))),
                     Container(
                         width: MediaQuery.of(context).size.width,
                         padding: EdgeInsets.all(10),
