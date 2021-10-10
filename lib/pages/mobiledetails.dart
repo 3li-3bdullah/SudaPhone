@@ -141,42 +141,12 @@ class _MobileDetailsState extends State<MobileDetails> {
                       text2: "كبيرة جدا تعطيك مرونه في فتح الكثير من التطبيقات ولكن فعليا هل سنحتاج إلي كل هذه المساحة بالاخص مع قدومها من نوع LPDDR5",
                       containerColor: kcontainerColor1,
                     ),
-                    Container(
-                      width: MediaQuery.of(context).size.width,
-                      padding: EdgeInsets.all(10),
-                      child: RichText(
-                          text: TextSpan(
-                              style: TextStyle(fontFamily: 'Cairo'),
-                              children: <TextSpan>[
-                            TextSpan(
-                                text: "الذاكرة العشوائية : ",
-                                style: TextStyle(
-                                    fontSize: 18, color: Colors.black)),
-                            TextSpan(
-                                text:
-                                    "كبيرة جدا تعطيك مرونه في فتح الكثير من التطبيقات ولكن فعليا هل سنحتاج إلي كل هذه المساحة بالاخص مع قدومها من نوع LPDDR5 .",
-                                style:
-                                    TextStyle(fontSize: 18, color: Colors.blue))
-                          ])),
+                    TextOfDetails(
+                      text1:  "الكاميرا  : ",
+                      text2:  "كامبرا قوية جدا قادرة علي المنافسة وكاد تكون الأفضل في 2020 ... مع كاميرا سيلفي مميزة 40 ميجا بيكسل",
+                      containerColor: kcontainerColor2,
                     ),
-                    Container(
-                        width: MediaQuery.of(context).size.width,
-                        padding: EdgeInsets.all(10),
-                        color: Colors.blue,
-                        child: RichText(
-                            text: TextSpan(
-                                style: TextStyle(fontFamily: 'Cairo'),
-                                children: <TextSpan>[
-                              TextSpan(
-                                  text: "الكاميرا  : ",
-                                  style: TextStyle(
-                                      fontSize: 18, color: Colors.black)),
-                              TextSpan(
-                                  text:
-                                      "كامبرا قوية جدا قادرة علي المنافسة وكاد تكون الأفضل في 2020 ... مع كاميرا سيلفي مميزة 40 ميجا بيكسل .",
-                                  style: TextStyle(
-                                      fontSize: 18, color: Colors.white))
-                            ]))),
+                    
                     Container(
                         width: MediaQuery.of(context).size.width,
                         padding: EdgeInsets.all(10),
