@@ -71,21 +71,17 @@ class _MyDrawerState extends State<MyDrawer> {
                 }));
             },
           ),
-          
-          InkWell(
-            child: ListTile(
-              title: Text("إضافة منشور",
-                  style: TextStyle(color: Colors.black, fontSize: 18)),
-              leading: Icon(Icons.post_add, color: Colors.blue, size: 25),
-            ),
-            onTap: () {
-              Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+          CustomDrawerItems(
+            text: "إضافة منشور",
+            icon: Icons.post_add_outlined,
+            onTap: (){
+             Navigator.of(context).push(MaterialPageRoute(builder: (context) {
                 return Post();
               }));
             },
           ),
           Divider(
-            color: Colors.blue,
+            color: khomeBar,
           ),
           InkWell(
             child: ListTile(
