@@ -92,7 +92,11 @@ class _MyDrawerState extends State<MyDrawer> {
               }));
             },
           ),
-          
+          CustomDrawerItems(
+            text: "الإعدادات",
+            icon: Icons.settings_outlined,
+            onTap: (){},
+          ),
           InkWell(
             child: ListTile(
               title: Text("الإعدادات",
