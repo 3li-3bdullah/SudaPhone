@@ -169,23 +169,22 @@ class _MobileDetailsState extends State<MobileDetails> {
                   ],
                 )),
             //End second container
-
             //Start three container
             Container(
-              color: Colors.red,
+              color: kappDetails,
               padding: EdgeInsets.all(10),
               child: Center(
                   child: Text(
                 "العيوب",
-                style: TextStyle(fontFamily: 'Cairo', fontSize: 18),
+                style: TextStyle(color: Colors.white ,fontFamily: 'Cairo', fontSize: 18),
               )),
             ),
             //Start Column Specfiction
-
             Container(
                 padding: EdgeInsets.all(10),
                 child: Column(
                   children: <Widget>[
+                    
                     Container(
                         width: MediaQuery.of(context).size.width,
                         padding: EdgeInsets.all(10),
