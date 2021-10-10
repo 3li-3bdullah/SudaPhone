@@ -58,12 +58,12 @@ class ScreenState extends State<Screen> {
     // ThemeData(fontFamily: 'Cairo');
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: "Mobetech",
+      title: "SudaPhone",
       home: Directionality(
           textDirection: TextDirection.rtl,
           child: Scaffold(
             appBar: AppBar(
-              title: Text(" Mobetech"),
+              title: Text("SudaPhone"),
               backgroundColor: Colors.blue,
               centerTitle: true,
               elevation: 6,
