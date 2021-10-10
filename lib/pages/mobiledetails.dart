@@ -72,7 +72,11 @@ class _MobileDetailsState extends State<MobileDetails> {
                 padding: EdgeInsets.all(10),
                 child: Column(
                   children: <Widget>[
-                    TextOfDetails(),
+                    TextOfDetails(
+                      text1: "الموديل :",
+                      text2: "S20 Ultra",
+                      containerColor: kcontainerColor1,
+                    ),
                     Container(
                       width: MediaQuery.of(context).size.width,
                       padding: EdgeInsets.all(10),
