@@ -161,24 +161,10 @@ class _MobileDetailsState extends State<MobileDetails> {
                       text2: "يدعم الشحن السريع بقوة 45 واط حيث ستتمكن من شحن هاتفك من 0% إلي 100% خلال 74 دقيقة بالكامل",
                       containerColor: kcontainerColor1,
                     ),
-                    
-                    Container(
-                      width: MediaQuery.of(context).size.width,
-                      padding: EdgeInsets.all(10),
-                      color: Colors.blue,
-                      child: RichText(
-                          text: TextSpan(
-                              style: TextStyle(fontFamily: 'Cairo'),
-                              children: <TextSpan>[
-                            TextSpan(
-                                text: "أداء المعالج : ",
-                                style: TextStyle(
-                                    fontSize: 18, color: Colors.black)),
-                            TextSpan(
-                                text: "قوي و يمتاز بأنه قوي من حيث الأداء .",
-                                style: TextStyle(
-                                    fontSize: 18, color: Colors.white)),
-                          ])),
+                    TextOfDetails(
+                      text1:   "أداء المعالج : ",
+                      text2: "قوي و يمتاز بأنه قوي من حيث الأداء",
+                      containerColor: kcontainerColor1,
                     ),
                   ],
                 )),
