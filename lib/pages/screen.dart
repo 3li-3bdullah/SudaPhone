@@ -133,42 +133,42 @@ class ScreenState extends State<Screen> {
                   child: ListView(
                       scrollDirection: Axis.horizontal,
                       children: <Widget>[
-                        BuildCategoriesLogo(
+                        CustomBuildCategoriesLogo(
                           imageLogo: "example/images/logo/huawei.png",
                           text: "Huawei",
                           onTap: () {},
                         ),
-                        BuildCategoriesLogo(
+                        CustomBuildCategoriesLogo(
                           imageLogo: "example/images/logo/iphone.jpg",
                           text: "Apple",
                           onTap: () {},
                         ),
-                        BuildCategoriesLogo(
+                        CustomBuildCategoriesLogo(
                           imageLogo: "example/images/logo/realme.png",
                           text: "Realme",
                           onTap: () {},
                         ),
-                        BuildCategoriesLogo(
+                        CustomBuildCategoriesLogo(
                           imageLogo: "example/images/logo/lenovo.png",
                           text: "Lenovo",
                           onTap: () {},
                         ),
-                        BuildCategoriesLogo(
+                        CustomBuildCategoriesLogo(
                           imageLogo: "example/images/logo/samsung.jpg",
                           text: "Samsung",
                           onTap: () {},
                         ),
-                        BuildCategoriesLogo(
+                        CustomBuildCategoriesLogo(
                           imageLogo: "example/images/logo/xiaomi.png",
                           text: "Xiaomi",
                           onTap: () {},
                         ),
-                        BuildCategoriesLogo(
+                        CustomBuildCategoriesLogo(
                           imageLogo: "example/images/logo/oppo.jpg",
                           text: "Oppo",
                           onTap: () {},
                         ),
-                        BuildCategoriesLogo(
+                        CustomBuildCategoriesLogo(
                           imageLogo: "example/images/logo/tecno.png",
                           text: "Tecno",
                           onTap: () {},
