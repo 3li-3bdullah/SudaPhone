@@ -40,17 +40,27 @@ class _MyDrawerState extends State<MyDrawer> {
             accountName: Text("Ali Abdullah"),
             accountEmail: Text("Alieko.A50@gmail.com"),
             currentAccountPicture: Container(
-              decoration: BoxDecoration(image: DecorationImage(
-                  image: AssetImage("example/images/slider/ali.jpg")), shape:BoxShape.circle),
+              decoration: BoxDecoration(
+                  image: DecorationImage(
+                      image: AssetImage("example/images/slider/ali.jpg")),
+                  shape: BoxShape.circle),
             ),
             decoration: BoxDecoration(
-                color: khomeBar,
-                // image: DecorationImage(
-                //     image: AssetImage("example/images/slider/drawer.jpg"),
-                //     fit: BoxFit.cover)
-                    ),
+              color: khomeBar,
+              // image: DecorationImage(
+              //     image: AssetImage("example/images/slider/drawer.jpg"),
+              //     fit: BoxFit.cover)
+            ),
           ),
-          CustomDrawerItems(),
+          CustomDrawerItems(
+            text: "الصفحة الرئيسية",
+            icon: Icons.home_outlined,
+            onTap: (){
+              Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+            return Screen();
+          }));
+            },
+          ),
           InkWell(
               child: ListTile(
                 title: Text("الأقسام",
@@ -118,22 +128,22 @@ class _MyDrawerState extends State<MyDrawer> {
 
 class CustomDrawerItems extends StatelessWidget {
   const CustomDrawerItems({
-    Key key,
-  }) : super(key: key);
-
+    this.text,
+    this.icon,
+     this.onTap,
+  });
+  final String text;
+  final IconData icon;
+  final Function onTap;
   @override
   Widget build(BuildContext context) {
     return InkWell(
         child: ListTile(
-          title: Text("الصفحة الرئيسية",
-              style: TextStyle(color: Colors.black, fontSize: 18)),
-          leading: Icon(Icons.home, color:khomeBar, size: 25),
+          title:
+              Text(text, style: TextStyle(color: Colors.black, fontSize: 18)),
+          leading: Icon(icon, color: khomeBar, size: 25),
         ),
-        onTap: () {
-          Navigator.of(context)
-              .push(MaterialPageRoute(builder: (context) {
-            return Screen();
-          }));
-        });
+        onTap: onTap,
+        );
   }
 }
