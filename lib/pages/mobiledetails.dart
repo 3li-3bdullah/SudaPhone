@@ -156,26 +156,12 @@ class _MobileDetailsState extends State<MobileDetails> {
                       text2: "كبيرة جدا والتي يتم توفيرها لأول مرة يهذه السعة في سلسلة ال S",
                       containerColor: kcontainerColor2,
                     ),
-                    
-                    Container(
-                      width: MediaQuery.of(context).size.width,
-                      padding: EdgeInsets.all(10),
-                      color: Colors.white,
-                      child: RichText(
-                          text: TextSpan(
-                              style: TextStyle(fontFamily: 'Cairo'),
-                              children: <TextSpan>[
-                            TextSpan(
-                                text: "الشحن : ",
-                                style: TextStyle(
-                                    fontSize: 18, color: Colors.black)),
-                            TextSpan(
-                                text:
-                                    "يدعم الشحن السريع بقوة 45 واط حيث ستتمكن من شحن هاتفك من 0% إلي 100% خلال 74 دقيقة بالكامل .",
-                                style: TextStyle(
-                                    fontSize: 18, color: Colors.blue)),
-                          ])),
+                    TextOfDetails(
+                      text1:   "الشحن : ",
+                      text2: "يدعم الشحن السريع بقوة 45 واط حيث ستتمكن من شحن هاتفك من 0% إلي 100% خلال 74 دقيقة بالكامل",
+                      containerColor: kcontainerColor1,
                     ),
+                    
                     Container(
                       width: MediaQuery.of(context).size.width,
                       padding: EdgeInsets.all(10),
