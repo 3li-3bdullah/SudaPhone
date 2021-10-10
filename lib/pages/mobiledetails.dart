@@ -87,24 +87,12 @@ class _MobileDetailsState extends State<MobileDetails> {
                       text2:  "Android 10, One UI 2",
                       containerColor: kcontainerColor1,
                     ),
-                    
-                    Container(
-                        width: MediaQuery.of(context).size.width,
-                        padding: EdgeInsets.all(10),
-                        color: Colors.blue,
-                        child: RichText(
-                            text: TextSpan(
-                                style: TextStyle(fontFamily: 'Cairo'),
-                                children: <TextSpan>[
-                              TextSpan(
-                                  text: "الحماية  :",
-                                  style: TextStyle(
-                                      fontSize: 18, color: Colors.black)),
-                              TextSpan(
-                                  text: " IP68 مقاوم للماء , Gorilla Glass 6",
-                                  style: TextStyle(
-                                      fontSize: 18, color: Colors.white))
-                            ]))),
+                    TextOfDetails(
+                      text1:  "الحماية  :",
+                      text2:   " IP68 مقاوم للماء , Gorilla Glass 6",
+                      containerColor: kcontainerColor2,
+                    ),
+                   
                     Container(
                         width: MediaQuery.of(context).size.width,
                         padding: EdgeInsets.all(10),
