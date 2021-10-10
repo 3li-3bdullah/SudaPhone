@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: "mobetech",
+      title: "SudaPhone",
      // theme: ThemeData(fontFamily: 'Cairo'),
       home: Screen(),
     );
