@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class LastProduct extends StatelessWidget {
-  const LastProduct({
+class CustomLastProduct extends StatelessWidget {
+  const CustomLastProduct({
     this.imageProduct,
     this.text, this.onTap,
   });
