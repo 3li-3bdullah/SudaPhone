@@ -97,42 +97,17 @@ class _MobileDetailsState extends State<MobileDetails> {
                       text2:   "6.9 بوصة بدقة QHD + بها ثقب صغير",
                       containerColor: kcontainerColor1,
                     ),
-                   
-                    Container(
-                        width: MediaQuery.of(context).size.width,
-                        padding: EdgeInsets.all(10),
-                        color: Colors.blue,
-                        child: RichText(
-                            text: TextSpan(
-                                style: TextStyle(fontFamily: 'Cairo'),
-                                children: <TextSpan>[
-                              TextSpan(
-                                  text: "المعالج   :",
-                                  style: TextStyle(
-                                      fontSize: 18, color: Colors.black)),
-                              TextSpan(
-                                  text: "Snapdragon 865, Eiyons 990",
-                                  style: TextStyle(
-                                      fontSize: 18, color: Colors.white))
-                            ]))),
-                    Container(
-                      width: MediaQuery.of(context).size.width,
-                      padding: EdgeInsets.all(10),
-                      color: Colors.white,
-                      child: RichText(
-                          text: TextSpan(
-                              style: TextStyle(fontFamily: 'Cairo'),
-                              children: <TextSpan>[
-                            TextSpan(
-                                text: "البطارية :",
-                                style: TextStyle(
-                                    fontSize: 18, color: Colors.black)),
-                            TextSpan(
-                                text: " 5000 MAH " + "" + "شحن سريع w15",
-                                style: TextStyle(
-                                    fontSize: 18, color: Colors.blue)),
-                          ])),
+                   TextOfDetails(
+                      text1:  "المعالج :",
+                      text2:   "Snapdragon 865, Eiyons 990",
+                      containerColor: kcontainerColor2,
                     ),
+                  TextOfDetails(
+                      text1: "البطارية :",
+                      text2: " 5000 MAH " + "" + "شحن سريع w15",
+                      containerColor: kcontainerColor1,
+                    ),
+                    
                   ],
                 )),
             //start the second container

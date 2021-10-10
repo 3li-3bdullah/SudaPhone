@@ -16,7 +16,7 @@ class LogIn extends StatefulWidget {
 }
 
 showdialogall(context, String mycontent) {
-  var mdw = MediaQuery.of(context).size.width;
+  double mdw = MediaQuery.of(context).size.width;
   return showDialog(
       context: context,
       builder: (context) {
@@ -78,10 +78,10 @@ class LogInState extends State<LogIn> {
 
   // }
 
-  signin() async {
+  signin()  {
    /// var formdata = formstatesignin.currentState;
-    if (formstatesignin.currentState.validate()) {
-      formstatesignin.currentState.save();
+    // if (formstatesignin.currentState.validate()) {
+    //   formstatesignin.currentState.save();
       // print(_email);
       // print(_password);
       // final authResult = await _auth.signIn(_email, _password);
@@ -93,30 +93,30 @@ class LogInState extends State<LogIn> {
     }
   }
 
-   signup() async {
+   signup()  {
     ///var formdata = formstatesignup.currentState;
-    if (formstatesignup.currentState.validate()) {
-      formstatesignup.currentState.save();
+    // if (formstatesignup.currentState.validate()) {
+    //   formstatesignup.currentState.save();
       //print(_email);
       // print(_password);
       // final authResult = await _auth.signUp(_email, _password);
       // print(authResult.user.uid);
       showdialogall(context, "تم إنشاء الحساب بنجاح");
     }
-  }
+  
 
-  TapGestureRecognizer _changesign;
+ // TapGestureRecognizer _changesign;
   bool showsignin = true;
 
   @override
   void dispose() {
-    _changesign = new TapGestureRecognizer()
-      ..onTap = () {
+    // _changesign = new TapGestureRecognizer()
+    //   ..onTap = () {
         setState(() {
           showsignin = !showsignin;
           print(showsignin);
         });
-      };
+    //  };
     //getPre();
     super.dispose();
   }
