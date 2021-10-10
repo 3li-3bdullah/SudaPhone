@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../constants.dart';
 import '../pages/post.dart';
 import '../pages/categories.dart';
 import '../pages/aboutapp.dart';
@@ -43,16 +44,17 @@ class _MyDrawerState extends State<MyDrawer> {
                   image: AssetImage("example/images/slider/ali.jpg")), shape:BoxShape.circle),
             ),
             decoration: BoxDecoration(
-                color: Colors.blue,
-                image: DecorationImage(
-                    image: AssetImage("example/images/slider/drawer.jpg"),
-                    fit: BoxFit.cover)),
+                color: khomeBar,
+                // image: DecorationImage(
+                //     image: AssetImage("example/images/slider/drawer.jpg"),
+                //     fit: BoxFit.cover)
+                    ),
           ),
           InkWell(
               child: ListTile(
                 title: Text("الصفحة الرئيسية",
                     style: TextStyle(color: Colors.black, fontSize: 18)),
-                leading: Icon(Icons.home, color: Colors.blue, size: 25),
+                leading: Icon(Icons.home, color:khomeBar, size: 25),
               ),
               onTap: () {
                 Navigator.of(context)
