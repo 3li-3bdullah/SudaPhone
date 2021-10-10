@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 
 class CustomLastProduct extends StatelessWidget {
   const CustomLastProduct({
-    this.imageProduct,
-    this.text, this.onTap,
+  required  this.imageProduct,
+  required  this.text,
+  required this.onTap,
   });
   final String imageProduct;
   final String text;
