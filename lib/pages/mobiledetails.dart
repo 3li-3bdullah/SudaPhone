@@ -65,21 +65,7 @@ class _MobileDetailsState extends State<MobileDetails> {
                 padding: EdgeInsets.all(10),
                 child: Column(
                   children: <Widget>[
-                    Container(
-                        width: MediaQuery.of(context).size.width,
-                        padding: EdgeInsets.all(10),
-                        color: Colors.white,
-                        child: RichText(
-                            text: TextSpan(
-                                style: TextStyle(fontSize: 18,fontFamily: 'Cairo'),
-                                children: <TextSpan>[
-                              TextSpan(
-                                  text: "الموديل :",
-                                  style: TextStyle(color: Colors.black)),
-                              TextSpan(
-                                  text: "S20 Ultra",
-                                  style: TextStyle(color: Colors.blue)),
-                            ]))),
+                    TextOfDetails(),
                     Container(
                       width: MediaQuery.of(context).size.width,
                       padding: EdgeInsets.all(10),
@@ -460,5 +446,30 @@ class _MobileDetailsState extends State<MobileDetails> {
             //End Column Specfiction
           ]),
         ));
+  }
+}
+
+class TextOfDetails extends StatelessWidget {
+  const TextOfDetails({
+    Key key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+        width: MediaQuery.of(context).size.width,
+        padding: EdgeInsets.all(10),
+        color: Colors.white,
+        child: RichText(
+            text: TextSpan(
+                style: TextStyle(fontSize: 18,fontFamily: 'Cairo'),
+                children: <TextSpan>[
+              TextSpan(
+                  text: "الموديل :",
+                  style: TextStyle(color: Colors.black)),
+              TextSpan(
+                  text: "S20 Ultra",
+                  style: TextStyle(color: Colors.blue)),
+            ])));
   }
 }
