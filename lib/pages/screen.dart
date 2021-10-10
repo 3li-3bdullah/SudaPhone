@@ -123,7 +123,7 @@ class ScreenState extends State<Screen> {
                 child: Text("الأقسام",
                     style: TextStyle(
                       fontSize: 30,
-                      color: Colors.blue,
+                      color: Colors.black,
                     )),
               ),
 
@@ -178,7 +178,7 @@ class ScreenState extends State<Screen> {
               Container(
                 padding: EdgeInsets.all(10),
                 child: Text("أحدث التلفونات",
-                    style: TextStyle(fontSize: 30, color: Colors.blue)),
+                    style: TextStyle(fontSize: 30, color: Colors.black)),
               ),
 
               Container(
