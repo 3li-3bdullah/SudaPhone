@@ -209,24 +209,12 @@ class _MobileDetailsState extends State<MobileDetails> {
                       text2:  "بروز كبير في الشكل",
                       containerColor: kcontainerColor1,
                     ),
-                   
-                    Container(
-                        width: MediaQuery.of(context).size.width,
-                        padding: EdgeInsets.all(10),
-                        color: Colors.blue,
-                        child: RichText(
-                            text: TextSpan(
-                                style: TextStyle(fontFamily: 'Cairo'),
-                                children: <TextSpan>[
-                              TextSpan(
-                                  text: "الألوان :",
-                                  style: TextStyle(
-                                      fontSize: 18, color: Colors.black)),
-                              TextSpan(
-                                  text: "محددة",
-                                  style: TextStyle(
-                                      fontSize: 18, color: Colors.white))
-                            ]))),
+                   TextOfDetails(
+                      text1: "الألوان :",
+                      text2:  "محددة",
+                      containerColor: kcontainerColor2,
+                    ),
+                    
                     Container(
                       width: MediaQuery.of(context).size.width,
                       padding: EdgeInsets.all(10),
