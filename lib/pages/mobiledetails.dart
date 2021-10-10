@@ -12,7 +12,10 @@ class _MobileDetailsState extends State<MobileDetails> {
         textDirection: TextDirection.rtl,
         child: Scaffold(
           appBar: AppBar(
-            title: Text('التفاصيل',style: TextStyle(fontFamily: 'Cairo'),),
+            title: Text(
+              'التفاصيل',
+              style: TextStyle(fontFamily: 'Cairo'),
+            ),
             centerTitle: true,
           ),
           body: ListView(children: <Widget>[
@@ -32,7 +35,8 @@ class _MobileDetailsState extends State<MobileDetails> {
                                   padding: EdgeInsets.all(10),
                                   child: Text(
                                     "S20 Ultra ",
-                                    style: TextStyle(fontFamily: 'Cairo',
+                                    style: TextStyle(
+                                        fontFamily: 'Cairo',
                                         color: Colors.white,
                                         fontSize: 20,
                                         fontWeight: FontWeight.w700),
@@ -42,7 +46,8 @@ class _MobileDetailsState extends State<MobileDetails> {
                                   padding: const EdgeInsets.all(10),
                                   child: Text(
                                     "1200\$",
-                                    style: TextStyle(fontFamily: 'Cairo',
+                                    style: TextStyle(
+                                        fontFamily: 'Cairo',
                                         color: Colors.white,
                                         fontSize: 20,
                                         fontWeight: FontWeight.w700),
@@ -57,7 +62,7 @@ class _MobileDetailsState extends State<MobileDetails> {
                 padding: EdgeInsets.all(10),
                 child: Text(
                   "المواصفات",
-                  style: TextStyle(fontSize: 18,fontFamily: 'Cairo'),
+                  style: TextStyle(fontSize: 18, fontFamily: 'Cairo'),
                 )),
             //Start Column Specfiction
 
@@ -71,88 +76,103 @@ class _MobileDetailsState extends State<MobileDetails> {
                       padding: EdgeInsets.all(10),
                       color: Colors.blue,
                       child: RichText(
-                          text: TextSpan(style: TextStyle(fontFamily: 'Cairo'),children: <TextSpan>[
-                        TextSpan(
-                            text: "الشاشة :",
-                            style:
-                                TextStyle(fontSize: 18, color: Colors.black)),
-                        TextSpan(
-                            text: "Super Amoled 5.5",
-                            style: TextStyle(fontSize: 18, color: Colors.white))
-                      ])),
+                          text: TextSpan(
+                              style: TextStyle(fontFamily: 'Cairo'),
+                              children: <TextSpan>[
+                            TextSpan(
+                                text: "الشاشة :",
+                                style: TextStyle(
+                                    fontSize: 18, color: Colors.black)),
+                            TextSpan(
+                                text: "Super Amoled 5.5",
+                                style: TextStyle(
+                                    fontSize: 18, color: Colors.white))
+                          ])),
                     ),
                     Container(
                       width: MediaQuery.of(context).size.width,
                       padding: EdgeInsets.all(10),
                       child: RichText(
-                          text: TextSpan(style: TextStyle(fontFamily: 'Cairo'),children: <TextSpan>[
-                        TextSpan(
-                            text: "نظام التشغيل :",
-                            style:
-                                TextStyle(fontSize: 18, color: Colors.black)),
-                        TextSpan(
-                            text: "Android 10, One UI 2",
-                            style: TextStyle(fontSize: 18, color: Colors.blue))
-                      ])),
+                          text: TextSpan(
+                              style: TextStyle(fontFamily: 'Cairo'),
+                              children: <TextSpan>[
+                            TextSpan(
+                                text: "نظام التشغيل :",
+                                style: TextStyle(
+                                    fontSize: 18, color: Colors.black)),
+                            TextSpan(
+                                text: "Android 10, One UI 2",
+                                style:
+                                    TextStyle(fontSize: 18, color: Colors.blue))
+                          ])),
                     ),
                     Container(
                         width: MediaQuery.of(context).size.width,
                         padding: EdgeInsets.all(10),
                         color: Colors.blue,
                         child: RichText(
-                            text: TextSpan(style: TextStyle(fontFamily: 'Cairo'),children: <TextSpan>[
-                          TextSpan(
-                              text: "الحماية  :",
-                              style:
-                                  TextStyle(fontSize: 18, color: Colors.black)),
-                          TextSpan(
-                              text: " IP68 مقاوم للماء , Gorilla Glass 6",
-                              style:
-                                  TextStyle(fontSize: 18, color: Colors.white))
-                        ]))),
+                            text: TextSpan(
+                                style: TextStyle(fontFamily: 'Cairo'),
+                                children: <TextSpan>[
+                              TextSpan(
+                                  text: "الحماية  :",
+                                  style: TextStyle(
+                                      fontSize: 18, color: Colors.black)),
+                              TextSpan(
+                                  text: " IP68 مقاوم للماء , Gorilla Glass 6",
+                                  style: TextStyle(
+                                      fontSize: 18, color: Colors.white))
+                            ]))),
                     Container(
                         width: MediaQuery.of(context).size.width,
                         padding: EdgeInsets.all(10),
                         child: RichText(
-                            text: TextSpan(style: TextStyle(fontFamily: 'Cairo'),children: <TextSpan>[
-                          TextSpan(
-                              text: "دقة الشاشة :",
-                              style:
-                                  TextStyle(fontSize: 18, color: Colors.black)),
-                          TextSpan(
-                              text: "6.9 بوصة بدقة QHD + بها ثقب صغير",
-                              style:
-                                  TextStyle(fontSize: 18, color: Colors.blue))
-                        ]))),
+                            text: TextSpan(
+                                style: TextStyle(fontFamily: 'Cairo'),
+                                children: <TextSpan>[
+                              TextSpan(
+                                  text: "دقة الشاشة :",
+                                  style: TextStyle(
+                                      fontSize: 18, color: Colors.black)),
+                              TextSpan(
+                                  text: "6.9 بوصة بدقة QHD + بها ثقب صغير",
+                                  style: TextStyle(
+                                      fontSize: 18, color: Colors.blue))
+                            ]))),
                     Container(
                         width: MediaQuery.of(context).size.width,
                         padding: EdgeInsets.all(10),
                         color: Colors.blue,
                         child: RichText(
-                            text: TextSpan(style: TextStyle(fontFamily: 'Cairo'),children: <TextSpan>[
-                          TextSpan(
-                              text: "المعالج   :",
-                              style:
-                                  TextStyle(fontSize: 18, color: Colors.black)),
-                          TextSpan(
-                              text: "Snapdragon 865, Eiyons 990",
-                              style:
-                                  TextStyle(fontSize: 18, color: Colors.white))
-                        ]))),
+                            text: TextSpan(
+                                style: TextStyle(fontFamily: 'Cairo'),
+                                children: <TextSpan>[
+                              TextSpan(
+                                  text: "المعالج   :",
+                                  style: TextStyle(
+                                      fontSize: 18, color: Colors.black)),
+                              TextSpan(
+                                  text: "Snapdragon 865, Eiyons 990",
+                                  style: TextStyle(
+                                      fontSize: 18, color: Colors.white))
+                            ]))),
                     Container(
                       width: MediaQuery.of(context).size.width,
                       padding: EdgeInsets.all(10),
                       color: Colors.white,
                       child: RichText(
-                          text: TextSpan(style: TextStyle(fontFamily: 'Cairo'),children: <TextSpan>[
-                        TextSpan(
-                            text: "البطارية :",
-                            style:
-                                TextStyle(fontSize: 18, color: Colors.black)),
-                        TextSpan(
-                            text: " 5000 MAH " + "" + "شحن سريع w15",
-                            style: TextStyle(fontSize: 18, color: Colors.blue)),
-                      ])),
+                          text: TextSpan(
+                              style: TextStyle(fontFamily: 'Cairo'),
+                              children: <TextSpan>[
+                            TextSpan(
+                                text: "البطارية :",
+                                style: TextStyle(
+                                    fontSize: 18, color: Colors.black)),
+                            TextSpan(
+                                text: " 5000 MAH " + "" + "شحن سريع w15",
+                                style: TextStyle(
+                                    fontSize: 18, color: Colors.blue)),
+                          ])),
                     ),
                   ],
                 )),
@@ -163,7 +183,7 @@ class _MobileDetailsState extends State<MobileDetails> {
               child: Center(
                   child: Text(
                 "المميزات",
-                style: TextStyle(fontSize: 18,fontFamily: 'Cairo'),
+                style: TextStyle(fontSize: 18, fontFamily: 'Cairo'),
               )),
             ),
             //Start Column Specfiction
@@ -178,7 +198,8 @@ class _MobileDetailsState extends State<MobileDetails> {
                         color: Colors.white,
                         child: RichText(
                             text: TextSpan(
-                                style: TextStyle(fontSize: 18,fontFamily: 'Cairo'),
+                                style: TextStyle(
+                                    fontSize: 18, fontFamily: 'Cairo'),
                                 children: <TextSpan>[
                               TextSpan(
                                   text: "التقريب : ",
@@ -193,109 +214,126 @@ class _MobileDetailsState extends State<MobileDetails> {
                       padding: EdgeInsets.all(10),
                       color: Colors.blue,
                       child: RichText(
-                          text: TextSpan(style: TextStyle(fontFamily: 'Cairo'),children: <TextSpan>[
-                        TextSpan(
-                            text: "دعم التصوير : ",
-                            style:
-                                TextStyle(fontSize: 18, color: Colors.black)),
-                        TextSpan(
-                            text: "يدعم تصوير الفيديوهات بجودة ال 8K.",
-                            style: TextStyle(fontSize: 18, color: Colors.white))
-                      ])),
+                          text: TextSpan(
+                              style: TextStyle(fontFamily: 'Cairo'),
+                              children: <TextSpan>[
+                            TextSpan(
+                                text: "دعم التصوير : ",
+                                style: TextStyle(
+                                    fontSize: 18, color: Colors.black)),
+                            TextSpan(
+                                text: "يدعم تصوير الفيديوهات بجودة ال 8K.",
+                                style: TextStyle(
+                                    fontSize: 18, color: Colors.white))
+                          ])),
                     ),
                     Container(
                       width: MediaQuery.of(context).size.width,
                       padding: EdgeInsets.all(10),
                       child: RichText(
-                          text: TextSpan(style: TextStyle(fontFamily: 'Cairo'),children: <TextSpan>[
-                        TextSpan(
-                            text: " الذاكرة العشوائية : ",
-                            style:
-                                TextStyle(fontSize: 18, color: Colors.black)),
-                        TextSpan(
-                            text:
-                                "كبيرة جدا تعطيك مرونه في فتح الكثير من التطبيقات ولكن فعليا هل سنحتاج إلي كل هذه المساحة بالاخص مع قدومها من نوع LPDDR5 .",
-                            style: TextStyle(fontSize: 18, color: Colors.blue))
-                      ])),
+                          text: TextSpan(
+                              style: TextStyle(fontFamily: 'Cairo'),
+                              children: <TextSpan>[
+                            TextSpan(
+                                text: " الذاكرة العشوائية : ",
+                                style: TextStyle(
+                                    fontSize: 18, color: Colors.black)),
+                            TextSpan(
+                                text:
+                                    "كبيرة جدا تعطيك مرونه في فتح الكثير من التطبيقات ولكن فعليا هل سنحتاج إلي كل هذه المساحة بالاخص مع قدومها من نوع LPDDR5 .",
+                                style:
+                                    TextStyle(fontSize: 18, color: Colors.blue))
+                          ])),
                     ),
                     Container(
                         width: MediaQuery.of(context).size.width,
                         padding: EdgeInsets.all(10),
                         color: Colors.blue,
                         child: RichText(
-                            text: TextSpan(style: TextStyle(fontFamily: 'Cairo'),children: <TextSpan>[
-                          TextSpan(
-                              text: "الكاميرا  : ",
-                              style:
-                                  TextStyle(fontSize: 18, color: Colors.black)),
-                          TextSpan(
-                              text:
-                                  "كامبرا قوية جدا قادرة علي المنافسة وكاد تكون الأفضل في 2020 ... مع كاميرا سيلفي مميزة 40 ميجا بيكسل .",
-                              style:
-                                  TextStyle(fontSize: 18, color: Colors.white))
-                        ]))),
+                            text: TextSpan(
+                                style: TextStyle(fontFamily: 'Cairo'),
+                                children: <TextSpan>[
+                              TextSpan(
+                                  text: "الكاميرا  : ",
+                                  style: TextStyle(
+                                      fontSize: 18, color: Colors.black)),
+                              TextSpan(
+                                  text:
+                                      "كامبرا قوية جدا قادرة علي المنافسة وكاد تكون الأفضل في 2020 ... مع كاميرا سيلفي مميزة 40 ميجا بيكسل .",
+                                  style: TextStyle(
+                                      fontSize: 18, color: Colors.white))
+                            ]))),
                     Container(
                         width: MediaQuery.of(context).size.width,
                         padding: EdgeInsets.all(10),
                         child: RichText(
-                            text: TextSpan(style: TextStyle(fontFamily: 'Cairo'),children: <TextSpan>[
-                          TextSpan(
-                              text: "الشاشة  : ",
-                              style:
-                                  TextStyle(fontSize: 18, color: Colors.black)),
-                          TextSpan(
-                              text:
-                                  "ممتازة وكبيرة و بدقة عالية ومعدل تحديث 120 هرتز .",
-                              style:
-                                  TextStyle(fontSize: 18, color: Colors.blue))
-                        ]))),
+                            text: TextSpan(
+                                style: TextStyle(fontFamily: 'Cairo'),
+                                children: <TextSpan>[
+                              TextSpan(
+                                  text: "الشاشة  : ",
+                                  style: TextStyle(
+                                      fontSize: 18, color: Colors.black)),
+                              TextSpan(
+                                  text:
+                                      "ممتازة وكبيرة و بدقة عالية ومعدل تحديث 120 هرتز .",
+                                  style: TextStyle(
+                                      fontSize: 18, color: Colors.blue))
+                            ]))),
                     Container(
                         width: MediaQuery.of(context).size.width,
                         padding: EdgeInsets.all(10),
                         color: Colors.blue,
                         child: RichText(
-                            text: TextSpan(style: TextStyle(fontFamily: 'Cairo'),children: <TextSpan>[
-                          TextSpan(
-                              text: "البطارية : ",
-                              style:
-                                  TextStyle(fontSize: 18, color: Colors.black)),
-                          TextSpan(
-                              text:
-                                  "كبيرة جدا والتي يتم توفيرها لأول مرة يهذه السعة في سلسلة ال S .",
-                              style:
-                                  TextStyle(fontSize: 18, color: Colors.white))
-                        ]))),
+                            text: TextSpan(
+                                style: TextStyle(fontFamily: 'Cairo'),
+                                children: <TextSpan>[
+                              TextSpan(
+                                  text: "البطارية : ",
+                                  style: TextStyle(
+                                      fontSize: 18, color: Colors.black)),
+                              TextSpan(
+                                  text:
+                                      "كبيرة جدا والتي يتم توفيرها لأول مرة يهذه السعة في سلسلة ال S .",
+                                  style: TextStyle(
+                                      fontSize: 18, color: Colors.white))
+                            ]))),
                     Container(
                       width: MediaQuery.of(context).size.width,
                       padding: EdgeInsets.all(10),
                       color: Colors.white,
                       child: RichText(
-                          text: TextSpan(style: TextStyle(fontFamily: 'Cairo'),children: <TextSpan>[
-                        TextSpan(
-                            text: "الشحن : ",
-                            style:
-                                TextStyle(fontSize: 18, color: Colors.black)),
-                        TextSpan(
-                            text:
-                                "يدعم الشحن السريع بقوة 45 واط حيث ستتمكن من شحن هاتفك من 0% إلي 100% خلال 74 دقيقة بالكامل .",
-                            style: TextStyle(fontSize: 18, color: Colors.blue)),
-                      ])),
+                          text: TextSpan(
+                              style: TextStyle(fontFamily: 'Cairo'),
+                              children: <TextSpan>[
+                            TextSpan(
+                                text: "الشحن : ",
+                                style: TextStyle(
+                                    fontSize: 18, color: Colors.black)),
+                            TextSpan(
+                                text:
+                                    "يدعم الشحن السريع بقوة 45 واط حيث ستتمكن من شحن هاتفك من 0% إلي 100% خلال 74 دقيقة بالكامل .",
+                                style: TextStyle(
+                                    fontSize: 18, color: Colors.blue)),
+                          ])),
                     ),
                     Container(
                       width: MediaQuery.of(context).size.width,
                       padding: EdgeInsets.all(10),
                       color: Colors.blue,
                       child: RichText(
-                          text: TextSpan(style: TextStyle(fontFamily: 'Cairo'),children: <TextSpan>[
-                        TextSpan(
-                            text: "أداء المعالج : ",
-                            style:
-                                TextStyle(fontSize: 18, color: Colors.black)),
-                        TextSpan(
-                            text: "قوي و يمتاز بأنه قوي من حيث الأداء .",
-                            style:
-                                TextStyle(fontSize: 18, color: Colors.white)),
-                      ])),
+                          text: TextSpan(
+                              style: TextStyle(fontFamily: 'Cairo'),
+                              children: <TextSpan>[
+                            TextSpan(
+                                text: "أداء المعالج : ",
+                                style: TextStyle(
+                                    fontSize: 18, color: Colors.black)),
+                            TextSpan(
+                                text: "قوي و يمتاز بأنه قوي من حيث الأداء .",
+                                style: TextStyle(
+                                    fontSize: 18, color: Colors.white)),
+                          ])),
                     ),
                   ],
                 )),
@@ -323,7 +361,8 @@ class _MobileDetailsState extends State<MobileDetails> {
                         color: Colors.white,
                         child: RichText(
                             text: TextSpan(
-                                style: TextStyle(fontSize: 18,fontFamily: 'Cairo'),
+                                style: TextStyle(
+                                    fontSize: 18, fontFamily: 'Cairo'),
                                 children: <TextSpan>[
                               TextSpan(
                                   text: "السعر :",
@@ -337,106 +376,124 @@ class _MobileDetailsState extends State<MobileDetails> {
                       padding: EdgeInsets.all(10),
                       color: Colors.blue,
                       child: RichText(
-                          text: TextSpan(style: TextStyle(fontFamily: 'Cairo'),children: <TextSpan>[
-                        TextSpan(
-                            text: "المنافذ :",
-                            style:
-                                TextStyle(fontSize: 18, color: Colors.black)),
-                        TextSpan(
-                            text: "لا يوجد منفذ 3.5 ملم",
-                            style: TextStyle(fontSize: 18, color: Colors.white))
-                      ])),
+                          text: TextSpan(
+                              style: TextStyle(fontFamily: 'Cairo'),
+                              children: <TextSpan>[
+                            TextSpan(
+                                text: "المنافذ :",
+                                style: TextStyle(
+                                    fontSize: 18, color: Colors.black)),
+                            TextSpan(
+                                text: "لا يوجد منفذ 3.5 ملم",
+                                style: TextStyle(
+                                    fontSize: 18, color: Colors.white))
+                          ])),
                     ),
                     Container(
                       width: MediaQuery.of(context).size.width,
                       padding: EdgeInsets.all(10),
                       child: RichText(
-                          text: TextSpan(style: TextStyle(fontFamily: 'Cairo'),children: <TextSpan>[
-                        TextSpan(
-                            text: " لمبة إشعارات :",
-                            style:
-                                TextStyle(fontSize: 18, color: Colors.black)),
-                        TextSpan(
-                            text: "لا توجد به لمبه إشعارات",
-                            style: TextStyle(fontSize: 18, color: Colors.blue))
-                      ])),
+                          text: TextSpan(
+                              style: TextStyle(fontFamily: 'Cairo'),
+                              children: <TextSpan>[
+                            TextSpan(
+                                text: " لمبة إشعارات :",
+                                style: TextStyle(
+                                    fontSize: 18, color: Colors.black)),
+                            TextSpan(
+                                text: "لا توجد به لمبه إشعارات",
+                                style:
+                                    TextStyle(fontSize: 18, color: Colors.blue))
+                          ])),
                     ),
                     Container(
                         width: MediaQuery.of(context).size.width,
                         padding: EdgeInsets.all(10),
                         color: Colors.blue,
                         child: RichText(
-                            text: TextSpan(style: TextStyle(fontFamily: 'Cairo'),children: <TextSpan>[
-                          TextSpan(
-                              text: "الشبكة  :",
-                              style:
-                                  TextStyle(fontSize: 18, color: Colors.black)),
-                          TextSpan(
-                              text: "لا يدعم الجيل الخامس في النسخة العربية",
-                              style:
-                                  TextStyle(fontSize: 18, color: Colors.white))
-                        ]))),
+                            text: TextSpan(
+                                style: TextStyle(fontFamily: 'Cairo'),
+                                children: <TextSpan>[
+                              TextSpan(
+                                  text: "الشبكة  :",
+                                  style: TextStyle(
+                                      fontSize: 18, color: Colors.black)),
+                              TextSpan(
+                                  text:
+                                      "لا يدعم الجيل الخامس في النسخة العربية",
+                                  style: TextStyle(
+                                      fontSize: 18, color: Colors.white))
+                            ]))),
                     Container(
                         width: MediaQuery.of(context).size.width,
                         padding: EdgeInsets.all(10),
                         child: RichText(
-                            text: TextSpan(style: TextStyle(fontFamily: 'Cairo'),children: <TextSpan>[
-                          TextSpan(
-                              text: "الكاميرا  :",
-                              style:
-                                  TextStyle(fontSize: 18, color: Colors.black)),
-                          TextSpan(
-                              text: "بروز كبير في الشكل",
-                              style:
-                                  TextStyle(fontSize: 18, color: Colors.blue))
-                        ]))),
+                            text: TextSpan(
+                                style: TextStyle(fontFamily: 'Cairo'),
+                                children: <TextSpan>[
+                              TextSpan(
+                                  text: "الكاميرا  :",
+                                  style: TextStyle(
+                                      fontSize: 18, color: Colors.black)),
+                              TextSpan(
+                                  text: "بروز كبير في الشكل",
+                                  style: TextStyle(
+                                      fontSize: 18, color: Colors.blue))
+                            ]))),
                     Container(
                         width: MediaQuery.of(context).size.width,
                         padding: EdgeInsets.all(10),
                         color: Colors.blue,
                         child: RichText(
-                            text: TextSpan(style: TextStyle(fontFamily: 'Cairo'),children: <TextSpan>[
-                          TextSpan(
-                              text: "الألوان :",
-                              style:
-                                  TextStyle(fontSize: 18, color: Colors.black)),
-                          TextSpan(
-                              text: "محددة",
-                              style:
-                                  TextStyle(fontSize: 18, color: Colors.white))
-                        ]))),
+                            text: TextSpan(
+                                style: TextStyle(fontFamily: 'Cairo'),
+                                children: <TextSpan>[
+                              TextSpan(
+                                  text: "الألوان :",
+                                  style: TextStyle(
+                                      fontSize: 18, color: Colors.black)),
+                              TextSpan(
+                                  text: "محددة",
+                                  style: TextStyle(
+                                      fontSize: 18, color: Colors.white))
+                            ]))),
                     Container(
                       width: MediaQuery.of(context).size.width,
                       padding: EdgeInsets.all(10),
                       color: Colors.white,
                       child: RichText(
-                          text: TextSpan(style: TextStyle(fontFamily: 'Cairo'),children: <TextSpan>[
-                        TextSpan(
-                            text: "الشرايح :",
-                            style:
-                                TextStyle(fontSize: 18, color: Colors.black)),
-                        TextSpan(
-                            text:
-                                "لا يمكن استخدام شريحتين و كارت ميموري في نفس الوقت",
-                            style: TextStyle(fontSize: 18, color: Colors.blue)),
-                      ])),
+                          text: TextSpan(
+                              style: TextStyle(fontFamily: 'Cairo'),
+                              children: <TextSpan>[
+                            TextSpan(
+                                text: "الشرايح :",
+                                style: TextStyle(
+                                    fontSize: 18, color: Colors.black)),
+                            TextSpan(
+                                text:
+                                    "لا يمكن استخدام شريحتين و كارت ميموري في نفس الوقت",
+                                style: TextStyle(
+                                    fontSize: 18, color: Colors.blue)),
+                          ])),
                     ),
                     Container(
                       width: MediaQuery.of(context).size.width,
                       padding: EdgeInsets.all(10),
                       color: Colors.blue,
                       child: RichText(
-                          text: TextSpan(style: TextStyle(fontFamily: 'Cairo'),children: <TextSpan>[
-                        TextSpan(
-                            text: "الشاشة :",
-                            style:
-                                TextStyle(fontSize: 18, color: Colors.black)),
-                        TextSpan(
-                            text:
-                                "كبيرة جدا في اليد وستحتاج إلي بعض الوقت للاعتياد عليها",
-                            style:
-                                TextStyle(fontSize: 18, color: Colors.white)),
-                      ])),
+                          text: TextSpan(
+                              style: TextStyle(fontFamily: 'Cairo'),
+                              children: <TextSpan>[
+                            TextSpan(
+                                text: "الشاشة :",
+                                style: TextStyle(
+                                    fontSize: 18, color: Colors.black)),
+                            TextSpan(
+                                text:
+                                    "كبيرة جدا في اليد وستحتاج إلي بعض الوقت للاعتياد عليها",
+                                style: TextStyle(
+                                    fontSize: 18, color: Colors.white)),
+                          ])),
                     ),
                   ],
                 )),
@@ -451,9 +508,9 @@ class _MobileDetailsState extends State<MobileDetails> {
 
 class TextOfDetails extends StatelessWidget {
   const TextOfDetails({
-    Key key,
-  }) : super(key: key);
-
+     this.containerColor
+  });
+  final Color containerColor;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -462,14 +519,11 @@ class TextOfDetails extends StatelessWidget {
         color: Colors.white,
         child: RichText(
             text: TextSpan(
-                style: TextStyle(fontSize: 18,fontFamily: 'Cairo'),
+                style: TextStyle(fontSize: 18, fontFamily: 'Cairo'),
                 children: <TextSpan>[
               TextSpan(
-                  text: "الموديل :",
-                  style: TextStyle(color: Colors.black)),
-              TextSpan(
-                  text: "S20 Ultra",
-                  style: TextStyle(color: Colors.blue)),
+                  text: "الموديل :", style: TextStyle(color: Colors.black)),
+              TextSpan(text: "S20 Ultra", style: TextStyle(color: Colors.blue)),
             ])));
   }
 }
