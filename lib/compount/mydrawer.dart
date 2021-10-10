@@ -83,18 +83,16 @@ class _MyDrawerState extends State<MyDrawer> {
           Divider(
             color: khomeBar,
           ),
-          InkWell(
-            child: ListTile(
-              title: Text("حول التطبيق",
-                  style: TextStyle(color: Colors.black, fontSize: 18)),
-              leading: Icon(Icons.info, color: Colors.blue, size: 25),
-            ),
-            onTap: () {
-              Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+          CustomDrawerItems(
+            text: "حول التطبيق",
+            icon: Icons.info_outline,
+            onTap: (){
+             Navigator.of(context).push(MaterialPageRoute(builder: (context) {
                 return AboutApp();
               }));
             },
           ),
+          
           InkWell(
             child: ListTile(
               title: Text("الإعدادات",
