@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import '../compount/data_search.dart';
-import '../widgets/last_product.dart';
-import '../widgets/build_categories_logo.dart';
+import '../widgets/custom_last_product.dart';
+import '../widgets/custom_build_categories_logo.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import '../compount/mydrawer.dart';
 import 'dart:core';
