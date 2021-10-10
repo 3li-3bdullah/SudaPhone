@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../constants.dart';
 
 class MobileDetails extends StatefulWidget {
   @override
@@ -12,6 +13,7 @@ class _MobileDetailsState extends State<MobileDetails> {
         textDirection: TextDirection.rtl,
         child: Scaffold(
           appBar: AppBar(
+            backgroundColor: kappDetails,
             title: Text(
               'التفاصيل',
               style: TextStyle(fontFamily: 'Cairo'),
@@ -519,7 +521,7 @@ class TextOfDetails extends StatelessWidget {
     return Container(
         width: MediaQuery.of(context).size.width,
         padding: EdgeInsets.all(10),
-        color: Color(0xff08535d),
+        color: containerColor,
         child: RichText(
             text: TextSpan(style: TextStyle(fontSize: 18), children: <TextSpan>[
           TextSpan(text: text1, style: TextStyle(color: color1)),
