@@ -15,22 +15,6 @@ class Screen extends StatefulWidget {
 }
 
 class ScreenState extends State<Screen> {
-  // final name;
-  //  var listSearch = [];
-  // ScreenState({this.name});
-
-  // Future getData() async {
-  //   for (int i = 0; i < name.length; i++) {
-  //     listSearch.add(name[i]);
-  //   }
-  //   print(listSearch);
-  // }
-
-  // @override
-  // void initState() {
-  //   getData();
-  //   super.initState();
-  // }
   int activeIndex = 0;
   final controller = PageController(viewportFraction: 0.8, keepPage: true);
   final colors = const [
@@ -41,15 +25,6 @@ class ScreenState extends State<Screen> {
     Colors.blue,
     Colors.amber,
   ];
-  //final controller = CarouselController();
-
-  // final imagesCarousel = [
-  //   Image.asset("example/images/slider/1.jpg"),
-  //   Image.asset("example/images/slider/2.jpg"),
-  //   Image.asset("example/images/slider/3.jpg"),
-  //   Image.asset("example/images/slider/4.jpg"),
-  //   Image.asset("example/images/slider/6.jpg"),
-  // ];
   List<String> imagesCarousel = [
     "example/images/slider/1.jpg",
     "example/images/slider/2.jpg",
