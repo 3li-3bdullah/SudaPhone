@@ -226,11 +226,11 @@ class _PostState extends State<Post> {
 
 class CustomText extends StatelessWidget {
   const CustomText({
-    this.text,
-    this.textAlign,
-    this.color,
-    this.fontSize,
-    this.fontWeight,
+  required  this.text,
+  required  this.textAlign,
+  required  this.color,
+  required  this.fontSize,
+  required  this.fontWeight,
   });
   final String text;
   final TextAlign textAlign;
