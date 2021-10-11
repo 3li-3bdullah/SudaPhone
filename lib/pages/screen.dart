@@ -217,12 +217,12 @@ class ScreenState extends State<Screen> {
                         "Lenovo K12 Pro : 1400\$",
                         () {}
                       ),
-                      
-                      CustomLastProduct(
-                        imageProduct: "example/images/product/realme.jpg",
-                        text: "Realme race teaser : 900\$",
-                        onTap: () {},
+                      buildLastProduct(
+                        "example/images/product/realme.jpg",
+                        "Realme race teaser : 900\$",
+                        () {}
                       ),
+                      
                       CustomLastProduct(
                         imageProduct: "example/images/product/tecno.jpg",
                         text: "Tecno Spark6 : 850\$",
