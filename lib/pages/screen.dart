@@ -169,12 +169,12 @@ class ScreenState extends State<Screen> {
                            "Oppo",
                             () {},
                         ),
-                        
-                        CustomBuildCategoriesLogo(
-                          imageLogo: "example/images/logo/tecno.png",
-                          text: "Tecno",
-                          onTap: () {},
+                        buildCategoriesLogo(
+                           "example/images/logo/tecno.png",
+                            "Tecno",
+                            () {},
                         ),
+                        
                       ])),
               // End The Long Container....
               Container(
