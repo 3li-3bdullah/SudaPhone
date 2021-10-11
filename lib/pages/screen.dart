@@ -192,16 +192,12 @@ class ScreenState extends State<Screen> {
                         "Huawei Mate 40 Pro : 1200\$",
                         () {}
                       ),
-                      CustomLastProduct(
-                        imageProduct: "example/images/product/huawei.jpg",
-                        text: "Huawei Mate 40 Pro : 1200\$",
-                        onTap: () {},
+                      buildLastProduct(
+                        "example/images/product/samsung.jpg",
+                         "Samsung S20 Ultra : 1100\$",
+                        () {}
                       ),
-                      CustomLastProduct(
-                        imageProduct: "example/images/product/samsung.jpg",
-                        text: "Samsung S20 Ultra : 1100\$",
-                        onTap: () {},
-                      ),
+                      
                       CustomLastProduct(
                         imageProduct: "example/images/product/iphone.jpg",
                         text: "iPhone 12 pro max : 1399\$",
