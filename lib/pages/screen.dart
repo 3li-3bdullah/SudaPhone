@@ -234,6 +234,26 @@ class ScreenState extends State<Screen> {
           )),
     );
   }
+
+  InkWell buildCategoriesLogo(String imageLogo, String text,Function onTap) {
+    return InkWell(
+                 child: Container(
+                          height: 100,
+                          width: 100,
+                          child: ListTile(
+                              title: Image.asset(
+                                imageLogo,
+                                height: 80,
+                                width: 80,
+                                fit: BoxFit.cover,
+                              ),
+                              subtitle:
+                                  Container(child: Text(text, textAlign: TextAlign.center)))),
+                      onTap: () {
+                        onTap();
+                      },
+  );
+  }
 }
 
 
