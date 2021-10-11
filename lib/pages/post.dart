@@ -176,11 +176,14 @@ class _PostState extends State<Post> {
                     child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
-                          Text(
-                            "تعليق",
+                          CustomText(
+                            text:  "0",
+                            color:Colors.grey.shade900,
+                            fontSize: 15,
+                            fontWeight: FontWeight.normal,
                             textAlign: TextAlign.center,
                           ),
-                          SizedBox(width: 4),
+                         const SizedBox(width: 4),
                           Icon(Icons.comment, color: Colors.purple),
                         ]),
                     onTap: () {
