@@ -3,7 +3,6 @@ import 'package:carousel_slider/carousel_slider.dart';
 import '../compount/data_search.dart';
 import '../constants.dart';
 import '../widgets/custom_last_product.dart';
-import '../widgets/custom_build_categories_logo.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import '../compount/mydrawer.dart';
 import 'dart:core';
@@ -135,46 +134,45 @@ class ScreenState extends State<Screen> {
                       scrollDirection: Axis.horizontal,
                       children: <Widget>[
                         buildCategoriesLogo(
-                           "example/images/logo/huawei.png",
-                           "Huawei",
-                            () {},
+                          "example/images/logo/huawei.png",
+                          "Huawei",
+                          () {},
                         ),
                         buildCategoriesLogo(
-                           "example/images/logo/iphone.jpg",
-                           "Apple",
-                            () {},
+                          "example/images/logo/iphone.jpg",
+                          "Apple",
+                          () {},
                         ),
                         buildCategoriesLogo(
-                           "example/images/logo/realme.png",
-                           "Realme",
-                            () {},
+                          "example/images/logo/realme.png",
+                          "Realme",
+                          () {},
                         ),
                         buildCategoriesLogo(
-                           "example/images/logo/lenovo.png",
-                           "Lenovo",
-                            () {},
+                          "example/images/logo/lenovo.png",
+                          "Lenovo",
+                          () {},
                         ),
                         buildCategoriesLogo(
-                           "example/images/logo/samsung.jpg",
-                           "Samsung",
-                            () {},
+                          "example/images/logo/samsung.jpg",
+                          "Samsung",
+                          () {},
                         ),
                         buildCategoriesLogo(
-                           "example/images/logo/xiaomi.png",
-                           "Xiaomi",
-                            () {},
+                          "example/images/logo/xiaomi.png",
+                          "Xiaomi",
+                          () {},
                         ),
                         buildCategoriesLogo(
-                           "example/images/logo/oppo.jpg",
-                           "Oppo",
-                            () {},
+                          "example/images/logo/oppo.jpg",
+                          "Oppo",
+                          () {},
                         ),
                         buildCategoriesLogo(
-                           "example/images/logo/tecno.png",
-                            "Tecno",
-                            () {},
+                          "example/images/logo/tecno.png",
+                          "Tecno",
+                          () {},
                         ),
-                        
                       ])),
               // End The Long Container....
               Container(
@@ -189,45 +187,46 @@ class ScreenState extends State<Screen> {
                     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                         crossAxisCount: 2),
                     children: <Widget>[
+                      buildLastProduct(),
                       CustomLastProduct(
                         imageProduct: "example/images/product/huawei.jpg",
                         text: "Huawei Mate 40 Pro : 1200\$",
-                        onTap: (){},
+                        onTap: () {},
                       ),
                       CustomLastProduct(
                         imageProduct: "example/images/product/samsung.jpg",
                         text: "Samsung S20 Ultra : 1100\$",
-                        onTap: (){},
+                        onTap: () {},
                       ),
                       CustomLastProduct(
                         imageProduct: "example/images/product/iphone.jpg",
                         text: "iPhone 12 pro max : 1399\$",
-                        onTap: (){},
+                        onTap: () {},
                       ),
                       CustomLastProduct(
                         imageProduct: "example/images/product/xiaomi.jpg",
-                        text: "Xaiomi Mi 10T  : 1050\$" ,
-                        onTap: (){},
+                        text: "Xaiomi Mi 10T  : 1050\$",
+                        onTap: () {},
                       ),
                       CustomLastProduct(
                         imageProduct: "example/images/product/oppo.jpg",
                         text: "Oppo F17 Pro : 1100\$",
-                        onTap: (){},
+                        onTap: () {},
                       ),
                       CustomLastProduct(
-                        imageProduct:  "example/images/product/lenovo.jpg",
+                        imageProduct: "example/images/product/lenovo.jpg",
                         text: "Lenovo K12 Pro : 1400\$",
-                        onTap: (){},
+                        onTap: () {},
                       ),
-                     CustomLastProduct(
-                        imageProduct:  "example/images/product/realme.jpg",
+                      CustomLastProduct(
+                        imageProduct: "example/images/product/realme.jpg",
                         text: "Realme race teaser : 900\$",
-                        onTap: (){},
+                        onTap: () {},
                       ),
                       CustomLastProduct(
                         imageProduct: "example/images/product/tecno.jpg",
                         text: "Tecno Spark6 : 850\$",
-                        onTap: (){},
+                        onTap: () {},
                       ),
                     ]),
               ),
@@ -236,26 +235,37 @@ class ScreenState extends State<Screen> {
     );
   }
 
-  InkWell buildCategoriesLogo(String imageLogo, String text,Function onTap) {
+  InkWell buildLastProduct(String imageProduct, String text, Function onTap) {
     return InkWell(
-                 child: Container(
-                          height: 100,
-                          width: 100,
-                          child: ListTile(
-                              title: Image.asset(
-                                imageLogo,
-                                height: 80,
-                                width: 80,
-                                fit: BoxFit.cover,
-                              ),
-                              subtitle:
-                                  Container(child: Text(text, textAlign: TextAlign.center)))),
-                      onTap: () {
-                        onTap();
-                      },
-  );
+      child: GridTile(
+          child: Image.asset(imageProduct),
+          footer: Container(
+              height: 25,
+              color: Colors.black.withOpacity(0.4),
+              child: Text(text,
+                  style: TextStyle(color: Colors.white),
+                  textAlign: TextAlign.center))),
+      onTap: onTap,
+    );
+  }
+
+  InkWell buildCategoriesLogo(String imageLogo, String text, Function onTap) {
+    return InkWell(
+      child: Container(
+          height: 100,
+          width: 100,
+          child: ListTile(
+              title: Image.asset(
+                imageLogo,
+                height: 80,
+                width: 80,
+                fit: BoxFit.cover,
+              ),
+              subtitle:
+                  Container(child: Text(text, textAlign: TextAlign.center)))),
+      onTap: () {
+        onTap();
+      },
+    );
   }
 }
-
-
-
