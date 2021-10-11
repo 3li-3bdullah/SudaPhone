@@ -16,7 +16,7 @@ class LogIn extends StatefulWidget {
 }
 
 showdialogall(context, String mycontent) {
-  double mdw = MediaQuery.of(context).size.width;
+  var mdw = MediaQuery.of(context).size.width;
   return showDialog(
       context: context,
       builder: (context) {
@@ -30,8 +30,7 @@ showdialogall(context, String mycontent) {
               FlatButton(
                 child: Text("تم", style: TextStyle(color: Colors.lightGreen)),
                 onPressed: () {
-                  Navigator.of(context)
-                      .push(MaterialPageRoute(builder: (context) {
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context) {
                     return Screen();
                   }));
                 },
@@ -78,44 +77,46 @@ class LogInState extends State<LogIn> {
 
   // }
 
-  signin()  {
-   /// var formdata = formstatesignin.currentState;
-    // if (formstatesignin.currentState.validate()) {
-    //   formstatesignin.currentState.save();
-      // print(_email);
-      // print(_password);
-      // final authResult = await _auth.signIn(_email, _password);
-      // setState(() {
+  signin() {
+    // String formdata = formstatesignin.currentState;
+    // if (formdata.validate()) {
+    //   formdata.save();
+    //   // print(_email);
+    //   // print(_password);
+    //   // final authResult = await _auth.signIn(_email, _password);
+    //   // setState(() {
 
-      // });
-      // print(authResult.user.uid);
-      showdialogall(context, "تم تسجيل دخولك بنجاح");
-    }
+    //   // });
+    //   // print(authResult.user.uid);
+    //   showdialogall(context, "تم تسجيل دخولك بنجاح");
+    // }
+    showdialogall(context, "تم تسجيل دخولك بنجاح");
   }
 
-   signup()  {
-    ///var formdata = formstatesignup.currentState;
-    // if (formstatesignup.currentState.validate()) {
-    //   formstatesignup.currentState.save();
-      //print(_email);
-      // print(_password);
-      // final authResult = await _auth.signUp(_email, _password);
-      // print(authResult.user.uid);
-      showdialogall(context, "تم إنشاء الحساب بنجاح");
-    }
-  
+  signup() {
+    // String formdata = formstatesignup.currentState;
+    // if (formdata.validate()) {
+    //   formdata.save();
+    //   //print(_email);
+    //   // print(_password);
+    //   // final authResult = await _auth.signUp(_email, _password);
+    //   // print(authResult.user.uid);
+    //   showdialogall(context, "تم إنشاء الحساب بنجاح");
+    // }
+    showdialogall(context, "تم إنشاء الحساب بنجاح");
+  }
 
- // TapGestureRecognizer _changesign;
+  //TapGestureRecognizer _changesign;
   bool showsignin = true;
 
   @override
   void dispose() {
     // _changesign = new TapGestureRecognizer()
-    //   ..onTap = () {
-        setState(() {
-          showsignin = !showsignin;
-          print(showsignin);
-        });
+    // ..onTap = () {
+    setState(() {
+      showsignin = !showsignin;
+      print(showsignin);
+    });
     //  };
     //getPre();
     super.dispose();
@@ -139,18 +140,10 @@ class LogInState extends State<LogIn> {
                   height: 1000,
                   child: SingleChildScrollView(
                       child: Column(children: <Widget>[
-                    Center(
-                        child: Container(
-                            margin: EdgeInsets.only(top: 30),
-                            child: Text(
-                                showsignin ? "تسجيل الدخول" : "إنشاء حساب",
-                                style: TextStyle(
-                                    color: Colors.white, fontSize: 20)))),
+                    Center(child: Container(margin: EdgeInsets.only(top: 30), child: Text(showsignin ? "تسجيل الدخول" : "إنشاء حساب", style: TextStyle(color: Colors.white, fontSize: 20)))),
                     Padding(padding: EdgeInsets.only(top: 20)),
                     buildContainerAvatar(mdw),
-                    showsignin
-                        ? buildFormBoxSignIn(mdw)
-                        : buildFormBoxSignUp(mdw),
+                    showsignin ? buildFormBoxSignIn(mdw) : buildFormBoxSignUp(mdw),
                     Container(
                       margin: EdgeInsets.only(top: 20),
                       child: Column(
@@ -169,28 +162,16 @@ class LogInState extends State<LogIn> {
                           SizedBox(height: showsignin ? 20 : 5),
                           RaisedButton(
                               elevation: 10,
-                              color:
-                                  showsignin ? Colors.grey[800] : Colors.purple,
-                              padding: EdgeInsets.symmetric(
-                                  vertical: 10, horizontal: 20),
+                              color: showsignin ? Color(0xff424242) : Colors.purple,
+                              padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
                               onPressed: showsignin ? signin : signup,
-                              child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  mainAxisSize: MainAxisSize.min,
-                                  children: <Widget>[
-                                    Text(
-                                      showsignin
-                                          ? "تسجيل الدخول"
-                                          : "إنشاء حساب",
-                                      style: TextStyle(
-                                          color: Colors.white, fontSize: 18),
-                                    ),
-                                    Container(
-                                        margin: EdgeInsets.only(top: 4),
-                                        padding: EdgeInsets.only(right: 10),
-                                        child: Icon(Icons.arrow_forward,
-                                            color: Colors.white))
-                                  ])),
+                              child: Row(mainAxisAlignment: MainAxisAlignment.center, mainAxisSize: MainAxisSize.min, children: <Widget>[
+                                Text(
+                                  showsignin ? "تسجيل الدخول" : "إنشاء حساب",
+                                  style: TextStyle(color: Colors.white, fontSize: 18),
+                                ),
+                                Container(margin: EdgeInsets.only(top: 4), padding: EdgeInsets.only(right: 10), child: Icon(Icons.arrow_forward, color: Colors.white))
+                              ])),
 
                           /// isLoading ? CircularProgressIndicator() : Padding(padding: EdgeInsets.all(0),),
                           Container(
@@ -209,15 +190,9 @@ class LogInState extends State<LogIn> {
                                         ),
                                         children: <TextSpan>[
                                       TextSpan(
-                                          recognizer: _changesign,
-                                          text: showsignin
-                                              ? "إنشاء حساب جديد"
-                                              : "تسجيل دخول",
-                                          style: TextStyle(
-                                              color: showsignin
-                                                  ? Colors.blue
-                                                  : Colors.purple,
-                                              fontWeight: FontWeight.w700)),
+                                          //recognizer: _changesign,
+                                          text: showsignin ? "إنشاء حساب جديد" : "تسجيل دخول",
+                                          style: TextStyle(color: showsignin ? Colors.blue : Colors.purple, fontWeight: FontWeight.w700)),
                                     ])),
                               )),
                           const SizedBox(height: 10),
@@ -225,63 +200,41 @@ class LogInState extends State<LogIn> {
                               ? Directionality(
                                   textDirection: TextDirection.ltr,
                                   child: Row(children: <Widget>[
-                                    Padding(
-                                        padding: EdgeInsets.only(right: 10)),
+                                    Padding(padding: EdgeInsets.only(right: 10)),
                                     Expanded(
                                         child: RaisedButton(
-                                            color:
-                                                Colors.green.withOpacity(0.3),
+                                            color: Colors.green.withOpacity(0.3),
                                             child: Row(
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment.center,
+                                              mainAxisAlignment: MainAxisAlignment.center,
                                               children: <Widget>[
                                                 Expanded(
                                                     flex: 3,
                                                     child: Text(
                                                       "Sign In Google",
-                                                      style: TextStyle(
-                                                          color: Colors.white,
-                                                          fontWeight:
-                                                              FontWeight.w600),
+                                                      style: TextStyle(color: Colors.white, fontWeight: FontWeight.w600),
                                                     )),
-                                                Expanded(
-                                                    flex: 1,
-                                                    child: Image.asset(
-                                                        "example/images/social/google.png",
-                                                        width: 25,
-                                                        height: 25)),
+                                                Expanded(flex: 1, child: Image.asset("example/images/social/google.png", width: 25, height: 25)),
                                               ],
                                             ),
                                             onPressed: () {})),
-                                    Padding(
-                                        padding: EdgeInsets.only(right: 10)),
+                                    Padding(padding: EdgeInsets.only(right: 10)),
                                     Expanded(
                                         child: RaisedButton(
                                             color: Colors.red.withOpacity(0.3),
                                             child: Row(
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment.center,
+                                              mainAxisAlignment: MainAxisAlignment.center,
                                               children: <Widget>[
                                                 Expanded(
                                                     flex: 3,
                                                     child: Text(
                                                       "Sign In Facebook",
-                                                      style: TextStyle(
-                                                          color: Colors.white,
-                                                          fontWeight:
-                                                              FontWeight.w600),
+                                                      style: TextStyle(color: Colors.white, fontWeight: FontWeight.w600),
                                                     )),
-                                                Expanded(
-                                                    flex: 1,
-                                                    child: Image.asset(
-                                                        "example/images/social/facebook.png",
-                                                        width: 25,
-                                                        height: 25)),
+                                                Expanded(flex: 1, child: Image.asset("example/images/social/facebook.png", width: 25, height: 25)),
                                               ],
                                             ),
                                             onPressed: () {})),
-                                    Padding(
-                                        padding: EdgeInsets.only(right: 10)),
+                                    Padding(padding: EdgeInsets.only(right: 10)),
                                   ]),
                                 )
                               : const SizedBox(),
@@ -303,11 +256,7 @@ class LogInState extends State<LogIn> {
             height: 250,
             width: mdw / 1.2,
             decoration: BoxDecoration(color: Colors.white, boxShadow: [
-              BoxShadow(
-                  color: Colors.black,
-                  blurRadius: 0.1,
-                  spreadRadius: 1,
-                  offset: Offset(1, 1))
+              BoxShadow(color: Colors.black, blurRadius: 0.1, spreadRadius: 1, offset: Offset(1, 1))
             ]),
             child: Form(
               key: formstatesignin,
@@ -318,9 +267,7 @@ class LogInState extends State<LogIn> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       //Start Email----------
-                      Text("عنوان البريد الالكتروني",
-                          style: TextStyle(
-                              color: Colors.blue, fontWeight: FontWeight.w600)),
+                      Text("عنوان البريد الالكتروني", style: TextStyle(color: Colors.blue, fontWeight: FontWeight.w600)),
                       const SizedBox(height: 10),
                       TextFormField(
                         onSaved: (value) {
@@ -328,36 +275,13 @@ class LogInState extends State<LogIn> {
                         },
                         controller: email,
                         validator: (val) {
-                          return validInput(val, 30, 15, "email");
+                          return validInput("email", 30, 15, "email");
                         },
-                        decoration: InputDecoration(
-                            contentPadding: EdgeInsets.all(4),
-                            hintText: "ادخل البريد الالكتروني هنا",
-                            prefixIcon:
-                                Icon(Icons.email_outlined, color: Colors.blue),
-                            filled: true,
-                            fillColor: Color(0xffe0e0e0),
-                            enabledBorder: OutlineInputBorder(
-                                borderSide: BorderSide(
-                                    color: Color(0xffbdbdbd),
-                                    style: BorderStyle.solid,
-                                    width: 1)),
-                            focusedBorder: OutlineInputBorder(
-                                borderSide: BorderSide(
-                                    color: Colors.blue,
-                                    style: BorderStyle.solid,
-                                    width: 1)),
-                            border: OutlineInputBorder(
-                                borderSide: BorderSide(
-                                    color: Colors.blue,
-                                    style: BorderStyle.solid,
-                                    width: 1))),
+                        decoration: InputDecoration(contentPadding: EdgeInsets.all(4), hintText: "ادخل البريد الالكتروني هنا", prefixIcon: Icon(Icons.email_outlined, color: Colors.blue), filled: true, fillColor: Color(0xffe0e0e0), enabledBorder: OutlineInputBorder(borderSide: BorderSide(color: Color(0xffbdbdbd), style: BorderStyle.solid, width: 1)), focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.blue, style: BorderStyle.solid, width: 1)), border: OutlineInputBorder(borderSide: BorderSide(color: Colors.blue, style: BorderStyle.solid, width: 1))),
                       ),
                       //End User Name----------
                       //Start User Password----------
-                      Text("كلمة المرور",
-                          style: TextStyle(
-                              color: Colors.blue, fontWeight: FontWeight.w600)),
+                      Text("كلمة المرور", style: TextStyle(color: Colors.blue, fontWeight: FontWeight.w600)),
                       SizedBox(height: 10),
                       TextFormField(
                         onSaved: (value) {
@@ -365,31 +289,10 @@ class LogInState extends State<LogIn> {
                         },
                         controller: password,
                         validator: (val) {
-                          return validInput(val, 20, 8, "password");
+                          return validInput("password", 20, 8, "password");
                         },
                         obscureText: true,
-                        decoration: InputDecoration(
-                            contentPadding: EdgeInsets.all(4),
-                            hintText: "أدخل  كلمة المرور هنا",
-                            prefixIcon:
-                                Icon(Icons.lock_outline, color: Colors.blue),
-                            filled: true,
-                            fillColor: Color(0xffe0e0e0),
-                            enabledBorder: OutlineInputBorder(
-                                borderSide: BorderSide(
-                                    color: Color(0xffbdbdbd),
-                                    style: BorderStyle.solid,
-                                    width: 1)),
-                            focusedBorder: OutlineInputBorder(
-                                borderSide: BorderSide(
-                                    color: Colors.blue,
-                                    style: BorderStyle.solid,
-                                    width: 1)),
-                            border: OutlineInputBorder(
-                                borderSide: BorderSide(
-                                    color: Colors.blue,
-                                    style: BorderStyle.solid,
-                                    width: 1))),
+                        decoration: InputDecoration(contentPadding: EdgeInsets.all(4), hintText: "أدخل  كلمة المرور هنا", prefixIcon: Icon(Icons.lock_outline, color: Colors.blue), filled: true, fillColor: Color(0xffe0e0e0), enabledBorder: OutlineInputBorder(borderSide: BorderSide(color: Color(0xffbdbdbd), style: BorderStyle.solid, width: 1)), focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.blue, style: BorderStyle.solid, width: 1)), border: OutlineInputBorder(borderSide: BorderSide(color: Colors.blue, style: BorderStyle.solid, width: 1))),
                       )
                       //End User Password----------
                     ],
@@ -408,11 +311,7 @@ class LogInState extends State<LogIn> {
             height: 402,
             width: mdw / 1.2,
             decoration: BoxDecoration(color: Colors.white, boxShadow: [
-              BoxShadow(
-                  color: Colors.black,
-                  blurRadius: 0.1,
-                  spreadRadius: 1,
-                  offset: Offset(1, 1))
+              BoxShadow(color: Colors.black, blurRadius: 0.1, spreadRadius: 1, offset: Offset(1, 1))
             ]),
             child: Form(
               key: formstatesignup,
@@ -423,26 +322,15 @@ class LogInState extends State<LogIn> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       //Start User Name----------
-                      Text("إسم المستخدم",
-                          style: TextStyle(
-                              color: Colors.purple,
-                              fontWeight: FontWeight.w600)),
+                      Text("إسم المستخدم", style: TextStyle(color: Colors.purple, fontWeight: FontWeight.w600)),
                       SizedBox(height: 10),
-                      buildTextFormFieldAll(
-                          false,
-                          "أدخل اسم المستخدم",
-                          Icons.person_outline_rounded,
-                          username,
-                          "validusername", (value) {
+                      buildTextFormFieldAll(false, "أدخل اسم المستخدم", Icons.person_outline_rounded, username, "validusername", (value) {
                         username = value;
                       }),
                       //End User Name----------
                       //Start User E-mail ----------
                       SizedBox(height: 10),
-                      Text("البريد الالكتروني",
-                          style: TextStyle(
-                              color: Colors.purple,
-                              fontWeight: FontWeight.w700)),
+                      Text("البريد الالكتروني", style: TextStyle(color: Colors.purple, fontWeight: FontWeight.w700)),
                       SizedBox(height: 10),
                       buildTextFormFieldAll(
                         false,
@@ -456,31 +344,15 @@ class LogInState extends State<LogIn> {
                       ),
                       //End User E-mail ----------
                       //Start User Password----------
-                      Text("كلمة المرور",
-                          style: TextStyle(
-                              color: Colors.purple,
-                              fontWeight: FontWeight.w600)),
+                      Text("كلمة المرور", style: TextStyle(color: Colors.purple, fontWeight: FontWeight.w600)),
                       SizedBox(height: 10),
-                      buildTextFormFieldAll(
-                          true,
-                          "أدخل كلمة المرور",
-                          Icons.lock_outlined,
-                          password,
-                          "validpassword", (value) {
+                      buildTextFormFieldAll(true, "أدخل كلمة المرور", Icons.lock_outlined, password, "validpassword", (value) {
                         ///  _password = value;
                       }),
                       //Start User Password Confirm----------
-                      Text("تأكيد كلمة المرور",
-                          style: TextStyle(
-                              color: Colors.purple,
-                              fontWeight: FontWeight.w600)),
+                      Text("تأكيد كلمة المرور", style: TextStyle(color: Colors.purple, fontWeight: FontWeight.w600)),
                       SizedBox(height: 10),
-                      buildTextFormFieldAll(
-                          true,
-                          "تأكيد كلمة المرور",
-                          Icons.lock_outlined,
-                          confirmpassword,
-                          "validconfirmpassword", (value) {
+                      buildTextFormFieldAll(true, "تأكيد كلمة المرور", Icons.lock_outlined, confirmpassword, "validconfirmpassword", (value) {
                         //  _password = value;
                       }),
                       //End User Password Confirm----------
@@ -491,8 +363,7 @@ class LogInState extends State<LogIn> {
             )));
   }
 
-  TextFormField buildTextFormFieldAll(bool pass, String myhinttext,
-      final IconData icon, TextEditingController myContorller, type, onClick) {
+  TextFormField buildTextFormFieldAll(bool pass, String myhinttext, final IconData icon, myContorller, type, onClick) {
     return TextFormField(
       ///autovalidateMode: AutovalidateMode.always,
       onSaved: (value) {
@@ -502,13 +373,13 @@ class LogInState extends State<LogIn> {
       obscureText: pass,
       validator: (val) {
         if (type == "validusername") {
-          return validInput(val, 20, 4, "username");
+          return validInput("username", 20, 4, "username");
         }
         if (type == "validemail") {
-          return validInput(val, 30, 15, "email");
+          return validInput("email", 30, 15, "email");
         }
         if (type == "validpassword") {
-          return validInput(val, 20, 6, "password");
+          return validInput("password", 20, 6, "password");
         }
         if (type == "validconfirmpassword") {
           if (type != password.text) {
@@ -516,25 +387,7 @@ class LogInState extends State<LogIn> {
           }
         }
       },
-      decoration: InputDecoration(
-          contentPadding: EdgeInsets.all(4),
-          hintText: myhinttext,
-          prefixIcon: Icon(icon, color: Colors.green),
-          filled: true,
-          fillColor: Color(0xffe0e0e0),
-          enabledBorder: OutlineInputBorder(
-              borderSide: BorderSide(
-                  color: Color(0xffbdbdbd),
-                  style: BorderStyle.solid,
-                  width: 1)),
-          focusedBorder: OutlineInputBorder(
-              borderSide: BorderSide(
-                  color: Colors.purple, style: BorderStyle.solid, width: 1)),
-          border: OutlineInputBorder(
-              borderSide: BorderSide(
-                  color: Color(0xffbdbdbd),
-                  style: BorderStyle.solid,
-                  width: 1))),
+      decoration: InputDecoration(contentPadding: EdgeInsets.all(4), hintText: myhinttext, prefixIcon: Icon(icon, color: Colors.green), filled: true, fillColor: Color(0xffe0e0e0), enabledBorder: OutlineInputBorder(borderSide: BorderSide(color: Color(0xffbdbdbd), style: BorderStyle.solid, width: 1)), focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.purple, style: BorderStyle.solid, width: 1)), border: OutlineInputBorder(borderSide: BorderSide(color: Color(0xffbdbdbd), style: BorderStyle.solid, width: 1))),
     );
   }
 
@@ -543,12 +396,9 @@ class LogInState extends State<LogIn> {
       duration: Duration(milliseconds: 500),
       height: 100,
       width: 100,
-      decoration: BoxDecoration(
-          color: showsignin ? Colors.yellow : Colors.purple,
-          borderRadius: BorderRadius.circular(100),
-          boxShadow: [
-            BoxShadow(color: Colors.black, blurRadius: 3, spreadRadius: 0.1)
-          ]),
+      decoration: BoxDecoration(color: showsignin ? Colors.yellow : Colors.purple, borderRadius: BorderRadius.circular(100), boxShadow: [
+        BoxShadow(color: Colors.black, blurRadius: 3, spreadRadius: 0.1)
+      ]),
       child: InkWell(
         onTap: () {
           setState(() {
@@ -594,9 +444,7 @@ class LogInState extends State<LogIn> {
           duration: Duration(milliseconds: 500),
           height: mdw,
           width: mdw,
-          decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(mdw),
-              color: showsignin ? Color(0xff424242) : Colors.green),
+          decoration: BoxDecoration(borderRadius: BorderRadius.circular(mdw), color: showsignin ? Color(0xff424242) : Colors.green),
         ),
       ),
     ));
@@ -611,11 +459,7 @@ class LogInState extends State<LogIn> {
         duration: Duration(milliseconds: 500),
         height: mdw,
         width: mdw,
-        decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(mdw),
-            color: showsignin
-                ? Colors.blue.withOpacity(0.3)
-                : Colors.red.withOpacity(0.3)),
+        decoration: BoxDecoration(borderRadius: BorderRadius.circular(mdw), color: showsignin ? Colors.blue.withOpacity(0.3) : Colors.red.withOpacity(0.3)),
       ),
     );
   }
