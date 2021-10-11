@@ -139,12 +139,12 @@ class ScreenState extends State<Screen> {
                            "Huawei",
                             () {},
                         ),
-                        
-                        CustomBuildCategoriesLogo(
-                          imageLogo: "example/images/logo/iphone.jpg",
-                          text: "Apple",
-                          onTap: () {},
+                        buildCategoriesLogo(
+                           "example/images/logo/iphone.jpg",
+                           "Apple",
+                            () {},
                         ),
+                        
                         CustomBuildCategoriesLogo(
                           imageLogo: "example/images/logo/realme.png",
                           text: "Realme",
