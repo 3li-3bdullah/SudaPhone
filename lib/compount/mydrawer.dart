@@ -116,7 +116,7 @@ class _MyDrawerState extends State<MyDrawer> {
         title: Text(text, style: TextStyle(color: Colors.black, fontSize: 18)),
         leading: Icon(icon, color: khomeBar, size: 25),
       ),
-      onTap: onTap,
+      onTap: (){onTap();},
     );
   }
 }
