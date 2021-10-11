@@ -5,7 +5,6 @@ import '../compount/comments.dart';
 //import 'package:shared_preferences/shared_preferences.dart';
 
 class Post extends StatefulWidget {
-
   @override
   _PostState createState() => _PostState();
 }
@@ -23,11 +22,11 @@ class _PostState extends State<Post> {
   //     print(_file);
   //   });
   // }
-    ///-----
+  ///-----
   // final ImagePicker _picker = ImagePicker();
   // Future pcamera() async {
   //   final File image = await _picker.pickImage(source: ImageSource.gallery);
-   
+
   // }
 
   /*  Future pickercamera() async {
@@ -91,6 +90,7 @@ class _PostState extends State<Post> {
             IconButton(
               icon: Icon(Icons.camera_alt_outlined),
               onPressed: () {},
+
               ///=> pickercamera(),
             ),
             Row(children: <Widget>[
@@ -106,13 +106,11 @@ class _PostState extends State<Post> {
                     child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
-                          Text(
-                            "اضف منشور",
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                                color: Colors.green,
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold),
+                          CustomText(
+                            text: "اضف منشور",
+                            color: Colors.grey.shade900,
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
                           ),
                           Padding(padding: EdgeInsets.only(right: 10)),
                           Icon(Icons.add_box, color: Colors.purple),
@@ -209,6 +207,31 @@ class _PostState extends State<Post> {
         ]),
       ),
     ));
+  }
+}
+
+class CustomText extends StatelessWidget {
+  const CustomText({
+     this.text,
+      this.textAlign,
+       this.color,
+        this.fontSize,
+         this.fontWeight,
+  });
+  final String text;
+  final TextAlign textAlign;
+  final Color color;
+  final double fontSize;
+  final FontWeight fontWeight;
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      text,
+      textAlign: textAlign,
+      style: TextStyle(
+          color: color, fontSize: fontSize, fontWeight: fontWeight),
+    );
   }
 }
 
