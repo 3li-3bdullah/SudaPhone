@@ -134,11 +134,12 @@ class ScreenState extends State<Screen> {
                   child: ListView(
                       scrollDirection: Axis.horizontal,
                       children: <Widget>[
-                        CustomBuildCategoriesLogo(
-                          imageLogo: "example/images/logo/huawei.png",
-                          text: "Huawei",
-                          onTap: () {},
+                        buildCategoriesLogo(
+                           "example/images/logo/huawei.png",
+                           "Huawei",
+                            () {},
                         ),
+                        
                         CustomBuildCategoriesLogo(
                           imageLogo: "example/images/logo/iphone.jpg",
                           text: "Apple",
