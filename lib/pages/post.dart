@@ -111,9 +111,10 @@ class _PostState extends State<Post> {
                             color: Colors.grey.shade900,
                             fontSize: 20,
                             fontWeight: FontWeight.bold,
+                            textAlign: TextAlign.center,
                           ),
                           Padding(padding: EdgeInsets.only(right: 10)),
-                          Icon(Icons.add_box, color: Colors.purple),
+                          Icon(Icons.add_box, color: Colors.grey.shade900),
                         ])),
               )),
             ]),
@@ -212,11 +213,11 @@ class _PostState extends State<Post> {
 
 class CustomText extends StatelessWidget {
   const CustomText({
-     this.text,
-      this.textAlign,
-       this.color,
-        this.fontSize,
-         this.fontWeight,
+    this.text,
+    this.textAlign,
+    this.color,
+    this.fontSize,
+    this.fontWeight,
   });
   final String text;
   final TextAlign textAlign;
@@ -229,8 +230,8 @@ class CustomText extends StatelessWidget {
     return Text(
       text,
       textAlign: textAlign,
-      style: TextStyle(
-          color: color, fontSize: fontSize, fontWeight: fontWeight),
+      style:
+          TextStyle(color: color, fontSize: fontSize, fontWeight: fontWeight),
     );
   }
 }
