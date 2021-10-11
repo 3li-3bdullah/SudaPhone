@@ -127,17 +127,24 @@ class _PostState extends State<Post> {
                   leading: CircleAvatar(child: Icon(Icons.person)),
                   title: Container(
                       margin: EdgeInsets.only(top: 10),
-                      child: Text("علي عبدالله",
-                          style: TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.w400,
-                              color: Colors.black))),
+                      child: CustomText(
+                            text: "علي عبدالله",
+                            color:Colors.black,
+                            fontSize: 18,
+                            fontWeight: FontWeight.w400,
+                            textAlign: TextAlign.right,
+                          ),),
                   trailing: IconButton(
                       icon: Icon(Icons.more_horiz), onPressed: () {}),
                   isThreeLine: true,
                   subtitle: Column(children: <Widget>[
-                    Text(
-                        "السلام عليكم شباب ،، لدي Huawei Mate 40 Pro إستعمال يومين فقط ، نضيف ومع كامل الملحقات البيع لأعلي سعر"),
+                    CustomText(
+                            text: "السلام عليكم شباب ،، لدي Huawei Mate 40 Pro إستعمال يومين فقط ، نضيف ومع كامل الملحقات البيع لأعلي سعر",
+                            color:Colors.grey.shade900,
+                            fontSize: 15,
+                            fontWeight: FontWeight.normal,
+                            textAlign: TextAlign.center,
+                          ),
                     Image.asset("example/images/product/huawei.jpg"),
                   ])),
               Divider(color: Colors.grey.withOpacity(0.2)),
@@ -150,10 +157,13 @@ class _PostState extends State<Post> {
                       child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
-                            Text(
-                              "إعجاب",
-                              textAlign: TextAlign.center,
-                            ),
+                           CustomText(
+                            text:  "0",
+                            color:Colors.grey.shade900,
+                            fontSize: 15,
+                            fontWeight: FontWeight.normal,
+                            textAlign: TextAlign.center,
+                          ),
                             const SizedBox(width: 4),
                             Icon(Icons.thumb_up, color: Colors.blue),
                           ]),
