@@ -187,47 +187,22 @@ class ScreenState extends State<Screen> {
                     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                         crossAxisCount: 2),
                     children: <Widget>[
-                      buildLastProduct(
-                        "example/images/product/huawei.jpg",
-                        "Huawei Mate 40 Pro : 1200\$",
-                        () {}
-                      ),
-                      buildLastProduct(
-                        "example/images/product/samsung.jpg",
-                         "Samsung S20 Ultra : 1100\$",
-                        () {}
-                      ),
-                      buildLastProduct(
-                        "example/images/product/iphone.jpg",
-                         "iPhone 12 pro max : 1399\$",
-                        () {}
-                      ),
-                      buildLastProduct(
-                        "example/images/product/xiaomi.jpg",
-                        "Xaiomi Mi 10T  : 1050\$",
-                        () {}
-                      ),
-                      buildLastProduct(
-                        "example/images/product/oppo.jpg",
-                        "Oppo F17 Pro : 1100\$",
-                        () {}
-                      ),
-                      buildLastProduct(
-                        "example/images/product/lenovo.jpg",
-                        "Lenovo K12 Pro : 1400\$",
-                        () {}
-                      ),
-                      buildLastProduct(
-                        "example/images/product/realme.jpg",
-                        "Realme race teaser : 900\$",
-                        () {}
-                      ),
-                      
-                      CustomLastProduct(
-                        imageProduct: "example/images/product/tecno.jpg",
-                        text: "Tecno Spark6 : 850\$",
-                        onTap: () {},
-                      ),
+                      buildLastProduct("example/images/product/huawei.jpg",
+                          "Huawei Mate 40 Pro : 1200\$", () {}),
+                      buildLastProduct("example/images/product/samsung.jpg",
+                          "Samsung S20 Ultra : 1100\$", () {}),
+                      buildLastProduct("example/images/product/iphone.jpg",
+                          "iPhone 12 pro max : 1399\$", () {}),
+                      buildLastProduct("example/images/product/xiaomi.jpg",
+                          "Xaiomi Mi 10T  : 1050\$", () {}),
+                      buildLastProduct("example/images/product/oppo.jpg",
+                          "Oppo F17 Pro : 1100\$", () {}),
+                      buildLastProduct("example/images/product/lenovo.jpg",
+                          "Lenovo K12 Pro : 1400\$", () {}),
+                      buildLastProduct("example/images/product/realme.jpg",
+                          "Realme race teaser : 900\$", () {}),
+                      buildLastProduct("example/images/product/tecno.jpg",
+                          "Tecno Spark6 : 850\$", () {}),
                     ]),
               ),
             ]),
