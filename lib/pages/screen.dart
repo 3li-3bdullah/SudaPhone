@@ -187,7 +187,11 @@ class ScreenState extends State<Screen> {
                     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                         crossAxisCount: 2),
                     children: <Widget>[
-                      buildLastProduct(),
+                      buildLastProduct(
+                        "example/images/product/huawei.jpg",
+                        "Huawei Mate 40 Pro : 1200\$",
+                        () {}
+                      ),
                       CustomLastProduct(
                         imageProduct: "example/images/product/huawei.jpg",
                         text: "Huawei Mate 40 Pro : 1200\$",
