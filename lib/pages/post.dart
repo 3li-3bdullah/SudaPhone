@@ -45,38 +45,6 @@ class _PostState extends State<Post> {
   /// }
   /// End Upload image
 
-  var posts = [
-    {
-      'name': "باسل خالد حمدي",
-      'content':
-          " . السلام عليكم ورحمة الله ، شباب اريد جوال في حدود 2000\$ جديد"
-    },
-    {
-      'name': "Aisha Al Nour",
-      'content':
-          "Hello :) , I've a telephone Oppo F17 Pro i wanna sell it for highest price .  "
-    },
-    {
-      'name': "احمد طه عبدالله ",
-      'content':
-          "السلام عليكم ورحمة الله وبركاته ، لدي أجهزه Xiaomi و Realme من الشركة مع تخفيض عند شراء اكثر من جوال"
-    },
-    {
-      'name': "Mayar Zain Alabdin",
-      'content':
-          " السلام عليكم ورحمة الله وبركاته ، اريد ان اشتري iPhone 12 Pro max مع التوصيل "
-    },
-    {
-      'name': "Kamal Mohammed ",
-      'content': "السلام عليكم ، اريد جوال S9 Plus مستعمل نضيف "
-    },
-    {
-      'name': "تامر عبدالله ",
-      'content':
-          "Hi guys , I wanna buy phone Huawei Mate 40 pro with delivery to Chicago ..."
-    }
-  ];
-
   // var username;
   // var email;
   // getPre() async {
@@ -220,93 +188,95 @@ class _PostState extends State<Post> {
           ),
           //for (int i = 0; i < posts.length; i++)
           //PostList(name: posts[i]['name'], contentpost: posts[i]['content']),
-          FutureBuilder(
-            builder: (BuildContext context, AsyncSnapshot snapshot) {
-              if (snapshot.hasData) {
-                return ListView.builder(
-                    shrinkWrap: true,
-                    physics: NeverScrollableScrollPhysics(),
-                    itemCount: snapshot.data.lenght,
-                    itemBuilder: (BuildContext context, int i) {
-                      return PostList(
-                          name: snapshot.data[i]['name'],
-                          contentpost: snapshot.data[i]['content']);
-                    });
-              }
-              return Center(child: CircularProgressIndicator());
-            },
-          ),
+          //---------------
+          // FutureBuilder(
+          //   builder: (BuildContext context, AsyncSnapshot snapshot) {
+          //     if (snapshot.hasData) {
+          //       return ListView.builder(
+          //           shrinkWrap: true,
+          //           physics: NeverScrollableScrollPhysics(),
+          //           itemCount: snapshot.data.lenght,
+          //           itemBuilder: (BuildContext context, int i) {
+          //             return PostList(
+          //                 name: snapshot.data[i]['name'],
+          //                 contentpost: snapshot.data[i]['content']);
+          //           });
+          //     }
+          //     return Center(child: CircularProgressIndicator());
+          //   },
+          // ),
+          //------------------
         ]),
       ),
     ));
   }
 }
 
-class PostList extends StatelessWidget {
-  final name;
-  final contentpost;
-  PostList({this.name, this.contentpost});
-  @override
-  Widget build(BuildContext context) {
-    return Card(
-      child: Column(children: <Widget>[
-        ListTile(
-          leading: CircleAvatar(child: Icon(Icons.person)),
-          title: Container(
-              margin: EdgeInsets.only(top: 10),
-              child: Text(name,
-                  style: TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.w400,
-                      color: Colors.black))),
-          trailing: IconButton(icon: Icon(Icons.more_horiz), onPressed: () {}),
-          isThreeLine: true,
-          subtitle: Text(contentpost),
-        ),
-        Divider(color: Colors.grey.withOpacity(0.2)),
-        Row(children: <Widget>[
-          Expanded(
-            child: InkWell(
-              child: Container(
-                decoration: BoxDecoration(
-                    border: Border(left: BorderSide(color: Colors.grey))),
-                child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      Text(
-                        "إعجاب",
-                        textAlign: TextAlign.center,
-                      ),
-                      SizedBox(width: 4),
-                      Icon(Icons.thumb_up, color: Colors.blue),
-                    ]),
-              ),
-              onTap: () {},
-            ),
-          ),
-          Expanded(
-            child: InkWell(
-              child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Text(
-                      "تعليق",
-                      textAlign: TextAlign.center,
-                    ),
-                    SizedBox(width: 4),
-                    Icon(Icons.comment, color: Colors.purple),
-                  ]),
-              onTap: () {
-                Navigator.of(context)
-                    .push(MaterialPageRoute(builder: (context) {
-                  return Comments();
-                }));
-              },
-            ),
-          ),
-        ]),
-        Padding(padding: EdgeInsets.only(top: 5)),
-      ]),
-    );
-  }
-}
+// class PostList extends StatelessWidget {
+//   final name;
+//   final contentpost;
+//   PostList({this.name, this.contentpost});
+//   @override
+//   Widget build(BuildContext context) {
+//     return Card(
+//       child: Column(children: <Widget>[
+//         ListTile(
+//           leading: CircleAvatar(child: Icon(Icons.person)),
+//           title: Container(
+//               margin: EdgeInsets.only(top: 10),
+//               child: Text(name,
+//                   style: TextStyle(
+//                       fontSize: 18,
+//                       fontWeight: FontWeight.w400,
+//                       color: Colors.black))),
+//           trailing: IconButton(icon: Icon(Icons.more_horiz), onPressed: () {}),
+//           isThreeLine: true,
+//           subtitle: Text(contentpost),
+//         ),
+//         Divider(color: Colors.grey.withOpacity(0.2)),
+//         Row(children: <Widget>[
+//           Expanded(
+//             child: InkWell(
+//               child: Container(
+//                 decoration: BoxDecoration(
+//                     border: Border(left: BorderSide(color: Colors.grey))),
+//                 child: Row(
+//                     mainAxisAlignment: MainAxisAlignment.center,
+//                     children: <Widget>[
+//                       Text(
+//                         "إعجاب",
+//                         textAlign: TextAlign.center,
+//                       ),
+//                       SizedBox(width: 4),
+//                       Icon(Icons.thumb_up, color: Colors.blue),
+//                     ]),
+//               ),
+//               onTap: () {},
+//             ),
+//           ),
+//           Expanded(
+//             child: InkWell(
+//               child: Row(
+//                   mainAxisAlignment: MainAxisAlignment.center,
+//                   children: <Widget>[
+//                     Text(
+//                       "تعليق",
+//                       textAlign: TextAlign.center,
+//                     ),
+//                     SizedBox(width: 4),
+//                     Icon(Icons.comment, color: Colors.purple),
+//                   ]),
+//               onTap: () {
+//                 Navigator.of(context)
+//                     .push(MaterialPageRoute(builder: (context) {
+//                   return Comments();
+//                 }));
+//               },
+//             ),
+//           ),
+//         ]),
+//         Padding(padding: EdgeInsets.only(top: 5)),
+//       ]),
+//     );
+//   }
+// }
