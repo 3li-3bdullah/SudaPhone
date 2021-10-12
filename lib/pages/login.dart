@@ -152,13 +152,14 @@ class LogInState extends State<LogIn> {
                           showsignin
                               ? InkWell(
                                   onTap: () {},
-                                  child: Text(
-                                    "هل نسيت كلمة المرور ؟",
-                                    style: TextStyle(
-                                      color: Colors.blue,
-                                      fontWeight: FontWeight.w600,
-                                    ),
-                                  ))
+                                  child: CustomText(
+                       text: "هل نسيت كلمة المرور ؟",
+                        color: Colors.blue,
+                     fontSize: 15,
+                    fontWeight: FontWeight.w600,
+                     textAlign: TextAlign.center,
+                       ),
+                                 )
                               : SizedBox(),
                           SizedBox(height: showsignin ? 20 : 5),
                           RaisedButton(
