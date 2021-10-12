@@ -2,6 +2,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:mobetech/compount/validinput.dart';
 import '../pages/screen.dart';
+import '../widgets/custom_text.dart';
 // import 'package:shared_preferences/shared_preferences.dart';
 //import '../services/auth.dart';
 
@@ -209,10 +210,14 @@ class LogInState extends State<LogIn> {
                                               children: <Widget>[
                                                 Expanded(
                                                     flex: 3,
-                                                    child: Text(
-                                                      "Sign In Google",
-                                                      style: TextStyle(color: Colors.white, fontWeight: FontWeight.w600),
-                                                    )),
+                                                   child: CustomText(
+                                                      text: "Sign In Google",
+                                                      color: Colors.white,
+                                                      fontSize: 15,
+                                                      fontWeight: FontWeight.w600,
+                                                      textAlign: TextAlign.center,
+                                                    ),
+                                                  ),
                                                 Expanded(flex: 1, child: Image.asset("example/images/social/google.png", width: 25, height: 25)),
                                               ],
                                             ),
