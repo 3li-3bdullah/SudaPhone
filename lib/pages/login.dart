@@ -361,7 +361,13 @@ class LogInState extends State<LogIn> {
                       //End User Name----------
                       //Start User E-mail ----------
                       SizedBox(height: 10),
-                      Text("البريد الالكتروني", style: TextStyle(color: Colors.purple, fontWeight: FontWeight.w700)),
+                      CustomText(
+                       text:"البريد الالكتروني",
+                        color: Colors.purple,
+                     fontSize: 15,
+                    fontWeight: FontWeight.w700,
+                     textAlign: TextAlign.center,
+                       ),
                       SizedBox(height: 10),
                       buildTextFormFieldAll(
                         false,
