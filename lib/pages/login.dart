@@ -300,7 +300,13 @@ class LogInState extends State<LogIn> {
                       ),
                       //End User Name----------
                       //Start User Password----------
-                      Text("كلمة المرور", style: TextStyle(color: Colors.blue, fontWeight: FontWeight.w600)),
+                      CustomText(
+                       text:"كلمة المرور",
+                        color: Colors.blue,
+                     fontSize: 15,
+                    fontWeight: FontWeight.w600,
+                     textAlign: TextAlign.center,
+                       ),
                       SizedBox(height: 10),
                       TextFormField(
                         onSaved: (value) {
