@@ -393,7 +393,13 @@ class LogInState extends State<LogIn> {
                         ///  _password = value;
                       }),
                       //Start User Password Confirm----------
-                      Text("تأكيد كلمة المرور", style: TextStyle(color: Colors.purple, fontWeight: FontWeight.w600)),
+                      CustomText(
+                       text:"تأكيد كلمة المرور",
+                        color: Colors.purple,
+                     fontSize: 15,
+                    fontWeight: FontWeight.w600,
+                     textAlign: TextAlign.center,
+                       ),
                       SizedBox(height: 10),
                       buildTextFormFieldAll(true, "تأكيد كلمة المرور", Icons.lock_outlined, confirmpassword, "validconfirmpassword", (value) {
                         //  _password = value;
