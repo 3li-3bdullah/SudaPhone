@@ -279,7 +279,14 @@ class LogInState extends State<LogIn> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       //Start Email----------
-                      Text("عنوان البريد الالكتروني", style: TextStyle(color: Colors.blue, fontWeight: FontWeight.w600)),
+                      CustomText(
+                       text:"عنوان البريد الالكتروني",
+                        color: Colors.blue,
+                     fontSize: 15,
+                    fontWeight: FontWeight.w600,
+                     textAlign: TextAlign.center,
+                       ),
+                      
                       const SizedBox(height: 10),
                       TextFormField(
                         onSaved: (value) {
