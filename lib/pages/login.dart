@@ -381,7 +381,13 @@ class LogInState extends State<LogIn> {
                       ),
                       //End User E-mail ----------
                       //Start User Password----------
-                      Text("كلمة المرور", style: TextStyle(color: Colors.purple, fontWeight: FontWeight.w600)),
+                       CustomText(
+                       text:"كلمة المرور",
+                        color: Colors.purple,
+                     fontSize: 15,
+                    fontWeight: FontWeight.w600,
+                     textAlign: TextAlign.center,
+                       ),
                       SizedBox(height: 10),
                       buildTextFormFieldAll(true, "أدخل كلمة المرور", Icons.lock_outlined, password, "validpassword", (value) {
                         ///  _password = value;
