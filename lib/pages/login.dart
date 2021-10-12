@@ -211,14 +211,16 @@ class LogInState extends State<LogIn> {
                                                 Expanded(
                                                     flex: 3,
                                                    child: CustomText(
-                                                      text: "Sign In Google",
+                                                      text: "Sign In Facebook",
                                                       color: Colors.white,
                                                       fontSize: 15,
                                                       fontWeight: FontWeight.w600,
                                                       textAlign: TextAlign.center,
                                                     ),
                                                   ),
-                                                Expanded(flex: 1, child: Image.asset("example/images/social/google.png", width: 25, height: 25)),
+                                                Expanded(flex: 1,
+                                                 child: Image.asset("example/images/social/facebook.png",
+                                                  width: 25, height: 25)),
                                               ],
                                             ),
                                             onPressed: () {})),
@@ -231,11 +233,16 @@ class LogInState extends State<LogIn> {
                                               children: <Widget>[
                                                 Expanded(
                                                     flex: 3,
-                                                    child: Text(
-                                                      "Sign In Facebook",
-                                                      style: TextStyle(color: Colors.white, fontWeight: FontWeight.w600),
-                                                    )),
-                                                Expanded(flex: 1, child: Image.asset("example/images/social/facebook.png", width: 25, height: 25)),
+                                                    child: CustomText(
+                                                      text: "Sign In Google",
+                                                      color: Colors.white,
+                                                      fontSize: 15,
+                                                      fontWeight: FontWeight.w600,
+                                                      textAlign: TextAlign.center,
+                                                    ),
+                                                    ),
+                                                Expanded(flex: 1,
+                                                 child: Image.asset("example/images/social/google.png", width: 25, height: 25)),
                                               ],
                                             ),
                                             onPressed: () {})),
