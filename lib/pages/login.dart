@@ -347,7 +347,13 @@ class LogInState extends State<LogIn> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       //Start User Name----------
-                      Text("إسم المستخدم", style: TextStyle(color: Colors.purple, fontWeight: FontWeight.w600)),
+                      CustomText(
+                       text:"إسم المستخدم",
+                        color: Colors.purple,
+                     fontSize: 15,
+                    fontWeight: FontWeight.w600,
+                     textAlign: TextAlign.center,
+                       ),
                       SizedBox(height: 10),
                       buildTextFormFieldAll(false, "أدخل اسم المستخدم", Icons.person_outline_rounded, username, "validusername", (value) {
                         username = value;
