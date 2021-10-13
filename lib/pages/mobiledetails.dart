@@ -120,7 +120,7 @@ class _MobileDetailsState extends State<MobileDetails> {
                 "المميزات",
                 style: TextStyle(color:Colors.white ,fontSize: 18, fontFamily: 'Cairo'),
               )),
-            ),
+            ),const SizedBox(height:2),
             //Start Column Specfiction
             Container(
                 padding: EdgeInsets.all(10),
@@ -131,42 +131,42 @@ class _MobileDetailsState extends State<MobileDetails> {
                       text1:  "التقريب : ",
                       text2: "يقرب حتي 100 مرة أثناء التصوير بالكاميرا الزوم",
                       containerColor: kcontainerColor1,
-                    ),
+                    ),const SizedBox(height:2),
                     CustomTextOfDetails(
                       text1:  "دعم التصوير : ",
                       text2: "يدعم تصوير الفيديوهات بجودة ال 8K",
                       containerColor: kcontainerColor2,
-                    ),
+                    ),const SizedBox(height:2),
                     CustomTextOfDetails(
                       text1:  "الذاكرة العشوائية : ",
                       text2: "كبيرة جدا تعطيك مرونه في فتح الكثير من التطبيقات ولكن فعليا هل سنحتاج إلي كل هذه المساحة بالاخص مع قدومها من نوع LPDDR5",
                       containerColor: kcontainerColor1,
-                    ),
+                    ),const SizedBox(height:2),
                     CustomTextOfDetails(
                       text1:  "الكاميرا  : ",
                       text2:  "كامبرا قوية جدا قادرة علي المنافسة وكاد تكون الأفضل في 2020 ... مع كاميرا سيلفي مميزة 40 ميجا بيكسل",
                       containerColor: kcontainerColor2,
-                    ),
+                    ),const SizedBox(height:2),
                     CustomTextOfDetails(
                       text1:  "الشاشة  : ",
                       text2:  "ممتازة وكبيرة و بدقة عالية ومعدل تحديث 120 هرتز",
                       containerColor: kcontainerColor1,
-                    ),
+                    ),const SizedBox(height:2),
                     CustomTextOfDetails(
                       text1:   "البطارية : ",
                       text2: "كبيرة جدا والتي يتم توفيرها لأول مرة يهذه السعة في سلسلة ال S",
                       containerColor: kcontainerColor2,
-                    ),
+                    ),const SizedBox(height:2),
                     CustomTextOfDetails(
                       text1:   "الشحن : ",
                       text2: "يدعم الشحن السريع بقوة 45 واط حيث ستتمكن من شحن هاتفك من 0% إلي 100% خلال 74 دقيقة بالكامل",
                       containerColor: kcontainerColor1,
-                    ),
+                    ),const SizedBox(height:2),
                     CustomTextOfDetails(
                       text1:   "أداء المعالج : ",
                       text2: "قوي و يمتاز بأنه قوي من حيث الأداء",
                       containerColor: kcontainerColor2,
-                    ),
+                    ),const SizedBox(height:2),
                   ],
                 )),
             //End second container
@@ -179,7 +179,7 @@ class _MobileDetailsState extends State<MobileDetails> {
                 "العيوب",
                 style: TextStyle(color: Colors.white ,fontFamily: 'Cairo', fontSize: 18),
               )),
-            ),
+            ),const SizedBox(height:2),
             //Start Column Specfiction
             Container(
                 padding: EdgeInsets.all(10),
