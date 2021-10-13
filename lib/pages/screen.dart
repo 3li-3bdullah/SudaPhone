@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:mobetech/widgets/custom_text.dart';
 import '../widgets/categories_logo.dart';
 import '../widgets/last_product.dart';
 import '../compount/data_search.dart';
@@ -79,7 +80,7 @@ class ScreenState extends State<Screen> {
               // leading: IconButton(icon: Icon(Icons.search), onPressed: () {}),
             ),
             drawer: MyDrawer(),
-            body: ListView(children: <Widget>[
+            body: ListView(children: [
               Container(
                 height: 300,
                 // width: double.infinity,
@@ -176,8 +177,13 @@ class ScreenState extends State<Screen> {
               // End The Long Container....
               Container(
                 padding: EdgeInsets.all(10),
-                child: Text("أحدث التلفونات",
-                    style: TextStyle(fontSize: 30, color: Colors.black)),
+                child: CustomText(
+                  text: "أحدث التلفونات",
+                  textAlign: TextAlign.center,
+                  color: Colors.grey.shade900,
+                  fontSize: 30,
+                  fontWeight: FontWeight.normal,
+                ),
               ),
 
               Container(
