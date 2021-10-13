@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import '../widgets/last_product.dart';
 import '../compount/data_search.dart';
 import '../constants.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
@@ -230,29 +231,3 @@ class ScreenState extends State<Screen> {
   }
 }
 
-class LastProduct extends StatelessWidget {
-  const LastProduct({
-    required this.imageProduct,
-    required this.text,
-    required this.onTap,
-  });
-  final String imageProduct;
-  final String text;
-  final Function onTap;
-  @override
-  Widget build(BuildContext context) {
-    return InkWell(
-      child: GridTile(
-          child: Image.asset(imageProduct),
-          footer: Container(
-              height: 25,
-              color: Colors.black.withOpacity(0.4),
-              child: Text(text,
-                  style: TextStyle(color: Colors.white),
-                  textAlign: TextAlign.center))),
-      onTap: () {
-        onTap();
-      },
-    );
-  }
-}
