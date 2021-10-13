@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 
 class CategoriesCard extends StatelessWidget {
   const CategoriesCard({
-    this.imageCat,
-    this.text,
-    this.onTap,
+  required  this.imageCat,
+  required  this.text,
+  required  this.onTap,
   });
   final String imageCat;
   final String text;
