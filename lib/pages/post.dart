@@ -70,12 +70,17 @@ class _PostState extends State<Post> {
       child: Scaffold(
         appBar: AppBar(
           backgroundColor: khomeBar,
-          
-          title: Text("المنشورات"),
+
+          title: CustomText(
+              text: "المنشورات",
+              color: Colors.white,
+              textAlign: TextAlign.center,
+              fontSize: 30,
+              fontWeight: FontWeight.normal),
         ),
-        body: ListView(children: <Widget>[
+        body: ListView(children: [
           Card(
-              child: Column(children: <Widget>[
+              child: Column(children:[
             ListTile(
               leading: CircleAvatar(child: Icon(Icons.person)),
               title: TextFormField(
@@ -97,7 +102,7 @@ class _PostState extends State<Post> {
 
               ///=> pickercamera(),
             ),
-            Row(children: <Widget>[
+            Row(children: [
               Expanded(
                   child: InkWell(
                 onTap: () {},
@@ -130,25 +135,27 @@ class _PostState extends State<Post> {
               ListTile(
                   leading: CircleAvatar(child: Icon(Icons.person)),
                   title: Container(
-                      margin: EdgeInsets.only(top: 10),
-                      child: CustomText(
-                            text: "علي عبدالله",
-                            color:Colors.black,
-                            fontSize: 18,
-                            fontWeight: FontWeight.w400,
-                            textAlign: TextAlign.right,
-                          ),),
+                    margin: EdgeInsets.only(top: 10),
+                    child: CustomText(
+                      text: "علي عبدالله",
+                      color: Colors.black,
+                      fontSize: 18,
+                      fontWeight: FontWeight.w400,
+                      textAlign: TextAlign.right,
+                    ),
+                  ),
                   trailing: IconButton(
                       icon: Icon(Icons.more_horiz), onPressed: () {}),
                   isThreeLine: true,
                   subtitle: Column(children: <Widget>[
                     CustomText(
-                            text: "السلام عليكم شباب ،، لدي Huawei Mate 40 Pro إستعمال يومين فقط ، نضيف ومع كامل الملحقات البيع لأعلي سعر",
-                            color:Colors.grey.shade900,
-                            fontSize: 15,
-                            fontWeight: FontWeight.normal,
-                            textAlign: TextAlign.center,
-                          ),
+                      text:
+                          "السلام عليكم شباب ،، لدي Huawei Mate 40 Pro إستعمال يومين فقط ، نضيف ومع كامل الملحقات البيع لأعلي سعر",
+                      color: Colors.grey.shade900,
+                      fontSize: 15,
+                      fontWeight: FontWeight.normal,
+                      textAlign: TextAlign.center,
+                    ),
                     Image.asset("example/images/product/huawei.jpg"),
                   ])),
               Divider(color: Colors.grey.withOpacity(0.2)),
@@ -161,13 +168,13 @@ class _PostState extends State<Post> {
                       child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
-                           CustomText(
-                            text:  "0",
-                            color:Colors.grey.shade900,
-                            fontSize: 15,
-                            fontWeight: FontWeight.normal,
-                            textAlign: TextAlign.center,
-                          ),
+                            CustomText(
+                              text: "0",
+                              color: Colors.grey.shade900,
+                              fontSize: 15,
+                              fontWeight: FontWeight.normal,
+                              textAlign: TextAlign.center,
+                            ),
                             const SizedBox(width: 4),
                             Icon(Icons.thumb_up, color: Colors.blue),
                           ]),
@@ -181,13 +188,13 @@ class _PostState extends State<Post> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
                           CustomText(
-                            text:  "0",
-                            color:Colors.grey.shade900,
+                            text: "0",
+                            color: Colors.grey.shade900,
                             fontSize: 15,
                             fontWeight: FontWeight.normal,
                             textAlign: TextAlign.center,
                           ),
-                         const SizedBox(width: 4),
+                          const SizedBox(width: 4),
                           Icon(Icons.comment, color: Colors.purple),
                         ]),
                     onTap: () {
