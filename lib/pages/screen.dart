@@ -131,20 +131,20 @@ class ScreenState extends State<Screen> {
                   //Start The Long Container....
                   height: 120,
                   child: ListView(scrollDirection: Axis.horizontal, children: [
-                    buildCategoriesLogo(
-                      "example/images/logo/huawei.png",
-                      "Huawei",
-                      () {},
+                    CategoriesLogo(
+                     imageLogo: "example/images/logo/huawei.png",
+                     text: "Huawei",
+                    onTap:  () {},
                     ),
-                    buildCategoriesLogo(
-                      "example/images/logo/iphone.jpg",
-                      "Apple",
-                      () {},
+                    CategoriesLogo(
+                     imageLogo: "example/images/logo/iphone.jpg",
+                     text: "Apple",
+                     onTap: () {},
                     ),
-                    buildCategoriesLogo(
-                      "example/images/logo/realme.png",
-                      "Realme",
-                      () {},
+                    CategoriesLogo(
+                     imageLogo: "example/images/logo/realme.png",
+                     text: "Realme",
+                     onTap: () {},
                     ),
                     buildCategoriesLogo(
                       "example/images/logo/lenovo.png",
