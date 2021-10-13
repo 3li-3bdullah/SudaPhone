@@ -14,7 +14,63 @@ class StateComments extends State<Comments> {
       child: Directionality(
         textDirection: TextDirection.rtl,
         child: Scaffold(
-          body: Stack(children: [
+          body: SafeArea(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    Container(
+                      height: 60,
+                      width: MediaQuery.of(context).size.width,
+                      child: Column(children: [
+                        Container(
+                          decoration: BoxDecoration(
+                              border: Border(top: BorderSide(color: Colors.grey))),
+                          child: Row(children: [
+                            IconButton(
+                                icon: Icon(Icons.camera_alt_outlined,
+                                    color: Colors.purple),
+                                onPressed: () {}),
+                            Container(
+                                padding: EdgeInsets.symmetric(
+                                    horizontal: 5, vertical: 5),
+                                width: MediaQuery.of(context).size.width - 70,
+                                child: TextFormField(
+                                  decoration: InputDecoration(
+                                    hintText: "أكتب تعليقك هنا",
+                                    filled: true,
+                                    fillColor: Colors.grey.shade200,
+                                    suffixIcon: IconButton(
+                                        icon: Icon(Icons.send_outlined,
+                                            color: Colors.green.shade900),
+                                        onPressed: () {}),
+                                    contentPadding: EdgeInsets.all(5),
+                                    focusedBorder: OutlineInputBorder(
+                                        borderRadius: BorderRadius.circular(60),
+                                        borderSide:
+                                            BorderSide(style: BorderStyle.none)),
+                                    enabledBorder: OutlineInputBorder(
+                                        borderRadius: BorderRadius.circular(60),
+                                        borderSide:
+                                            BorderSide(style: BorderStyle.none)),
+                                    errorBorder: InputBorder.none,
+                                    disabledBorder: InputBorder.none,
+                                  ),
+                                )),
+                          ]),
+                        )
+                      ]),
+                    ),
+                  ],
+                ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+/* 
+Stack(children: [
             Container(
                 color: Colors.white,
                 height: MediaQuery.of(context).size.height,
@@ -104,25 +160,4 @@ class StateComments extends State<Comments> {
               ])),
         ))
           ]),
-        ),
-      ),
-    );
-  }
-
-  ListTile listTileComments(String comname , String comcontent) {
-    return ListTile(
-                leading: CircleAvatar(
-                    child: Icon(Icons.person)),
-                title: Container(
-                    margin: EdgeInsets.only(top: 30),
-                    child: Text(comname , style: TextStyle(fontSize: 16))),
-                subtitle: Container(
-                    padding: EdgeInsets.all(10),
-                    color: Colors.grey[100],
-                    child: Text(
-                      comcontent,
-                      style: TextStyle(color: Colors.black),
-                    )),
-              );
-  }
-}
+*/
