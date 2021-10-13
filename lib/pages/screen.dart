@@ -129,50 +129,48 @@ class ScreenState extends State<Screen> {
               Container(
                   //Start The Long Container....
                   height: 120,
-                  child: ListView(
-                      scrollDirection: Axis.horizontal,
-                      children: <Widget>[
-                        buildCategoriesLogo(
-                          "example/images/logo/huawei.png",
-                          "Huawei",
-                          () {},
-                        ),
-                        buildCategoriesLogo(
-                          "example/images/logo/iphone.jpg",
-                          "Apple",
-                          () {},
-                        ),
-                        buildCategoriesLogo(
-                          "example/images/logo/realme.png",
-                          "Realme",
-                          () {},
-                        ),
-                        buildCategoriesLogo(
-                          "example/images/logo/lenovo.png",
-                          "Lenovo",
-                          () {},
-                        ),
-                        buildCategoriesLogo(
-                          "example/images/logo/samsung.jpg",
-                          "Samsung",
-                          () {},
-                        ),
-                        buildCategoriesLogo(
-                          "example/images/logo/xiaomi.png",
-                          "Xiaomi",
-                          () {},
-                        ),
-                        buildCategoriesLogo(
-                          "example/images/logo/oppo.jpg",
-                          "Oppo",
-                          () {},
-                        ),
-                        buildCategoriesLogo(
-                          "example/images/logo/tecno.png",
-                          "Tecno",
-                          () {},
-                        ),
-                      ])),
+                  child: ListView(scrollDirection: Axis.horizontal, children: [
+                    buildCategoriesLogo(
+                      "example/images/logo/huawei.png",
+                      "Huawei",
+                      () {},
+                    ),
+                    buildCategoriesLogo(
+                      "example/images/logo/iphone.jpg",
+                      "Apple",
+                      () {},
+                    ),
+                    buildCategoriesLogo(
+                      "example/images/logo/realme.png",
+                      "Realme",
+                      () {},
+                    ),
+                    buildCategoriesLogo(
+                      "example/images/logo/lenovo.png",
+                      "Lenovo",
+                      () {},
+                    ),
+                    buildCategoriesLogo(
+                      "example/images/logo/samsung.jpg",
+                      "Samsung",
+                      () {},
+                    ),
+                    buildCategoriesLogo(
+                      "example/images/logo/xiaomi.png",
+                      "Xiaomi",
+                      () {},
+                    ),
+                    buildCategoriesLogo(
+                      "example/images/logo/oppo.jpg",
+                      "Oppo",
+                      () {},
+                    ),
+                    buildCategoriesLogo(
+                      "example/images/logo/tecno.png",
+                      "Tecno",
+                      () {},
+                    ),
+                  ])),
               // End The Long Container....
               Container(
                 padding: EdgeInsets.all(10),
@@ -185,41 +183,29 @@ class ScreenState extends State<Screen> {
                 child: GridView(
                     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                         crossAxisCount: 2),
-                    children: <Widget>[
-                      buildLastProduct("example/images/product/huawei.jpg",
-                          "Huawei Mate 40 Pro : 1200\$", () {}),
-                      buildLastProduct("example/images/product/samsung.jpg",
-                          "Samsung S20 Ultra : 1100\$", () {}),
-                      buildLastProduct("example/images/product/iphone.jpg",
-                          "iPhone 12 pro max : 1399\$", () {}),
-                      buildLastProduct("example/images/product/xiaomi.jpg",
-                          "Xaiomi Mi 10T  : 1050\$", () {}),
-                      buildLastProduct("example/images/product/oppo.jpg",
-                          "Oppo F17 Pro : 1100\$", () {}),
-                      buildLastProduct("example/images/product/lenovo.jpg",
-                          "Lenovo K12 Pro : 1400\$", () {}),
-                      buildLastProduct("example/images/product/realme.jpg",
-                          "Realme race teaser : 900\$", () {}),
-                      buildLastProduct("example/images/product/tecno.jpg",
-                          "Tecno Spark6 : 850\$", () {}),
+                    children: [
+                      LastProduct(
+                        imageProduct:"example/images/product/huawei.jpg",
+                         text: "Huawei Mate 40 Pro : 1200\$",
+                         onTap: () {}),
+                      LastProduct(imageProduct:"example/images/product/samsung.jpg",
+                         text: "Samsung S20 Ultra : 1100\$", onTap: () {}),
+                      LastProduct(imageProduct:"example/images/product/iphone.jpg",
+                        text: "iPhone 12 pro max : 1399\$",onTap: () {}),
+                      LastProduct(imageProduct:  "example/images/product/xiaomi.jpg",
+                        text:  "Xaiomi Mi 10T  : 1050\$",onTap: () {}),
+                      LastProduct(imageProduct:  "example/images/product/oppo.jpg",
+                         text: "Oppo F17 Pro : 1100\$",onTap: () {}),
+                      LastProduct(imageProduct: "example/images/product/lenovo.jpg",
+                         text: "Lenovo K12 Pro : 1400\$",onTap: () {}),
+                      LastProduct(imageProduct:"example/images/product/realme.jpg",
+                          text:"Realme race teaser : 900\$",onTap: () {}),
+                      LastProduct(imageProduct:"example/images/product/tecno.jpg",
+                         text: "Tecno Spark6 : 850\$",onTap: () {}),
                     ]),
               ),
             ]),
           )),
-    );
-  }
-
-  InkWell buildLastProduct(String imageProduct, String text, Function onTap) {
-    return InkWell(
-      child: GridTile(
-          child: Image.asset(imageProduct),
-          footer: Container(
-              height: 25,
-              color: Colors.black.withOpacity(0.4),
-              child: Text(text,
-                  style: TextStyle(color: Colors.white),
-                  textAlign: TextAlign.center))),
-      onTap: onTap,
     );
   }
 
@@ -237,6 +223,33 @@ class ScreenState extends State<Screen> {
               ),
               subtitle:
                   Container(child: Text(text, textAlign: TextAlign.center)))),
+      onTap: () {
+        onTap();
+      },
+    );
+  }
+}
+
+class LastProduct extends StatelessWidget {
+  const LastProduct({
+    required this.imageProduct,
+    required this.text,
+    required this.onTap,
+  });
+  final String imageProduct;
+  final String text;
+  final Function onTap;
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+      child: GridTile(
+          child: Image.asset(imageProduct),
+          footer: Container(
+              height: 25,
+              color: Colors.black.withOpacity(0.4),
+              child: Text(text,
+                  style: TextStyle(color: Colors.white),
+                  textAlign: TextAlign.center))),
       onTap: () {
         onTap();
       },
