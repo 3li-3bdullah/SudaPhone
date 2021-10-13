@@ -14,7 +14,7 @@ class StateComments extends State<Comments> {
       child: Directionality(
         textDirection: TextDirection.rtl,
         child: Scaffold(
-          body: Stack(children: <Widget>[
+          body: Stack(children: [
             Container(
                 color: Colors.white,
                 height: MediaQuery.of(context).size.height,
@@ -24,11 +24,11 @@ class StateComments extends State<Comments> {
                 child: Container(
                   height: 60,
                   width: MediaQuery.of(context).size.width,
-                  child: Column(children: <Widget>[
+                  child: Column(children: [
                     Container(
                       decoration: BoxDecoration(
                           border: Border(top: BorderSide(color: Colors.grey))),
-                      child: Row(children: <Widget>[
+                      child: Row(children: [
                         IconButton(
                             icon: Icon(Icons.camera_alt_outlined,
                                 color: Colors.purple),
@@ -41,9 +41,10 @@ class StateComments extends State<Comments> {
                               decoration: InputDecoration(
                                 hintText: "أكتب تعليقك هنا",
                                 filled: true,
-                                fillColor: Colors.grey[200],
+                                fillColor: Colors.grey.shade200,
                                 suffixIcon: IconButton(
-                                    icon: Icon(Icons.send, color: Colors.green),
+                                    icon: Icon(Icons.send_outlined
+                                     , color: Colors.green.shade900),
                                     onPressed: () {}),
                                 contentPadding: EdgeInsets.all(5),
                                 focusedBorder: OutlineInputBorder(
