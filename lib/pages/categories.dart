@@ -57,24 +57,11 @@ class _CategoriesState extends State<Categories> {
                   //End cat three
                   //----------------------
                   //Start cat four
-                  InkWell(
-                      child: Card(
-                          child: Column(
-                        children: <Widget>[
-                          Expanded(
-                            child: Image.asset(
-                              "example/images/category/oppo.png",
-                              fit: BoxFit.cover,
-                            ),
-                          ),
-                          Container(
-                              child: Text(
-                            "Oppo",
-                            style: TextStyle(fontSize: 20),
-                          )),
-                        ],
-                      )),
-                      onTap: () {}),
+                  CategoriesCard(
+                    imageCat:  "example/images/category/oppo.png",
+                    text: "Oppo",
+                    onTap: () {},
+                  ),
                   //End cat four
                   //----------------------
                   //Start cat five
