@@ -122,11 +122,13 @@ class ScreenState extends State<Screen> {
               ),
               Container(
                 padding: EdgeInsets.all(10),
-                child: Text("الأقسام",
-                    style: TextStyle(
-                      fontSize: 30,
-                      color: Colors.black,
-                    )),
+                child:CustomText(
+                  text: "الأقسام",
+                  textAlign: TextAlign.right,
+                  color: Colors.grey.shade900,
+                  fontSize: 30,
+                  fontWeight: FontWeight.normal,
+                ),
               ),
 
               Container(
@@ -179,7 +181,7 @@ class ScreenState extends State<Screen> {
                 padding: EdgeInsets.all(10),
                 child: CustomText(
                   text: "أحدث التلفونات",
-                  textAlign: TextAlign.center,
+                  textAlign: TextAlign.right,
                   color: Colors.grey.shade900,
                   fontSize: 30,
                   fontWeight: FontWeight.normal,
