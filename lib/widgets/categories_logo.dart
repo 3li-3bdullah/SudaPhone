@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import '../widgets/custom_text.dart';
 
 class CategoriesLogo extends StatelessWidget {
   const CategoriesLogo({
@@ -24,7 +25,15 @@ class CategoriesLogo extends StatelessWidget {
                 fit: BoxFit.cover,
               ),
               subtitle:
-                  Container(child: Text(text, textAlign: TextAlign.center)))),
+                  Container(
+                    child:CustomText(
+                      text: text,
+                      textAlign: TextAlign.center,
+                      color: Colors.grey.shade900,
+                      fontSize: 15,
+                      fontWeight: FontWeight.normal,
+                    ),
+                        ))),
       onTap: () {
         onTap();
       },
