@@ -27,29 +27,7 @@ class _CategoriesState extends State<Categories> {
                     crossAxisCount: 2),
                 children: <Widget>[
                   //Start cat one
-                  InkWell(
-                      child: Card(
-                          child: Column(
-                        children: <Widget>[
-                          Expanded(
-                            child: Image.asset(
-                              "example/images/category/samsung.png",
-                              fit: BoxFit.cover,
-                            ),
-                          ),
-                          Container(
-                              child: Text(
-                            "Samsung",
-                            style: TextStyle(fontSize: 20),
-                          )),
-                        ],
-                      )),
-                      onTap: () {
-                        Navigator.of(context)
-                            .push(MaterialPageRoute(builder: (context) {
-                          return Samsung();
-                        }));
-                      }),
+                  CategoriesCard(),
                   //End cat one
                   //----------------------
                   //Start cat two
@@ -202,5 +180,38 @@ class _CategoriesState extends State<Categories> {
                 ],
               ),
             )));
+  }
+}
+
+class CategoriesCard extends StatelessWidget {
+  const CategoriesCard({
+    Key key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+        child: Card(
+            child: Column(
+          children: <Widget>[
+            Expanded(
+              child: Image.asset(
+                "example/images/category/samsung.png",
+                fit: BoxFit.cover,
+              ),
+            ),
+            Container(
+                child: Text(
+              "Samsung",
+              style: TextStyle(fontSize: 20),
+            )),
+          ],
+        )),
+        onTap: () {
+          Navigator.of(context)
+              .push(MaterialPageRoute(builder: (context) {
+            return Samsung();
+          }));
+        });
   }
 }
