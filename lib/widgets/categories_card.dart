@@ -14,6 +14,7 @@ class CategoriesCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
         child: Card(
+          elevation: 2,
             child: Column(
           children: <Widget>[
             Expanded(
