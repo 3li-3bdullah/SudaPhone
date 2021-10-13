@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../widgets/custom_text.dart';
 
 class CategoriesCard extends StatelessWidget {
   const CategoriesCard({
@@ -22,10 +23,14 @@ class CategoriesCard extends StatelessWidget {
               ),
             ),
             Container(
-                child: Text(
-              text,
-              style: TextStyle(fontSize: 20),
-            )),
+               child: CustomText(
+                 text: text,
+                 fontSize: 20,
+                 fontWeight: FontWeight.normal,
+                 textAlign: TextAlign.center,
+                 color: Colors.grey.shade900,
+               ),
+                ),
           ],
         )),
         onTap: () {
