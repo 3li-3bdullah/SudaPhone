@@ -1,0 +1,34 @@
+import 'package:flutter/material.dart';
+import '../widgets/custom_text.dart';
+
+class LastProduct extends StatelessWidget {
+  const LastProduct({
+    required this.imageProduct,
+    required this.text,
+    required this.onTap,
+  });
+  final String imageProduct;
+  final String text;
+  final Function onTap;
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+      child: GridTile(
+          child: Image.asset(imageProduct),
+          footer: Container(
+              height: 25,
+              color: Colors.black.withOpacity(0.4),
+              child: CustomText(
+                text: text,
+                color: Colors.white,
+                textAlign: TextAlign.center,
+                fontSize: 15,
+                fontWeight: FontWeight.normal,
+              ),
+              )),
+      onTap: () {
+        onTap();
+      },
+    );
+  }
+}
