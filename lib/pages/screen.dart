@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import '../widgets/categories_logo.dart';
 import '../widgets/last_product.dart';
 import '../compount/data_search.dart';
 import '../constants.dart';
@@ -221,37 +222,6 @@ class ScreenState extends State<Screen> {
               ),
             ]),
           )),
-    );
-  }
-}
-
-class CategoriesLogo extends StatelessWidget {
-  const CategoriesLogo({
-    required this.imageLogo,
-    required  this.text,
-    required   this.onTap,
-  });
-  final String imageLogo;
-  final String text;
-  final Function onTap;
-  @override
-  Widget build(BuildContext context) {
-    return InkWell(
-      child: Container(
-          height: 100,
-          width: 100,
-          child: ListTile(
-              title: Image.asset(
-                imageLogo,
-                height: 80,
-                width: 80,
-                fit: BoxFit.cover,
-              ),
-              subtitle:
-                  Container(child: Text(text, textAlign: TextAlign.center)))),
-      onTap: () {
-        onTap();
-      },
     );
   }
 }
