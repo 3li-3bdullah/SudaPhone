@@ -16,7 +16,7 @@ class CategoriesCard extends StatelessWidget {
         child: Card(
           elevation: 2,
             child: Column(
-          children: <Widget>[
+          children: [
             Expanded(
               child: Image.asset(
                 imageCat,
