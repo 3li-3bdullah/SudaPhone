@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../constants.dart';
 import '../widgets/categories_card.dart';
 import '../pages/samsung.dart';
 import '../compount/mydrawer.dart';
@@ -19,6 +20,7 @@ class _CategoriesState extends State<Categories> {
             textDirection: TextDirection.rtl,
             child: Scaffold(
               appBar: AppBar(
+                backgroundColor: khomeBar,
                 title: Text('الأقسام'),
                 centerTitle: true,
               ),
