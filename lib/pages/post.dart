@@ -131,7 +131,7 @@ class _PostState extends State<Post> {
           // This card under editinggggggg ---------------
           // The editing it has done with all peaceful :) ----
           Card(
-            child: Column(children: <Widget>[
+            child: Column(children: [
               ListTile(
                   leading: CircleAvatar(child: Icon(Icons.person)),
                   title: Container(
@@ -140,14 +140,14 @@ class _PostState extends State<Post> {
                       text: "علي عبدالله",
                       color: Colors.black,
                       fontSize: 18,
-                      fontWeight: FontWeight.w400,
+                      fontWeight: FontWeight.bold,
                       textAlign: TextAlign.right,
                     ),
                   ),
                   trailing: IconButton(
                       icon: Icon(Icons.more_horiz), onPressed: () {}),
                   isThreeLine: true,
-                  subtitle: Column(children: <Widget>[
+                  subtitle: Column(children:[
                     CustomText(
                       text:
                           "السلام عليكم شباب ،، لدي Huawei Mate 40 Pro إستعمال يومين فقط ، نضيف ومع كامل الملحقات البيع لأعلي سعر",
@@ -159,7 +159,7 @@ class _PostState extends State<Post> {
                     Image.asset("example/images/product/huawei.jpg"),
                   ])),
               Divider(color: Colors.grey.withOpacity(0.2)),
-              Row(children: <Widget>[
+              Row(children: [
                 Expanded(
                   child: InkWell(
                     child: Container(
