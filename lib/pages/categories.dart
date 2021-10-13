@@ -78,29 +78,14 @@ class _CategoriesState extends State<Categories> {
                     text: "Lenovo",
                     onTap: () {},
                   ),
-                  
-
                   //End cat six
                   //----------------------
                   //Start cat seven
-                  InkWell(
-                      child: Card(
-                          child: Column(
-                        children: <Widget>[
-                          Expanded(
-                            child: Image.asset(
-                              "example/images/category/realme.png",
-                              fit: BoxFit.cover,
-                            ),
-                          ),
-                          Container(
-                              child: Text(
-                            "Realme",
-                            style: TextStyle(fontSize: 20),
-                          )),
-                        ],
-                      )),
-                      onTap: () {}),
+                  CategoriesCard(
+                    imageCat: "example/images/category/realme.png",
+                    text: "Realme",
+                    onTap: () {},
+                  ),
                   //End cat eight
                   //----------------------
                   InkWell(
