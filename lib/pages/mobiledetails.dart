@@ -72,12 +72,12 @@ class _MobileDetailsState extends State<MobileDetails> {
             Container(
                 padding: EdgeInsets.all(10),
                 child: Column(
-                  children: <Widget>[
+                  children: [
                     CustomTextOfDetails(
                       text1: "الموديل : ",
                       text2: "S20 Ultra",
                       containerColor: kcontainerColor1,
-                    ),
+                    ), const SizedBox(height:2),
                      CustomTextOfDetails(
                       text1:  "الشاشة : ",
                       text2:  "Super Amoled 5.5",
