@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mobetech/widgets/custom_text.dart';
 import '../widgets/custom_textof_details.dart';
 import '../constants.dart';
 
@@ -175,10 +176,12 @@ class _MobileDetailsState extends State<MobileDetails> {
               color: kappDetails,
               padding: EdgeInsets.all(10),
               child: Center(
-                  child: Text(
-                "العيوب",
-                style: TextStyle(color: Colors.white ,fontFamily: 'Cairo', fontSize: 18),
-              )),
+                child: CustomText(
+                  text: "العيوب",
+                  color: Colors.white,
+                  fontSize: 25,
+                  fontWeight: FontWeight.bold,
+                ) ,),
             ),const SizedBox(height:2),
             //Start Column Specfiction
             Container(
