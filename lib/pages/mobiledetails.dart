@@ -82,38 +82,38 @@ class _MobileDetailsState extends State<MobileDetails> {
                       text1:  "الشاشة : ",
                       text2:  "Super Amoled 5.5",
                       containerColor: kcontainerColor2,
-                    ),
+                    ),const SizedBox(height:2),
                     CustomTextOfDetails(
                       text1:  "نظام التشغيل : ",
                       text2:  "Android 10, One UI 2",
                       containerColor: kcontainerColor1,
-                    ),
+                    ),const SizedBox(height:2),
                     CustomTextOfDetails(
                       text1:  "الحماية  : ",
                       text2:   " IP68 مقاوم للماء , Gorilla Glass 6",
                       containerColor: kcontainerColor2,
-                    ),
+                    ),const SizedBox(height:2),
                    CustomTextOfDetails(
                       text1:  "دقة الشاشة : ",
                       text2:   "6.9 بوصة بدقة QHD + بها ثقب صغير",
                       containerColor: kcontainerColor1,
-                    ),
+                    ),const SizedBox(height:2),
                    CustomTextOfDetails(
                       text1:  "المعالج : ",
                       text2:   "Snapdragon 865, Eiyons 990",
                       containerColor: kcontainerColor2,
-                    ),
+                    ),const SizedBox(height:2),
                   CustomTextOfDetails(
                       text1: "البطارية : ",
                       text2: "5000 MAH " + "" + "شحن سريع w15",
                       containerColor: kcontainerColor1,
-                    ),
+                    ),const SizedBox(height:2),
                     
                   ],
                 )),
             //start the second container
             Container(
-              color: kappDetails,
+              color: khomeBar,
               padding: EdgeInsets.all(10),
               child: Center(
                   child: Text(
