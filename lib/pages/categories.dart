@@ -27,7 +27,16 @@ class _CategoriesState extends State<Categories> {
                     crossAxisCount: 2),
                 children: <Widget>[
                   //Start cat one
-                  CategoriesCard(),
+                  CategoriesCard(
+                    imageCat: "example/images/category/samsung.png",
+                    text: "Samsung",
+                    onTap: () {
+                      Navigator.of(context)
+                          .push(MaterialPageRoute(builder: (context) {
+                        return Samsung();
+                      }));
+                    },
+                  ),
                   //End cat one
                   //----------------------
                   //Start cat two
@@ -185,9 +194,11 @@ class _CategoriesState extends State<Categories> {
 
 class CategoriesCard extends StatelessWidget {
   const CategoriesCard({
-    Key key, this.imagecat, this.text, this.onTap,
-  }) : super(key: key);
-  final String imagecat;
+    this.imageCat,
+    this.text,
+    this.onTap,
+  });
+  final String imageCat;
   final String text;
   final Function onTap;
   @override
@@ -198,21 +209,19 @@ class CategoriesCard extends StatelessWidget {
           children: <Widget>[
             Expanded(
               child: Image.asset(
-                "example/images/category/samsung.png",
+                imageCat,
                 fit: BoxFit.cover,
               ),
             ),
             Container(
                 child: Text(
-              "Samsung",
+              text,
               style: TextStyle(fontSize: 20),
             )),
           ],
         )),
         onTap: () {
-          Navigator.of(context).push(MaterialPageRoute(builder: (context) {
-            return Samsung();
-          }));
+          onTap();
         });
   }
 }
