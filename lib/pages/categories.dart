@@ -11,7 +11,7 @@ class _CategoriesState extends State<Categories> {
   @override
   Widget build(BuildContext context) {
     ///ThemeData(fontFamily: 'Cairo');
-    
+
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         home: Directionality(
@@ -175,7 +175,7 @@ class _CategoriesState extends State<Categories> {
                         ],
                       )),
                       onTap: () {}),
-                      
+
                   //End cat eight
                 ],
               ),
@@ -185,9 +185,11 @@ class _CategoriesState extends State<Categories> {
 
 class CategoriesCard extends StatelessWidget {
   const CategoriesCard({
-    Key key,
+    Key key, this.imagecat, this.text, this.onTap,
   }) : super(key: key);
-
+  final String imagecat;
+  final String text;
+  final Function onTap;
   @override
   Widget build(BuildContext context) {
     return InkWell(
@@ -208,8 +210,7 @@ class CategoriesCard extends StatelessWidget {
           ],
         )),
         onTap: () {
-          Navigator.of(context)
-              .push(MaterialPageRoute(builder: (context) {
+          Navigator.of(context).push(MaterialPageRoute(builder: (context) {
             return Samsung();
           }));
         });
