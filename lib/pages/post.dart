@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../constants.dart';
 import '../widgets/custom_text.dart';
 import '../compount/comments.dart';
 //import 'package:image_picker/image_picker.dart';
@@ -68,6 +69,8 @@ class _PostState extends State<Post> {
       textDirection: TextDirection.rtl,
       child: Scaffold(
         appBar: AppBar(
+          backgroundColor: khomeBar,
+          
           title: Text("المنشورات"),
         ),
         body: ListView(children: <Widget>[
