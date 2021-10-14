@@ -16,9 +16,10 @@ class _MobileDetailsState extends State<MobileDetails> {
         child: Scaffold(
           appBar: AppBar(
             backgroundColor: kappDetails,
-            title: Text(
-              'التفاصيل',
-              style: TextStyle(fontFamily: 'Cairo'),
+            title: CustomText(
+              text: 'التفاصيل',
+              fontSize: 25,
+              fontWeight: FontWeight.bold,
             ),
             centerTitle: true,
           ),
