@@ -1,7 +1,8 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:mobetech/compount/validinput.dart';
-import 'package:mobetech/widgets/build_positioned_bottom.dart';
+import '../widgets/build_positioned_bottom.dart';
+import '../widgets/build_positioned_top.dart';
 import '../pages/screen.dart';
 import '../widgets/custom_text.dart';
 // import 'package:shared_preferences/shared_preferences.dart';
