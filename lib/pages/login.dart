@@ -402,7 +402,8 @@ class LogInState extends State<LogIn> {
                      textAlign: TextAlign.center,
                        ),
                       SizedBox(height: 10),
-                      buildTextFormFieldAll(true, "تأكيد كلمة المرور", Icons.lock_outlined, confirmpassword, "validconfirmpassword", (value) {
+                      buildTextFormFieldAll(true, "تأكيد كلمة المرور", 
+                      Icons.lock_outlined, confirmpassword, "validconfirmpassword", (value) {
                         //  _password = value;
                       }),
                       //End User Password Confirm----------
@@ -456,7 +457,7 @@ class LogInState extends State<LogIn> {
           });
         },
         child: Stack(
-          children: <Widget>[
+          children: [
             Positioned(
               top: 25,
               right: 25,
@@ -494,7 +495,8 @@ class LogInState extends State<LogIn> {
           duration: Duration(milliseconds: 500),
           height: mdw,
           width: mdw,
-          decoration: BoxDecoration(borderRadius: BorderRadius.circular(mdw), color: showsignin ? Color(0xff424242) : Colors.green),
+          decoration: BoxDecoration(borderRadius: BorderRadius.circular(mdw),
+           color: showsignin ? Color(0xff424242) : Colors.green),
         ),
       ),
     ));
@@ -509,8 +511,59 @@ class LogInState extends State<LogIn> {
         duration: Duration(milliseconds: 500),
         height: mdw,
         width: mdw,
-        decoration: BoxDecoration(borderRadius: BorderRadius.circular(mdw), color: showsignin ? Colors.blue.withOpacity(0.3) : Colors.red.withOpacity(0.3)),
+        decoration: BoxDecoration(borderRadius: BorderRadius.circular(mdw),
+         color: showsignin ? Colors.blue.withOpacity(0.3) : Colors.red.withOpacity(0.3)),
       ),
     );
   }
 }
+
+// class TextFormFieldAll extends StatelessWidget {
+//   const TextFormFieldAll({
+    
+//     @required this.password, this.onClick, this.myContorller, this.pass, this.myhinttext, this.icon, this.type,
+//   });
+//   final Function onClick;
+//   final TextEditingController password;
+//   final TextEditingController myContorller;
+//   final bool pass;
+//   final String myhinttext;
+//   final IconData icon;
+//   final String type;
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return TextFormField(
+//       ///autovalidateMode: AutovalidateMode.always,
+//       onSaved: (value) {
+//         onClick();
+//       },
+//       controller: myContorller,
+//       obscureText: pass,
+//       validator: (val) {
+//         if (type == "validusername") {
+//           return validInput("username", 20, 4, "username");
+//         }
+//         if (type == "validemail") {
+//           return validInput("email", 30, 15, "email");
+//         }
+//         if (type == "validpassword") {
+//           return validInput("password", 20, 6, "password");
+//         }
+//         if (type == "validconfirmpassword") {
+//           if (type != password.text) {
+//             return "The password isn\'t identical";
+//           }
+//         }
+//       },
+//       decoration: InputDecoration(contentPadding: EdgeInsets.all(4),
+//        hintText: myhinttext, prefixIcon: Icon(icon, color: Colors.green),
+//         filled: true, fillColor: Color(0xffe0e0e0),
+//          enabledBorder: OutlineInputBorder(borderSide: BorderSide(color: Color(0xffbdbdbd),
+//           style: BorderStyle.solid, width: 1)),
+//            focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.purple,
+//             style: BorderStyle.solid, width: 1)), border: OutlineInputBorder(borderSide: BorderSide(
+//               color: Color(0xffbdbdbd), style: BorderStyle.solid, width: 1))),
+//     );
+//   }
+// }
