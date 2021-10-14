@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 class BuildPositionedBottom extends StatelessWidget {
   const BuildPositionedBottom({
     
-    @required this.mdw,
-    @required this.showsignin,
+    required this.mdw,
+    required this.showsignin,
   }) ;
 
   final double mdw;
