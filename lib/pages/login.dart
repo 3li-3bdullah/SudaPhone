@@ -1,6 +1,7 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:mobetech/compount/validinput.dart';
+import '../widgets/text_formfield_all.dart';
 import '../widgets/build_positioned_bottom.dart';
 import '../widgets/build_positioned_top.dart';
 import '../pages/screen.dart';
@@ -137,7 +138,6 @@ class LogInState extends State<LogIn> {
                 height: double.infinity,
                 width: double.infinity,
               ),
-              buildPositionedTop(mdw),
               BuildPositionedTop(mdw: mdw, showsignin: showsignin),
               BuildPositionedBottom(mdw: mdw, showsignin: showsignin),
               Container(
@@ -405,10 +405,13 @@ class LogInState extends State<LogIn> {
                      textAlign: TextAlign.center,
                        ),
                       SizedBox(height: 10),
-                      buildTextFormFieldAll(true, "تأكيد كلمة المرور", 
-                      Icons.lock_outlined, confirmpassword, "validconfirmpassword", (value) {
-                        //  _password = value;
-                      }),
+                      TextFormFieldAll(pass: true,icon:Icons.lock_outlined ,myContorller: confirmpassword,
+                      myhinttext:  "تأكيد كلمة المرور",onClick: (value){},type:"validconfirmpassword",
+                      password:  password.text ),
+                      // buildTextFormFieldAll(true, "تأكيد كلمة المرور", 
+                      // Icons.lock_outlined, confirmpassword, "validconfirmpassword", (value) {
+                      //   //  _password = value;
+                      // }),
                       //End User Password Confirm----------
                     ],
                   ),
@@ -417,7 +420,8 @@ class LogInState extends State<LogIn> {
             )));
   }
 
-  TextFormField buildTextFormFieldAll(bool pass, String myhinttext, final IconData icon, myContorller, type, onClick) {
+  TextFormField buildTextFormFieldAll(bool pass, String myhinttext, final IconData icon, myContorller, type,
+   onClick) {
     return TextFormField(
       ///autovalidateMode: AutovalidateMode.always,
       onSaved: (value) {
@@ -485,76 +489,4 @@ class LogInState extends State<LogIn> {
     );
   }
 
-  Positioned buildPositionedTop(double mdw) {
-    return Positioned(
-        child: Transform.scale(
-      scale: 1.3,
-      child: Transform.translate(
-        offset: Offset(0, -mdw / 1.7),
-
-        /// the offset takes tow value hori and vertical hori will push it right with positive number and top with
-        /// naigtive number and to bottom with positive number
-        child: AnimatedContainer(
-          duration: Duration(milliseconds: 500),
-          height: mdw,
-          width: mdw,
-          decoration: BoxDecoration(borderRadius: BorderRadius.circular(mdw),
-           color: showsignin ? Color(0xff424242) : Colors.green),
-        ),
-      ),
-    ));
-  }
-
 }
-
-
-
-// class TextFormFieldAll extends StatelessWidget {
-//   const TextFormFieldAll({
-    
-//     @required this.password, this.onClick, this.myContorller, this.pass, this.myhinttext, this.icon, this.type,
-//   });
-//   final Function onClick;
-//   final TextEditingController password;
-//   final TextEditingController myContorller;
-//   final bool pass;
-//   final String myhinttext;
-//   final IconData icon;
-//   final String type;
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return TextFormField(
-//       ///autovalidateMode: AutovalidateMode.always,
-//       onSaved: (value) {
-//         onClick();
-//       },
-//       controller: myContorller,
-//       obscureText: pass,
-//       validator: (val) {
-//         if (type == "validusername") {
-//           return validInput("username", 20, 4, "username");
-//         }
-//         if (type == "validemail") {
-//           return validInput("email", 30, 15, "email");
-//         }
-//         if (type == "validpassword") {
-//           return validInput("password", 20, 6, "password");
-//         }
-//         if (type == "validconfirmpassword") {
-//           if (type != password.text) {
-//             return "The password isn\'t identical";
-//           }
-//         }
-//       },
-//       decoration: InputDecoration(contentPadding: EdgeInsets.all(4),
-//        hintText: myhinttext, prefixIcon: Icon(icon, color: Colors.green),
-//         filled: true, fillColor: Color(0xffe0e0e0),
-//          enabledBorder: OutlineInputBorder(borderSide: BorderSide(color: Color(0xffbdbdbd),
-//           style: BorderStyle.solid, width: 1)),
-//            focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.purple,
-//             style: BorderStyle.solid, width: 1)), border: OutlineInputBorder(borderSide: BorderSide(
-//               color: Color(0xffbdbdbd), style: BorderStyle.solid, width: 1))),
-//     );
-//   }
-// }
