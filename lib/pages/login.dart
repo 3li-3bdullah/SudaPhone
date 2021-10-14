@@ -1,6 +1,7 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:mobetech/compount/validinput.dart';
+import 'package:mobetech/widgets/build_positioned_bottom.dart';
 import '../pages/screen.dart';
 import '../widgets/custom_text.dart';
 // import 'package:shared_preferences/shared_preferences.dart';
@@ -27,7 +28,7 @@ showdialogall(context, String mycontent) {
           child: AlertDialog(
             // title: Text(mytitle),
             content: Text(mycontent, style: TextStyle(color: Colors.black)),
-            actions: <Widget>[
+            actions: [
               FlatButton(
                 child: Text("تم", style: TextStyle(color: Colors.lightGreen)),
                 onPressed: () {
@@ -136,7 +137,8 @@ class LogInState extends State<LogIn> {
                 width: double.infinity,
               ),
               buildPositionedTop(mdw),
-              buildPositionedBottom(mdw),
+              BuildPositionedTop(mdw: mdw, showsignin: showsignin),
+              BuildPositionedBottom(mdw: mdw, showsignin: showsignin),
               Container(
                   height: 1000,
                   child: SingleChildScrollView(
@@ -502,21 +504,40 @@ class LogInState extends State<LogIn> {
     ));
   }
 
-  Positioned buildPositionedBottom(double mdw) {
+}
+
+class BuildPositionedTop extends StatelessWidget {
+  const BuildPositionedTop({
+    
+    @required this.mdw,
+    @required this.showsignin,
+  }) ;
+
+  final double mdw;
+  final bool showsignin;
+
+  @override
+  Widget build(BuildContext context) {
     return Positioned(
-      //top : 300
-      top: mdw * 1.2, // this will go down
-      right: mdw / 1.5,
-      child: AnimatedContainer(
-        duration: Duration(milliseconds: 500),
-        height: mdw,
-        width: mdw,
-        decoration: BoxDecoration(borderRadius: BorderRadius.circular(mdw),
-         color: showsignin ? Colors.blue.withOpacity(0.3) : Colors.red.withOpacity(0.3)),
+        child: Transform.scale(
+      scale: 1.3,
+      child: Transform.translate(
+        offset: Offset(0, -mdw / 1.7),
+
+        /// the offset takes tow value hori and vertical hori will push it right with positive number and top with
+        /// naigtive number and to bottom with positive number
+        child: AnimatedContainer(
+          duration: Duration(milliseconds: 500),
+          height: mdw,
+          width: mdw,
+          decoration: BoxDecoration(borderRadius: BorderRadius.circular(mdw),
+           color: showsignin ? Color(0xff424242) : Colors.green),
+        ),
       ),
-    );
+    ));
   }
 }
+
 
 // class TextFormFieldAll extends StatelessWidget {
 //   const TextFormFieldAll({
