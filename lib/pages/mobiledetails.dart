@@ -64,10 +64,12 @@ class _MobileDetailsState extends State<MobileDetails> {
 
             Container(
                 padding: EdgeInsets.all(10),
-                child: Text(
-                  "المواصفات",
-                  style: TextStyle(fontSize: 18, fontFamily: 'Cairo'),
-                )),
+                child: CustomText(
+                  text: "المواصفات",
+                  color: Colors.black,
+                  fontSize: 25,
+                  fontWeight: FontWeight.bold,
+                ),),
             //Start Column Specfiction
 
             Container(
@@ -117,10 +119,12 @@ class _MobileDetailsState extends State<MobileDetails> {
               color: khomeBar,
               padding: EdgeInsets.all(10),
               child: Center(
-                  child: Text(
-                "المميزات",
-                style: TextStyle(color:Colors.white ,fontSize: 18, fontFamily: 'Cairo'),
-              )),
+                child: CustomText(
+                  text:  "المميزات",
+                  color: Colors.white,
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ) ,),
             ),const SizedBox(height:2),
             //Start Column Specfiction
             Container(
@@ -179,9 +183,9 @@ class _MobileDetailsState extends State<MobileDetails> {
                 child: CustomText(
                   text: "العيوب",
                   color: Colors.white,
-                  fontSize: 25,
+                  fontSize: 20,
                   fontWeight: FontWeight.bold,
-                ) ,),
+                ) ),
             ),const SizedBox(height:2),
             //Start Column Specfiction
             Container(
