@@ -1,6 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:mobetech/compount/validinput.dart';
+import '../compount/validinput.dart';
 import '../widgets/text_formfield_all.dart';
 import '../widgets/build_positioned_bottom.dart';
 import '../widgets/build_positioned_top.dart';
@@ -133,7 +133,7 @@ class LogInState extends State<LogIn> {
         textDirection: TextDirection.rtl,
         child: Scaffold(
           body: Stack(
-            children: <Widget>[
+            children:[
               Container(
                 height: double.infinity,
                 width: double.infinity,
@@ -143,15 +143,17 @@ class LogInState extends State<LogIn> {
               Container(
                   height: 1000,
                   child: SingleChildScrollView(
-                      child: Column(children: <Widget>[
-                    Center(child: Container(margin: EdgeInsets.only(top: 30), child: Text(showsignin ? "تسجيل الدخول" : "إنشاء حساب", style: TextStyle(color: Colors.white, fontSize: 20)))),
+                      child: Column(children: [
+                    Center(child: Container(margin: EdgeInsets.only(top: 30),
+                     child: Text(showsignin ? "تسجيل الدخول" : "إنشاء حساب", 
+                     style: TextStyle(color: Colors.white, fontSize: 20)))),
                     Padding(padding: EdgeInsets.only(top: 20)),
                     buildContainerAvatar(mdw),
                     showsignin ? buildFormBoxSignIn(mdw) : buildFormBoxSignUp(mdw),
                     Container(
                       margin: EdgeInsets.only(top: 20),
                       child: Column(
-                        children: <Widget>[
+                        children: [
                           showsignin
                               ? InkWell(
                                   onTap: () {},
@@ -170,12 +172,15 @@ class LogInState extends State<LogIn> {
                               color: showsignin ? Color(0xff424242) : Colors.purple,
                               padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
                               onPressed: showsignin ? signin : signup,
-                              child: Row(mainAxisAlignment: MainAxisAlignment.center, mainAxisSize: MainAxisSize.min, children: <Widget>[
+                              child: Row(mainAxisAlignment: MainAxisAlignment.center,
+                               mainAxisSize: MainAxisSize.min, children: [
                                 Text(
                                   showsignin ? "تسجيل الدخول" : "إنشاء حساب",
                                   style: TextStyle(color: Colors.white, fontSize: 18),
                                 ),
-                                Container(margin: EdgeInsets.only(top: 4), padding: EdgeInsets.only(right: 10), child: Icon(Icons.arrow_forward, color: Colors.white))
+                                Container(margin: EdgeInsets.only(top: 4), 
+                                padding: EdgeInsets.only(right: 10),
+                                 child: Icon(Icons.arrow_forward, color: Colors.white))
                               ])),
 
                           /// isLoading ? CircularProgressIndicator() : Padding(padding: EdgeInsets.all(0),),
@@ -197,7 +202,8 @@ class LogInState extends State<LogIn> {
                                       TextSpan(
                                           //recognizer: _changesign,
                                           text: showsignin ? "إنشاء حساب جديد" : "تسجيل دخول",
-                                          style: TextStyle(color: showsignin ? Colors.blue : Colors.purple, fontWeight: FontWeight.w700)),
+                                          style: TextStyle(color: showsignin ? Colors.blue : Colors.purple,
+                                           fontWeight: FontWeight.w700)),
                                     ])),
                               )),
                           const SizedBox(height: 10),
@@ -234,7 +240,7 @@ class LogInState extends State<LogIn> {
                                             color: Colors.red.withOpacity(0.3),
                                             child: Row(
                                               mainAxisAlignment: MainAxisAlignment.center,
-                                              children: <Widget>[
+                                              children: [
                                                 Expanded(
                                                     flex: 3,
                                                     child: CustomText(
@@ -281,7 +287,7 @@ class LogInState extends State<LogIn> {
                 child: SingleChildScrollView(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
+                    children: [
                       //Start Email----------
                       CustomText(
                        text:"عنوان البريد الالكتروني",
@@ -300,7 +306,16 @@ class LogInState extends State<LogIn> {
                         validator: (val) {
                           return validInput("email", 30, 15, "email");
                         },
-                        decoration: InputDecoration(contentPadding: EdgeInsets.all(4), hintText: "ادخل البريد الالكتروني هنا", prefixIcon: Icon(Icons.email_outlined, color: Colors.blue), filled: true, fillColor: Color(0xffe0e0e0), enabledBorder: OutlineInputBorder(borderSide: BorderSide(color: Color(0xffbdbdbd), style: BorderStyle.solid, width: 1)), focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.blue, style: BorderStyle.solid, width: 1)), border: OutlineInputBorder(borderSide: BorderSide(color: Colors.blue, style: BorderStyle.solid, width: 1))),
+                        decoration: InputDecoration(contentPadding: EdgeInsets.all(4),
+                         hintText: "ادخل البريد الالكتروني هنا",
+                          prefixIcon: Icon(Icons.email_outlined, color: Colors.blue),
+                           filled: true, fillColor: Color(0xffe0e0e0),
+                            enabledBorder: OutlineInputBorder(borderSide: BorderSide(color: Color(0xffbdbdbd),
+                             style: BorderStyle.solid, width: 1)),
+                              focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.blue, 
+                              style: BorderStyle.solid, width: 1)),
+                               border: OutlineInputBorder(borderSide: BorderSide(color: Colors.blue,
+                                style: BorderStyle.solid, width: 1))),
                       ),
                       //End User Name----------
                       //Start User Password----------
@@ -445,7 +460,13 @@ class LogInState extends State<LogIn> {
           }
         }
       },
-      decoration: InputDecoration(contentPadding: EdgeInsets.all(4), hintText: myhinttext, prefixIcon: Icon(icon, color: Colors.green), filled: true, fillColor: Color(0xffe0e0e0), enabledBorder: OutlineInputBorder(borderSide: BorderSide(color: Color(0xffbdbdbd), style: BorderStyle.solid, width: 1)), focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.purple, style: BorderStyle.solid, width: 1)), border: OutlineInputBorder(borderSide: BorderSide(color: Color(0xffbdbdbd), style: BorderStyle.solid, width: 1))),
+      decoration: InputDecoration(contentPadding: EdgeInsets.all(4), hintText: myhinttext,
+       prefixIcon: Icon(icon, color: Colors.green), filled: true, fillColor: Color(0xffe0e0e0),
+        enabledBorder: OutlineInputBorder(borderSide: BorderSide(color: Color(0xffbdbdbd), 
+        style: BorderStyle.solid, width: 1)), focusedBorder: OutlineInputBorder(borderSide: BorderSide(
+          color: Colors.purple, style: BorderStyle.solid, width: 1)),
+           border: OutlineInputBorder(borderSide: BorderSide(color: Color(0xffbdbdbd),
+            style: BorderStyle.solid, width: 1))),
     );
   }
 
