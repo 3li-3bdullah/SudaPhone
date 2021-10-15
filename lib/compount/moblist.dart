@@ -23,7 +23,7 @@ class MobList extends StatelessWidget {
         width: 100,
         child: Card(
           child: Row(
-            children: <Widget>[
+            children: [
               Expanded(
                   flex: 1,
                   child: Image.asset("example/images/product/samsung.jpg")),
@@ -35,7 +35,7 @@ class MobList extends StatelessWidget {
                     height: 180,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
+                      children: [
                         Container(
                           margin: EdgeInsets.only(bottom: 10, right: 10),
                           child: Text(name,
@@ -43,36 +43,36 @@ class MobList extends StatelessWidget {
                                   fontSize: 18, fontWeight: FontWeight.w800),
                               textAlign: TextAlign.center),
                         ),
-                        Row(children: <Widget>[
+                        Row(children: [
                           Text("الكاميرا:",
                               style: TextStyle(color: Colors.grey)),
                           Text(camera, style: TextStyle(color: Colors.blue)),
                         ]),
-                        Row(children: <Widget>[
+                        Row(children: [
                           Text("المعالج : ",
                               style: TextStyle(color: Colors.grey)),
                           Text(cpu, style: TextStyle(color: Colors.blue))
                         ]),
-                        Row(children: <Widget>[
-                          Text("الزاكرة:",
+                        Row(children: [
+                          Text("الذاكرة:",
                               style: TextStyle(color: Colors.grey)),
                           Text(memory, style: TextStyle(color: Colors.blue)),
                         ]),
-                        Row(children: <Widget>[
+                        Row(children: [
                           Text("البطارية :",
                               style: TextStyle(color: Colors.grey)),
                           Text(battery, style: TextStyle(color: Colors.blue))
                         ]),
                         Row(
-                          children: <Widget>[
+                          children: [
                             Expanded(
-                              child: Row(children: <Widget>[
+                              child: Row(children: [
                                 Text("السعر : $price",
                                     style: TextStyle(color: Colors.red)),
                               ]),
                             ),
                        
-                        Row(children: <Widget>[
+                        Row(children: [
                           Text("للمزيد إضغط هنا",
                               style: TextStyle(color: Colors.green)),
                         ]),
