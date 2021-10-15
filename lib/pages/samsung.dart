@@ -1,5 +1,6 @@
 //import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import '../constants.dart';
 // import 'package:http/http.dart' as http;
 // import 'dart:convert';
 import '../compount/moblist.dart';
@@ -31,6 +32,7 @@ class _SamsungState extends State<Samsung> {
         textDirection: TextDirection.rtl,
         child: Scaffold(
           appBar: AppBar(
+            backgroundColor: khomeBar,
             title: Text("Samsung"),
             centerTitle: true,
           ),
