@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 class CustomText extends StatelessWidget {
   const CustomText({
+    context,
   required  this.text,
   required  this.textAlign,
   required  this.color,
