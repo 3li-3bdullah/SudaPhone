@@ -422,7 +422,7 @@ class LogInState extends State<LogIn> {
                       SizedBox(height: 10),
                       TextFormFieldAll(pass: true,icon:Icons.lock_outlined ,myContorller: confirmpassword,
                       myhinttext:  "تأكيد كلمة المرور",onClick: (value){},type:"validconfirmpassword",
-                      password:  password.text ),
+                      password:  password ),
                       // buildTextFormFieldAll(true, "تأكيد كلمة المرور", 
                       // Icons.lock_outlined, confirmpassword, "validconfirmpassword", (value) {
                       //   //  _password = value;
