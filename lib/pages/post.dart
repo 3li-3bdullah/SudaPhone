@@ -114,7 +114,7 @@ class _PostState extends State<Post> {
                     padding: EdgeInsets.all(10),
                     child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
+                        children: [
                           CustomText(
                             text: "اضف منشور",
                             color: Colors.grey.shade900,
@@ -167,7 +167,7 @@ class _PostState extends State<Post> {
                           border: Border(left: BorderSide(color: Colors.grey))),
                       child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
-                          children: <Widget>[
+                          children:[
                             CustomText(
                               text: "0",
                               color: Colors.grey.shade900,
@@ -186,7 +186,7 @@ class _PostState extends State<Post> {
                   child: InkWell(
                     child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
+                        children: [
                           CustomText(
                             text: "0",
                             color: Colors.grey.shade900,
