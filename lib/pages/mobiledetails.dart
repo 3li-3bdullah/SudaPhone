@@ -121,6 +121,7 @@ class _MobileDetailsState extends State<MobileDetails> {
               padding: EdgeInsets.all(10),
               child: Center(
                 child: CustomText(
+                  
                   text:  "المميزات",
                   color: Colors.white,
                   fontSize: 20,
@@ -182,6 +183,7 @@ class _MobileDetailsState extends State<MobileDetails> {
               padding: EdgeInsets.all(10),
               child: Center(
                 child: CustomText(
+                  textAlign:TextAlign.center,
                   text: "العيوب",
                   color: Colors.white,
                   fontSize: 20,
