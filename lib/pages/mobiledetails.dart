@@ -17,9 +17,10 @@ class _MobileDetailsState extends State<MobileDetails> {
           appBar: AppBar(
             backgroundColor: kappDetails,
             title: CustomText(
+              textAlign: TextAlign.center,
               text: 'التفاصيل',
               fontSize: 25,
-              fontWeight: FontWeight.bold,
+              fontWeight: FontWeight.bold, color: Colors.grey.shade900,
             ),
             centerTitle: true,
           ),
