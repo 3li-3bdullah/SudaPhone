@@ -181,7 +181,7 @@ class _MobileDetailsState extends State<MobileDetails> {
             //End second container
             //Start three container
             Container(
-              color: kappDetails,
+              color: khomeBar,
               padding: EdgeInsets.all(10),
               child: Center(
                 child: CustomText(
