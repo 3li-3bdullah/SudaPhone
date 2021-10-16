@@ -66,6 +66,7 @@ class _MobileDetailsState extends State<MobileDetails> {
             Container(
                 padding: EdgeInsets.all(10),
                 child: CustomText(
+                  textAlign: TextAlign.center,
                   text: "المواصفات",
                   color: Colors.black,
                   fontSize: 25,
@@ -121,7 +122,7 @@ class _MobileDetailsState extends State<MobileDetails> {
               padding: EdgeInsets.all(10),
               child: Center(
                 child: CustomText(
-                  
+                  textAlign: TextAlign.center,
                   text:  "المميزات",
                   color: Colors.white,
                   fontSize: 20,
