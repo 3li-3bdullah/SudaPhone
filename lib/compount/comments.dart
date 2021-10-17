@@ -16,7 +16,7 @@ class StateComments extends State<Comments> {
         child: Scaffold(
           body: SafeArea(
                 child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  mainAxisAlignment: MainAxisAlignment.end,
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
                     Container(
