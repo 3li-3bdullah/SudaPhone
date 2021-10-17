@@ -236,9 +236,10 @@ class LogInState extends State<LogIn> {
                                             onPressed: () {})),
                                     Padding(padding: EdgeInsets.only(right: 10)),
                                     Expanded(
-                                        child: RaisedButton(
-                                            color: Colors.red.withOpacity(0.3),
+                                        child: ElevatedButton(
+                                          //  child: Container(color:Colors.red.withOpacity(0.3)),
                                             child: Row(
+                                              
                                               mainAxisAlignment: MainAxisAlignment.center,
                                               children: [
                                                 Expanded(
@@ -475,7 +476,8 @@ class LogInState extends State<LogIn> {
       duration: Duration(milliseconds: 500),
       height: 100,
       width: 100,
-      decoration: BoxDecoration(color: showsignin ? Colors.yellow : Colors.purple, borderRadius: BorderRadius.circular(100), boxShadow: [
+      decoration: BoxDecoration(color: showsignin ? Colors.yellow : Colors.purple, 
+      borderRadius: BorderRadius.circular(100), boxShadow: [
         BoxShadow(color: Colors.black, blurRadius: 3, spreadRadius: 0.1)
       ]),
       child: InkWell(
