@@ -210,7 +210,7 @@ class LogInState extends State<LogIn> {
                           showsignin
                               ? Directionality(
                                   textDirection: TextDirection.ltr,
-                                  child: Row(children: <Widget>[
+                                  child: Row(children: [
                                     Padding(padding: EdgeInsets.only(right: 10)),
                                     Expanded(
                                         child: RaisedButton(
@@ -236,27 +236,29 @@ class LogInState extends State<LogIn> {
                                             onPressed: () {})),
                                     Padding(padding: EdgeInsets.only(right: 10)),
                                     Expanded(
-                                        child: ElevatedButton(
-                                          //  child: Container(color:Colors.red.withOpacity(0.3)),
-                                            child: Row(
-                                              
-                                              mainAxisAlignment: MainAxisAlignment.center,
-                                              children: [
-                                                Expanded(
-                                                    flex: 3,
-                                                    child: CustomText(
-                                                      text: "Sign In Google",
-                                                      color: Colors.white,
-                                                      fontSize: 15,
-                                                      fontWeight: FontWeight.w600,
-                                                      textAlign: TextAlign.center,
-                                                    ),
-                                                    ),
-                                                Expanded(flex: 1,
-                                                 child: Image.asset("example/images/social/google.png", width: 25, height: 25)),
-                                              ],
+                                        child: Material(
+                                           color:Colors.red.withOpacity(0.3),
+                                            child: MaterialButton(
+                                              child: Row(
+                                                mainAxisAlignment: MainAxisAlignment.center,
+                                                children: [
+                                                  Expanded(
+                                                      flex: 3,
+                                                      child: CustomText(
+                                                        text: "Sign In Google",
+                                                        color: Colors.white,
+                                                        fontSize: 15,
+                                                        fontWeight: FontWeight.w600,
+                                                        textAlign: TextAlign.center,
+                                                      ),
+                                                      ),
+                                                  Expanded(flex: 1,
+                                                   child: Image.asset("example/images/social/google.png", width: 25, height: 25)),
+                                                ],
+                                              ),
+                                              onPressed: (){},
                                             ),
-                                            onPressed: () {})),
+                                           )),
                                     Padding(padding: EdgeInsets.only(right: 10)),
                                   ]),
                                 )
