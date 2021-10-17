@@ -75,12 +75,9 @@ class _MyDrawerState extends State<MyDrawer> {
             "إضافة منشور",
             Icons.post_add_outlined,
             () {
-              Navigator.of(context).push(MaterialPageRoute(builder: (context) {
-                return Post();
-              }));
+              Get.to(Post());
             },
           ),
-          
           Divider(
             color: khomeBar,
           ),
@@ -99,7 +96,7 @@ class _MyDrawerState extends State<MyDrawer> {
           drawerItems(
             "تسجيل الدخول",
             Icons.exit_to_app_outlined,
-             () {
+            () {
               Get.to(LogIn());
             },
           ),
@@ -107,13 +104,16 @@ class _MyDrawerState extends State<MyDrawer> {
       ),
     );
   }
+
   InkWell drawerItems(String text, IconData icon, Function onTap) {
     return InkWell(
       child: ListTile(
         title: Text(text, style: TextStyle(color: Colors.black, fontSize: 18)),
         leading: Icon(icon, color: khomeBar, size: 25),
       ),
-      onTap: (){onTap();},
+      onTap: () {
+        onTap();
+      },
     );
   }
 }
