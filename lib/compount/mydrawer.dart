@@ -57,9 +57,7 @@ class _MyDrawerState extends State<MyDrawer> {
             "الصفحة الرئيسية",
             Icons.home_outlined,
             () {
-              Navigator.of(context).push(MaterialPageRoute(builder: (context) {
-                return Screen();
-              }));
+              Get.to(Screen());
             },
           ),
           drawerItems(
