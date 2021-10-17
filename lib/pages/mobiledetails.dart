@@ -20,11 +20,11 @@ class _MobileDetailsState extends State<MobileDetails> {
               textAlign: TextAlign.center,
               text: 'التفاصيل',
               fontSize: 25,
-              fontWeight: FontWeight.bold, color: Colors.grey.shade900,
+              fontWeight: FontWeight.bold, color: Colors.grey.shade800,
             ),
             centerTitle: true,
           ),
-          body: ListView(children: <Widget>[
+          body: ListView(children: [
             Container(
                 height: 300,
                 child: GridTile(
@@ -35,7 +35,7 @@ class _MobileDetailsState extends State<MobileDetails> {
                         child: Directionality(
                             textDirection: TextDirection.ltr,
                             child: Row(
-                              children: <Widget>[
+                              children: [
                                 Expanded(
                                     child: Container(
                                   padding: EdgeInsets.all(10),
@@ -69,7 +69,7 @@ class _MobileDetailsState extends State<MobileDetails> {
                 child: CustomText(
                   textAlign: TextAlign.center,
                   text: "المواصفات",
-                  color: Colors.black,
+                  color: Colors.grey.shade800,
                   fontSize: 25,
                   fontWeight: FontWeight.bold,
                 ),),
@@ -134,7 +134,7 @@ class _MobileDetailsState extends State<MobileDetails> {
             Container(
                 padding: EdgeInsets.all(10),
                 child: Column(
-                  children: <Widget>[
+                  children: [
 
                      CustomTextOfDetails(
                       text1:  "التقريب : ",
@@ -196,7 +196,7 @@ class _MobileDetailsState extends State<MobileDetails> {
             Container(
                 padding: EdgeInsets.all(10),
                 child: Column(
-                  children: <Widget>[
+                  children: [
                     CustomTextOfDetails(
                       text1:  "السعر : ",
                       text2: "مرتفع وحجمة ثقيل",
