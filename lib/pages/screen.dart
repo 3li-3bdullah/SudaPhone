@@ -69,7 +69,7 @@ class ScreenState extends State<Screen> {
               backgroundColor: khomeBar,
               centerTitle: true,
               elevation: 6,
-              actions: <Widget>[
+              actions: [
                 IconButton(
                     icon: Icon(Icons.search),
                     onPressed: () {
