@@ -66,9 +66,7 @@ class _MyDrawerState extends State<MyDrawer> {
             "الأقسام",
             Icons.category_outlined,
             () {
-              Navigator.of(context).push(MaterialPageRoute(builder: (context) {
-                return Categories();
-              }));
+              Get.to(Categories());
             },
           ),
           drawerItems(
