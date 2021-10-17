@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import '../constants.dart';
 import '../widgets/categories_card.dart';
 import '../pages/samsung.dart';
@@ -34,10 +35,7 @@ class _CategoriesState extends State<Categories> {
                     imageCat: "example/images/category/samsung.png",
                     text: "Samsung",
                     onTap: () {
-                      Navigator.of(context)
-                          .push(MaterialPageRoute(builder: (context) {
-                        return Samsung();
-                      }));
+                      Get.to(Samsung());
                     },
                   ),
                   //End cat one
@@ -56,12 +54,12 @@ class _CategoriesState extends State<Categories> {
                     text: "Apple",
                     onTap: () {},
                   ),
-                 
+
                   //End cat three
                   //----------------------
                   //Start cat four
                   CategoriesCard(
-                    imageCat:  "example/images/category/oppo.png",
+                    imageCat: "example/images/category/oppo.png",
                     text: "Oppo",
                     onTap: () {},
                   ),
@@ -77,7 +75,7 @@ class _CategoriesState extends State<Categories> {
                   //----------------------
                   //Start car six
                   CategoriesCard(
-                    imageCat:"example/images/category/lenovo.png",
+                    imageCat: "example/images/category/lenovo.png",
                     text: "Lenovo",
                     onTap: () {},
                   ),
@@ -92,7 +90,7 @@ class _CategoriesState extends State<Categories> {
                   //End cat eight
                   //----------------------
                   CategoriesCard(
-                    imageCat:  "example/images/category/tecno.png",
+                    imageCat: "example/images/category/tecno.png",
                     text: "Tecno",
                     onTap: () {},
                   ),
@@ -102,5 +100,3 @@ class _CategoriesState extends State<Categories> {
             )));
   }
 }
-
-
