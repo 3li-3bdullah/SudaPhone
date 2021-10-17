@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import '../constants.dart';
 import '../pages/post.dart';
 import '../pages/categories.dart';
@@ -101,9 +102,7 @@ class _MyDrawerState extends State<MyDrawer> {
             "تسجيل الدخول",
             Icons.exit_to_app_outlined,
              () {
-              Navigator.of(context).push(MaterialPageRoute(builder: (context) {
-                return LogIn();
-              }));
+              Get.to(LogIn());
             },
           ),
         ],
