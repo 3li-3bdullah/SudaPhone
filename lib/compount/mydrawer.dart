@@ -88,9 +88,7 @@ class _MyDrawerState extends State<MyDrawer> {
             "حول التطبيق",
             Icons.info_outline,
             () {
-              Navigator.of(context).push(MaterialPageRoute(builder: (context) {
-                return AboutApp();
-              }));
+              Get.to(AboutApp());
             },
           ),
           drawerItems(
