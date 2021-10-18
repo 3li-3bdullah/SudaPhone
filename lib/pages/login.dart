@@ -31,7 +31,7 @@ showdialogall(context, String mycontent) {
             // title: Text(mytitle),
             content: Text(mycontent, style: TextStyle(color: Colors.black)),
             actions: [
-              FlatButton(
+              TextButton(
                 child: Text("تم", style: TextStyle(color: Colors.lightGreen)),
                 onPressed: () {
                   Navigator.of(context).push(MaterialPageRoute(builder: (context) {
@@ -253,7 +253,8 @@ class LogInState extends State<LogIn> {
                                                       ),
                                                       ),
                                                   Expanded(flex: 1,
-                                                   child: Image.asset("example/images/social/google.png", width: 25, height: 25)),
+                                                   child: Image.asset("example/images/social/google.png",
+                                                    width: 25, height: 25)),
                                                 ],
                                               ),
                                               onPressed: (){},
@@ -303,7 +304,7 @@ class LogInState extends State<LogIn> {
                       const SizedBox(height: 10),
                       TextFormField(
                         onSaved: (value) {
-                          /// _email = value;
+                        //email = value;
                         },
                         controller: email,
                         validator: (val) {
