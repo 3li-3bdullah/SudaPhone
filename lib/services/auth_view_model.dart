@@ -1,7 +1,9 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
 
 class AuthViewModel extends GetxController {
-  
+  final FirebaseAuth _auth = FirebaseAuth.instance;
+
   late String email, password, name;
 
   @override
@@ -22,5 +24,7 @@ class AuthViewModel extends GetxController {
     super.onClose();
   }
 
-  signInWithEmailAndPassword() {}
+  signInWithEmailAndPassword() {
+    _auth.signInWithEmailAndPassword(email: email, password: password);
+  }
 }
