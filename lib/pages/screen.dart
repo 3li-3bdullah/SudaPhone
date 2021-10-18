@@ -3,7 +3,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:mobetech/widgets/custom_text.dart';
 import '../widgets/categories_logo.dart';
 import '../widgets/last_product.dart';
-import '../compount/data_search.dart';
+import '../widgets/data_search.dart';
 import '../constants.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import '../compount/mydrawer.dart';
