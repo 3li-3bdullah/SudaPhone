@@ -1,4 +1,6 @@
+
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class AuthViewModel extends GetxController {
@@ -25,7 +27,8 @@ class AuthViewModel extends GetxController {
     try {
       await _auth.signInWithEmailAndPassword(email: email, password: password);
     } catch (e) {
-      print(e);
+       print(e);
+      Get.snackbar("Error login account", "Try correct your data" ,colorText: Colors.black ,snackPosition: SnackPosition.BOTTOM );
     }
   }
 }
