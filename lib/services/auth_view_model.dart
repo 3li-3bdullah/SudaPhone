@@ -8,23 +8,24 @@ class AuthViewModel extends GetxController {
 
   @override
   void onInit() {
-    // TODO: implement onInit
     super.onInit();
   }
 
   @override
   void onReady() {
-    // TODO: implement onReady
     super.onReady();
   }
 
   @override
   void onClose() {
-    // TODO: implement onClose
     super.onClose();
   }
 
-  signInWithEmailAndPassword() async{
-   await _auth.signInWithEmailAndPassword(email: email, password: password);
+  signInWithEmailAndPassword() async {
+    try {
+      await _auth.signInWithEmailAndPassword(email: email, password: password);
+    } catch (e) {
+      print(e);
+    }
   }
 }
