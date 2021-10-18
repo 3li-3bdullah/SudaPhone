@@ -17,4 +17,8 @@ class AuthViewModel extends GetxController{
     // TODO: implement onClose
     super.onClose();
   }
+
+  signInWithEmailAndPassword(){
+    
+  }
 }
