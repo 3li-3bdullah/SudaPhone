@@ -2,6 +2,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:mobetech/widgets/custom_text_form_field.dart';
 import '../compount/validinput.dart';
+import '../constants.dart';
 import '../widgets/text_formfield_all.dart';
 import '../widgets/build_positioned_bottom.dart';
 import '../widgets/build_positioned_top.dart';
@@ -348,8 +349,8 @@ class LogInState extends State<LogIn> {
                           icon: Icons.email_outlined,
                           myhinttext: "ادخل البريد الالكتروني هنا",
                           prefixColor: Colors.blue,
-                          fillColor: Color(0xffe0e0e0),
-                          enabledColor: Color(0xffbdbdbd),
+                          fillColor: kfillColor,
+                          enabledColor:kenabledColor,
                           focusedColor: Colors.blue,
                           borderSideColor: Colors.blue),
                       //End User Name----------
