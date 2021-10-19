@@ -35,7 +35,8 @@ showdialogall(context, String mycontent) {
               TextButton(
                 child: Text("تم", style: TextStyle(color: Colors.lightGreen)),
                 onPressed: () {
-                  Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+                  Navigator.of(context)
+                      .push(MaterialPageRoute(builder: (context) {
                     return Screen();
                   }));
                 },
@@ -134,7 +135,7 @@ class LogInState extends State<LogIn> {
         textDirection: TextDirection.rtl,
         child: Scaffold(
           body: Stack(
-            children:[
+            children: [
               Container(
                 height: double.infinity,
                 width: double.infinity,
@@ -145,12 +146,18 @@ class LogInState extends State<LogIn> {
                   height: 1000,
                   child: SingleChildScrollView(
                       child: Column(children: [
-                    Center(child: Container(margin: EdgeInsets.only(top: 30),
-                     child: Text(showsignin ? "تسجيل الدخول" : "إنشاء حساب", 
-                     style: TextStyle(color: Colors.white, fontSize: 20)))),
+                    Center(
+                        child: Container(
+                            margin: EdgeInsets.only(top: 30),
+                            child: Text(
+                                showsignin ? "تسجيل الدخول" : "إنشاء حساب",
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 20)))),
                     Padding(padding: EdgeInsets.only(top: 20)),
                     buildContainerAvatar(mdw),
-                    showsignin ? buildFormBoxSignIn(mdw) : buildFormBoxSignUp(mdw),
+                    showsignin
+                        ? buildFormBoxSignIn(mdw)
+                        : buildFormBoxSignUp(mdw),
                     Container(
                       margin: EdgeInsets.only(top: 20),
                       child: Column(
@@ -159,30 +166,40 @@ class LogInState extends State<LogIn> {
                               ? InkWell(
                                   onTap: () {},
                                   child: CustomText(
-                       text: "هل نسيت كلمة المرور ؟",
-                        color: Colors.blue,
-                     fontSize: 15,
-                    fontWeight: FontWeight.w600,
-                     textAlign: TextAlign.center,
-                       ),
-                                 )
+                                    text: "هل نسيت كلمة المرور ؟",
+                                    color: Colors.blue,
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.w600,
+                                    textAlign: TextAlign.center,
+                                  ),
+                                )
                               : SizedBox(),
                           SizedBox(height: showsignin ? 20 : 5),
                           RaisedButton(
                               elevation: 10,
-                              color: showsignin ? Color(0xff424242) : Colors.purple,
-                              padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+                              color: showsignin
+                                  ? Color(0xff424242)
+                                  : Colors.purple,
+                              padding: EdgeInsets.symmetric(
+                                  vertical: 10, horizontal: 20),
                               onPressed: showsignin ? signin : signup,
-                              child: Row(mainAxisAlignment: MainAxisAlignment.center,
-                               mainAxisSize: MainAxisSize.min, children: [
-                                Text(
-                                  showsignin ? "تسجيل الدخول" : "إنشاء حساب",
-                                  style: TextStyle(color: Colors.white, fontSize: 18),
-                                ),
-                                Container(margin: EdgeInsets.only(top: 4), 
-                                padding: EdgeInsets.only(right: 10),
-                                 child: Icon(Icons.arrow_forward, color: Colors.white))
-                              ])),
+                              child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  mainAxisSize: MainAxisSize.min,
+                                  children: [
+                                    Text(
+                                      showsignin
+                                          ? "تسجيل الدخول"
+                                          : "إنشاء حساب",
+                                      style: TextStyle(
+                                          color: Colors.white, fontSize: 18),
+                                    ),
+                                    Container(
+                                        margin: EdgeInsets.only(top: 4),
+                                        padding: EdgeInsets.only(right: 10),
+                                        child: Icon(Icons.arrow_forward,
+                                            color: Colors.white))
+                                  ])),
 
                           /// isLoading ? CircularProgressIndicator() : Padding(padding: EdgeInsets.all(0),),
                           Container(
@@ -202,9 +219,14 @@ class LogInState extends State<LogIn> {
                                         children: <TextSpan>[
                                       TextSpan(
                                           //recognizer: _changesign,
-                                          text: showsignin ? "إنشاء حساب جديد" : "تسجيل دخول",
-                                          style: TextStyle(color: showsignin ? Colors.blue : Colors.purple,
-                                           fontWeight: FontWeight.w700)),
+                                          text: showsignin
+                                              ? "إنشاء حساب جديد"
+                                              : "تسجيل دخول",
+                                          style: TextStyle(
+                                              color: showsignin
+                                                  ? Colors.blue
+                                                  : Colors.purple,
+                                              fontWeight: FontWeight.w700)),
                                     ])),
                               )),
                           const SizedBox(height: 10),
@@ -212,56 +234,68 @@ class LogInState extends State<LogIn> {
                               ? Directionality(
                                   textDirection: TextDirection.ltr,
                                   child: Row(children: [
-                                    Padding(padding: EdgeInsets.only(right: 10)),
+                                    Padding(
+                                        padding: EdgeInsets.only(right: 10)),
                                     Expanded(
                                         child: RaisedButton(
-                                            color: Colors.green.withOpacity(0.3),
+                                            color:
+                                                Colors.green.withOpacity(0.3),
                                             child: Row(
-                                              mainAxisAlignment: MainAxisAlignment.center,
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.center,
                                               children: <Widget>[
                                                 Expanded(
-                                                    flex: 3,
-                                                   child: CustomText(
-                                                      text: "Sign In Facebook",
-                                                      color: Colors.white,
-                                                      fontSize: 15,
-                                                      fontWeight: FontWeight.w600,
-                                                      textAlign: TextAlign.center,
-                                                    ),
+                                                  flex: 3,
+                                                  child: CustomText(
+                                                    text: "Sign In Facebook",
+                                                    color: Colors.white,
+                                                    fontSize: 15,
+                                                    fontWeight: FontWeight.w600,
+                                                    textAlign: TextAlign.center,
                                                   ),
-                                                Expanded(flex: 1,
-                                                 child: Image.asset("example/images/social/facebook.png",
-                                                  width: 25, height: 25)),
+                                                ),
+                                                Expanded(
+                                                    flex: 1,
+                                                    child: Image.asset(
+                                                        "example/images/social/facebook.png",
+                                                        width: 25,
+                                                        height: 25)),
                                               ],
                                             ),
                                             onPressed: () {})),
-                                    Padding(padding: EdgeInsets.only(right: 10)),
+                                    Padding(
+                                        padding: EdgeInsets.only(right: 10)),
                                     Expanded(
                                         child: Material(
-                                           color:Colors.red.withOpacity(0.3),
-                                            child: MaterialButton(
-                                              child: Row(
-                                                mainAxisAlignment: MainAxisAlignment.center,
-                                                children: [
-                                                  Expanded(
-                                                      flex: 3,
-                                                      child: CustomText(
-                                                        text: "Sign In Google",
-                                                        color: Colors.white,
-                                                        fontSize: 15,
-                                                        fontWeight: FontWeight.w600,
-                                                        textAlign: TextAlign.center,
-                                                      ),
-                                                      ),
-                                                  Expanded(flex: 1,
-                                                   child: Image.asset("example/images/social/google.png",
-                                                    width: 25, height: 25)),
-                                                ],
+                                      color: Colors.red.withOpacity(0.3),
+                                      child: MaterialButton(
+                                        child: Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.center,
+                                          children: [
+                                            Expanded(
+                                              flex: 3,
+                                              child: CustomText(
+                                                text: "Sign In Google",
+                                                color: Colors.white,
+                                                fontSize: 15,
+                                                fontWeight: FontWeight.w600,
+                                                textAlign: TextAlign.center,
                                               ),
-                                              onPressed: (){},
                                             ),
-                                           )),
-                                    Padding(padding: EdgeInsets.only(right: 10)),
+                                            Expanded(
+                                                flex: 1,
+                                                child: Image.asset(
+                                                    "example/images/social/google.png",
+                                                    width: 25,
+                                                    height: 25)),
+                                          ],
+                                        ),
+                                        onPressed: () {},
+                                      ),
+                                    )),
+                                    Padding(
+                                        padding: EdgeInsets.only(right: 10)),
                                   ]),
                                 )
                               : const SizedBox(),
@@ -283,7 +317,11 @@ class LogInState extends State<LogIn> {
             height: 250,
             width: mdw / 1.2,
             decoration: BoxDecoration(color: Colors.white, boxShadow: [
-              BoxShadow(color: Colors.black, blurRadius: 0.1, spreadRadius: 1, offset: Offset(1, 1))
+              BoxShadow(
+                  color: Colors.black,
+                  blurRadius: 0.1,
+                  spreadRadius: 1,
+                  offset: Offset(1, 1))
             ]),
             child: Form(
               key: formstatesignin,
@@ -295,48 +333,47 @@ class LogInState extends State<LogIn> {
                     children: [
                       //Start Email----------
                       CustomText(
-                       text:"عنوان البريد الالكتروني",
+                        text: "عنوان البريد الالكتروني",
                         color: Colors.blue,
-                     fontSize: 15,
-                    fontWeight: FontWeight.w600,
-                     textAlign: TextAlign.center,
-                       ),
-                      
+                        fontSize: 15,
+                        fontWeight: FontWeight.w600,
+                        textAlign: TextAlign.center,
+                      ),
+
                       const SizedBox(height: 10),
                       CustomTextFormField(
-                        onSave: (value){},
-                         pass: false,
-                         validator: (value){},
-                         icon: Icons.email_outlined,
+                          onSave: (value) {},
+                          pass: false,
+                          validator: (value) {},
+                          icon: Icons.email_outlined,
                           myhinttext: "ادخل البريد الالكتروني هنا",
                           prefixColor: Colors.blue,
-                           fillColor: Color(0xffe0e0e0),
-                            enabledColor:  Color(0xffbdbdbd),
-                             focusedColor: Colors.blue, 
+                          fillColor: Color(0xffe0e0e0),
+                          enabledColor: Color(0xffbdbdbd),
+                          focusedColor: Colors.blue,
                           borderSideColor: Colors.blue),
                       //End User Name----------
                       //Start User Password----------
                       CustomText(
-                       text:"كلمة المرور",
+                        text: "كلمة المرور",
                         color: Colors.blue,
-                     fontSize: 15,
-                    fontWeight: FontWeight.w600,
-                     textAlign: TextAlign.center,
-                       ),
+                        fontSize: 15,
+                        fontWeight: FontWeight.w600,
+                        textAlign: TextAlign.center,
+                      ),
                       SizedBox(height: 10),
-                      TextFormField(
-                        onSaved: (value) {
-                          ///  _password = value;
-                        },
-                        controller: password,
-                        validator: (val) {
-                          return validInput("password", 20, 8, "password");
-                        },
-                        obscureText: true,
-                        decoration: InputDecoration(contentPadding: EdgeInsets.all(4), hintText: "أدخل  كلمة المرور هنا",
-                         prefixIcon: Icon(Icons.lock_outline, color: Colors.blue), filled: true, fillColor: Color(0xffe0e0e0),
-                          enabledBorder: OutlineInputBorder(borderSide: BorderSide(color: Color(0xffbdbdbd), style: BorderStyle.solid, width: 1)), focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.blue, style: BorderStyle.solid, width: 1)), border: OutlineInputBorder(borderSide: BorderSide(color: Colors.blue, style: BorderStyle.solid, width: 1))),
-                      )
+                      CustomTextFormField(
+                        onSave: (vlaue) {},
+                        pass: true,
+                        validator: (value) {},
+                        icon: Icons.lock_outline,
+                        myhinttext: "أدخل  كلمة المرور هنا",
+                        fillColor: Color(0xffe0e0e0),
+                        enabledColor: Color(0xffbdbdbd),
+                        focusedColor: Colors.blue,
+                        borderSideColor: Colors.blue,
+                        prefixColor: Colors.blue,
+                      ),
                       //End User Password----------
                     ],
                   ),
@@ -354,7 +391,11 @@ class LogInState extends State<LogIn> {
             height: 402,
             width: mdw / 1.2,
             decoration: BoxDecoration(color: Colors.white, boxShadow: [
-              BoxShadow(color: Colors.black, blurRadius: 0.1, spreadRadius: 1, offset: Offset(1, 1))
+              BoxShadow(
+                  color: Colors.black,
+                  blurRadius: 0.1,
+                  spreadRadius: 1,
+                  offset: Offset(1, 1))
             ]),
             child: Form(
               key: formstatesignup,
@@ -366,26 +407,31 @@ class LogInState extends State<LogIn> {
                     children: <Widget>[
                       //Start User Name----------
                       CustomText(
-                       text:"إسم المستخدم",
+                        text: "إسم المستخدم",
                         color: Colors.purple,
-                     fontSize: 15,
-                    fontWeight: FontWeight.w600,
-                     textAlign: TextAlign.center,
-                       ),
+                        fontSize: 15,
+                        fontWeight: FontWeight.w600,
+                        textAlign: TextAlign.center,
+                      ),
                       SizedBox(height: 10),
-                      buildTextFormFieldAll(false, "أدخل اسم المستخدم", Icons.person_outline_rounded, username, "validusername", (value) {
+                      buildTextFormFieldAll(
+                          false,
+                          "أدخل اسم المستخدم",
+                          Icons.person_outline_rounded,
+                          username,
+                          "validusername", (value) {
                         username = value;
                       }),
                       //End User Name----------
                       //Start User E-mail ----------
                       SizedBox(height: 10),
                       CustomText(
-                       text:"البريد الالكتروني",
+                        text: "البريد الالكتروني",
                         color: Colors.purple,
-                     fontSize: 15,
-                    fontWeight: FontWeight.w700,
-                     textAlign: TextAlign.center,
-                       ),
+                        fontSize: 15,
+                        fontWeight: FontWeight.w700,
+                        textAlign: TextAlign.center,
+                      ),
                       SizedBox(height: 10),
                       buildTextFormFieldAll(
                         false,
@@ -399,30 +445,40 @@ class LogInState extends State<LogIn> {
                       ),
                       //End User E-mail ----------
                       //Start User Password----------
-                       CustomText(
-                       text:"كلمة المرور",
+                      CustomText(
+                        text: "كلمة المرور",
                         color: Colors.purple,
-                     fontSize: 15,
-                    fontWeight: FontWeight.w600,
-                     textAlign: TextAlign.center,
-                       ),
+                        fontSize: 15,
+                        fontWeight: FontWeight.w600,
+                        textAlign: TextAlign.center,
+                      ),
                       SizedBox(height: 10),
-                      buildTextFormFieldAll(true, "أدخل كلمة المرور", Icons.lock_outlined, password, "validpassword", (value) {
+                      buildTextFormFieldAll(
+                          true,
+                          "أدخل كلمة المرور",
+                          Icons.lock_outlined,
+                          password,
+                          "validpassword", (value) {
                         ///  _password = value;
                       }),
                       //Start User Password Confirm----------
                       CustomText(
-                       text:"تأكيد كلمة المرور",
+                        text: "تأكيد كلمة المرور",
                         color: Colors.purple,
-                     fontSize: 15,
-                    fontWeight: FontWeight.w600,
-                     textAlign: TextAlign.center,
-                       ),
+                        fontSize: 15,
+                        fontWeight: FontWeight.w600,
+                        textAlign: TextAlign.center,
+                      ),
                       SizedBox(height: 10),
-                      TextFormFieldAll(pass: true,icon:Icons.lock_outlined ,myContorller: confirmpassword,
-                      myhinttext:  "تأكيد كلمة المرور",onClick: (value){},type:"validconfirmpassword",
-                      password:  password ),
-                      // buildTextFormFieldAll(true, "تأكيد كلمة المرور", 
+                      TextFormFieldAll(
+                          pass: true,
+                          icon: Icons.lock_outlined,
+                          myContorller: confirmpassword,
+                          myhinttext: "تأكيد كلمة المرور",
+                          onClick: (value) {},
+                          type: "validconfirmpassword",
+                          password: password),
+                      // buildTextFormFieldAll(true, "تأكيد كلمة المرور",
                       // Icons.lock_outlined, confirmpassword, "validconfirmpassword", (value) {
                       //   //  _password = value;
                       // }),
@@ -434,8 +490,8 @@ class LogInState extends State<LogIn> {
             )));
   }
 
-  TextFormField buildTextFormFieldAll(bool pass, String myhinttext, final IconData icon, myContorller, type,
-   onClick) {
+  TextFormField buildTextFormFieldAll(bool pass, String myhinttext,
+      final IconData icon, myContorller, type, onClick) {
     return TextFormField(
       ///autovalidateMode: AutovalidateMode.always,
       onSaved: (value) {
@@ -459,13 +515,25 @@ class LogInState extends State<LogIn> {
           }
         }
       },
-      decoration: InputDecoration(contentPadding: EdgeInsets.all(4), hintText: myhinttext,
-       prefixIcon: Icon(icon, color: Colors.green), filled: true, fillColor: Color(0xffe0e0e0),
-        enabledBorder: OutlineInputBorder(borderSide: BorderSide(color: Color(0xffbdbdbd), 
-        style: BorderStyle.solid, width: 1)), focusedBorder: OutlineInputBorder(borderSide: BorderSide(
-          color: Colors.purple, style: BorderStyle.solid, width: 1)),
-           border: OutlineInputBorder(borderSide: BorderSide(color: Color(0xffbdbdbd),
-            style: BorderStyle.solid, width: 1))),
+      decoration: InputDecoration(
+          contentPadding: EdgeInsets.all(4),
+          hintText: myhinttext,
+          prefixIcon: Icon(icon, color: Colors.green),
+          filled: true,
+          fillColor: Color(0xffe0e0e0),
+          enabledBorder: OutlineInputBorder(
+              borderSide: BorderSide(
+                  color: Color(0xffbdbdbd),
+                  style: BorderStyle.solid,
+                  width: 1)),
+          focusedBorder: OutlineInputBorder(
+              borderSide: BorderSide(
+                  color: Colors.purple, style: BorderStyle.solid, width: 1)),
+          border: OutlineInputBorder(
+              borderSide: BorderSide(
+                  color: Color(0xffbdbdbd),
+                  style: BorderStyle.solid,
+                  width: 1))),
     );
   }
 
@@ -474,10 +542,12 @@ class LogInState extends State<LogIn> {
       duration: Duration(milliseconds: 500),
       height: 100,
       width: 100,
-      decoration: BoxDecoration(color: showsignin ? Colors.yellow : Colors.purple, 
-      borderRadius: BorderRadius.circular(100), boxShadow: [
-        BoxShadow(color: Colors.black, blurRadius: 3, spreadRadius: 0.1)
-      ]),
+      decoration: BoxDecoration(
+          color: showsignin ? Colors.yellow : Colors.purple,
+          borderRadius: BorderRadius.circular(100),
+          boxShadow: [
+            BoxShadow(color: Colors.black, blurRadius: 3, spreadRadius: 0.1)
+          ]),
       child: InkWell(
         onTap: () {
           setState(() {
@@ -509,5 +579,4 @@ class LogInState extends State<LogIn> {
       ),
     );
   }
-
 }
