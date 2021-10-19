@@ -415,14 +415,18 @@ class LogInState extends State<LogIn> {
                         textAlign: TextAlign.center,
                       ),
                       SizedBox(height: 10),
-                      buildTextFormFieldAll(
-                          false,
-                          "أدخل اسم المستخدم",
-                          Icons.person_outline_rounded,
-                          username,
-                          "validusername", (value) {
-                        username = value;
-                      }),
+                      CustomTextFormField(
+                        onSave: (vlaue) {},
+                        pass: false,
+                        validator: (value) {},
+                        icon:  Icons.person_outline_rounded,
+                        myhinttext: "أدخل اسم المستخدم",
+                        fillColor: kfillColor,
+                        enabledColor: kenabledColor,
+                        focusedColor: kprimaryColor,
+                        borderSideColor: kprimaryColor,
+                        prefixColor: Colors.green.shade900,
+                      ),
                       //End User Name----------
                       //Start User E-mail ----------
                       SizedBox(height: 10),
