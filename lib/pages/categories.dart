@@ -21,7 +21,7 @@ class _CategoriesState extends State<Categories> {
             textDirection: TextDirection.rtl,
             child: Scaffold(
               appBar: AppBar(
-                backgroundColor: khomeBar,
+                backgroundColor: kprimaryColor,
                 title: Text('الأقسام'),
                 centerTitle: true,
               ),
