@@ -481,18 +481,18 @@ class LogInState extends State<LogIn> {
                         textAlign: TextAlign.right,
                       ),
                       SizedBox(height: 10),
-                      TextFormFieldAll(
-                          pass: true,
-                          icon: Icons.lock_outlined,
-                          myContorller: confirmpassword,
-                          myhinttext: "تأكيد كلمة المرور",
-                          onClick: (value) {},
-                          type: "validconfirmpassword",
-                          password: password),
-                      // buildTextFormFieldAll(true, "تأكيد كلمة المرور",
-                      // Icons.lock_outlined, confirmpassword, "validconfirmpassword", (value) {
-                      //   //  _password = value;
-                      // }),
+                      CustomTextFormField(
+                        onSave: (vlaue) {},
+                        pass: true,
+                        validator: (value) {},
+                        icon: Icons.lock_outlined,
+                        myhinttext: "تأكيد كلمة المرور",
+                        fillColor: kfillColor,
+                        enabledColor: Colors.green.shade900,
+                        focusedColor: kprimaryColor,
+                        borderSideColor: Colors.green.shade900,
+                        prefixColor: Colors.green.shade900,
+                      ),
                       //End User Password Confirm----------
                     ],
                   ),
