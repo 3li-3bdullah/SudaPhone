@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mobetech/constants.dart';
 
 class BuildPositionedTop extends StatelessWidget {
   const BuildPositionedTop({
@@ -25,7 +26,7 @@ class BuildPositionedTop extends StatelessWidget {
           height: mdw,
           width: mdw,
           decoration: BoxDecoration(borderRadius: BorderRadius.circular(mdw),
-           color: showsignin ? Color(0xff424242) : Colors.green),
+           color: showsignin ? kprimaryColor : Colors.green.shade900),
         ),
       ),
     ));
