@@ -47,7 +47,7 @@ class _MyDrawerState extends State<MyDrawer> {
                   shape: BoxShape.circle),
             ),
             decoration: BoxDecoration(
-              color: khomeBar,
+              color: kprimaryColor,
               // image: DecorationImage(
               //     image: AssetImage("example/images/slider/drawer.jpg"),
               //     fit: BoxFit.cover)
@@ -75,7 +75,7 @@ class _MyDrawerState extends State<MyDrawer> {
             },
           ),
           Divider(
-            color: khomeBar,
+            color: kprimaryColor,
           ),
           drawerItems(
             "حول التطبيق",
@@ -105,7 +105,7 @@ class _MyDrawerState extends State<MyDrawer> {
     return InkWell(
       child: ListTile(
         title: Text(text, style: TextStyle(color: Colors.black, fontSize: 18)),
-        leading: Icon(icon, color: khomeBar, size: 25),
+        leading: Icon(icon, color: kprimaryColor, size: 25),
       ),
       onTap: () {
         onTap();
