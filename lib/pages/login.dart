@@ -309,10 +309,11 @@ class LogInState extends State<LogIn> {
                          validator: (value){},
                          icon: Icons.email_outlined,
                           myhinttext: "ادخل البريد الالكتروني هنا",
+                          prefixColor: Colors.blue,
                            fillColor: Color(0xffe0e0e0),
-                            colorEnabled:  Color(0xffbdbdbd),
-                             colorFocused: Colors.blue, 
-                          colorBorderSide: Colors.blue),
+                            enabledColor:  Color(0xffbdbdbd),
+                             focusedColor: Colors.blue, 
+                          borderSideColor: Colors.blue),
                       TextFormField(
                         onSaved: (value) {
                         //email = value;
