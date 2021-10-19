@@ -438,15 +438,17 @@ class LogInState extends State<LogIn> {
                         textAlign: TextAlign.right,
                       ),
                       SizedBox(height: 10),
-                      buildTextFormFieldAll(
-                        false,
-                        "أدخل عنوان البريد الالكتروني",
-                        Icons.email_outlined,
-                        email,
-                        "validemail",
-                        (value) {
-                          ///  _email = value;
-                        },
+                      CustomTextFormField(
+                        onSave: (vlaue) {},
+                        pass: false,
+                        validator: (value) {},
+                        icon:  Icons.email_outlined,
+                        myhinttext:"أدخل عنوان البريد الالكتروني",
+                        fillColor: kfillColor,
+                        enabledColor: Colors.green,
+                        focusedColor: kprimaryColor,
+                        borderSideColor: Colors.green,
+                        prefixColor: Colors.green.shade900,
                       ),
                       //End User E-mail ----------
                       //Start User Password----------
@@ -455,7 +457,7 @@ class LogInState extends State<LogIn> {
                         color: Colors.purple,
                         fontSize: 15,
                         fontWeight: FontWeight.w600,
-                        textAlign: TextAlign.center,
+                        textAlign: TextAlign.right,
                       ),
                       SizedBox(height: 10),
                       buildTextFormFieldAll(
