@@ -454,20 +454,24 @@ class LogInState extends State<LogIn> {
                       //Start User Password----------
                       CustomText(
                         text: "كلمة المرور",
-                        color: Colors.purple,
+                        color: kprimaryColor,
                         fontSize: 15,
                         fontWeight: FontWeight.w600,
                         textAlign: TextAlign.right,
                       ),
                       SizedBox(height: 10),
-                      buildTextFormFieldAll(
-                          true,
-                          "أدخل كلمة المرور",
-                          Icons.lock_outlined,
-                          password,
-                          "validpassword", (value) {
-                        ///  _password = value;
-                      }),
+                      CustomTextFormField(
+                        onSave: (vlaue) {},
+                        pass: false,
+                        validator: (value) {},
+                        icon:  Icons.email_outlined,
+                        myhinttext:"أدخل كلمة المرور",
+                        fillColor: kfillColor,
+                        enabledColor: Colors.green,
+                        focusedColor: kprimaryColor,
+                        borderSideColor: Colors.green,
+                        prefixColor: Colors.green.shade900,
+                      ),
                       //Start User Password Confirm----------
                       CustomText(
                         text: "تأكيد كلمة المرور",
