@@ -242,35 +242,27 @@ class LogInState extends State<LogIn> {
                                     Padding(
                                         padding: EdgeInsets.only(right: 10)),
                                     Expanded(
-                                        child: Material(
-                                            color:
-                                                Colors.green.withOpacity(0.3),
-                                            child: MaterialButton(
-                                              child: Row(
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment.center,
-                                              children: <Widget>[
-                                                Expanded(
-                                                  flex: 3,
-                                                  child: CustomText(
-                                                    text: "Sign In Facebook",
-                                                    color: Colors.white,
-                                                    fontSize: 15,
-                                                    fontWeight: FontWeight.w600,
-                                                    textAlign: TextAlign.center,
-                                                  ),
+                                        child: TextButton(
+                                          onPressed: (){},
+                                          child: Column(
+                                            children: [
+                                              Container(
+                                                height: 80,
+                                                width: 80,
+                                                decoration: BoxDecoration(shape: BoxShape.circle,
+                                                  image: DecorationImage(
+                                                  image: AssetImage("example/images/social/facebook.png"
+                                                  )),
                                                 ),
-                                                Expanded(
-                                                    flex: 1,
-                                                    child: Image.asset(
-                                                        "example/images/social/facebook.png",
-                                                        width: 25,
-                                                        height: 25)),
-                                              ],
-                                            ),
-                                            onPressed: () {}
-                                            ),
-                                            )
+                                                
+                                              ),
+                                             const SizedBox(height:2),
+                                             CustomText(text: "Login with facebook" , textAlign: TextAlign.center,
+                                              color: kprimaryColor, fontSize: 15,fontWeight: FontWeight.bold,
+                                              )
+                                            ],
+                                          ),
+                                        ),
                                             ),
                                     Padding(
                                         padding: EdgeInsets.only(right: 10)),
