@@ -66,7 +66,7 @@ class ScreenState extends State<Screen> {
           child: Scaffold(
             appBar: AppBar(
               title: Text("SudaPhone"),
-              backgroundColor: khomeBar,
+              backgroundColor: kprimaryColor,
               centerTitle: true,
               elevation: 6,
               actions: [
