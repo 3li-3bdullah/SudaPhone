@@ -475,10 +475,10 @@ class LogInState extends State<LogIn> {
                       //Start User Password Confirm----------
                       CustomText(
                         text: "تأكيد كلمة المرور",
-                        color: Colors.purple,
+                        color: kprimaryColor,
                         fontSize: 15,
                         fontWeight: FontWeight.w600,
-                        textAlign: TextAlign.center,
+                        textAlign: TextAlign.right,
                       ),
                       SizedBox(height: 10),
                       TextFormFieldAll(
