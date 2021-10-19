@@ -409,10 +409,10 @@ class LogInState extends State<LogIn> {
                       //Start User Name----------
                       CustomText(
                         text: "إسم المستخدم",
-                        color: Colors.purple,
+                        color: kprimaryColor,
                         fontSize: 15,
                         fontWeight: FontWeight.w600,
-                        textAlign: TextAlign.center,
+                        textAlign: TextAlign.right,
                       ),
                       SizedBox(height: 10),
                       CustomTextFormField(
@@ -432,10 +432,10 @@ class LogInState extends State<LogIn> {
                       SizedBox(height: 10),
                       CustomText(
                         text: "البريد الالكتروني",
-                        color: Colors.purple,
+                        color: kprimaryColor,
                         fontSize: 15,
                         fontWeight: FontWeight.w700,
-                        textAlign: TextAlign.center,
+                        textAlign: TextAlign.right,
                       ),
                       SizedBox(height: 10),
                       buildTextFormFieldAll(
