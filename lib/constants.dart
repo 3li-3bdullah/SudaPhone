@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
-const khomeText = Color(0xff99bcc4);
-const khomeBar = Color(0xff08535d);
+const kiconSign = Color(0xff99bcc4);
+const kiconRegister = Color(0xff99bcc4);
+const kprimaryColor = Color(0xff08535d);
 const kcontainerColor1 = Color(0xff9ca2ab);
 const kcontainerColor2 = Color(0xff808488);
 const kappDetails = Color(0xff555555);
