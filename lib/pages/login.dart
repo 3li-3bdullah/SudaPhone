@@ -1,5 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:mobetech/widgets/custom_text_form_field.dart';
 import '../compount/validinput.dart';
 import '../widgets/text_formfield_all.dart';
 import '../widgets/build_positioned_bottom.dart';
@@ -302,6 +303,16 @@ class LogInState extends State<LogIn> {
                        ),
                       
                       const SizedBox(height: 10),
+                      CustomTextFormField(
+                        onSave: (value){},
+                         pass: false,
+                         validator: (value){},
+                         icon: Icons.email_outlined,
+                          myhinttext: "ادخل البريد الالكتروني هنا",
+                           fillColor: Color(0xffe0e0e0),
+                            colorEnabled:  Color(0xffbdbdbd),
+                             colorFocused: Colors.blue, 
+                          colorBorderSide: Colors.blue),
                       TextFormField(
                         onSaved: (value) {
                         //email = value;
@@ -340,7 +351,9 @@ class LogInState extends State<LogIn> {
                           return validInput("password", 20, 8, "password");
                         },
                         obscureText: true,
-                        decoration: InputDecoration(contentPadding: EdgeInsets.all(4), hintText: "أدخل  كلمة المرور هنا", prefixIcon: Icon(Icons.lock_outline, color: Colors.blue), filled: true, fillColor: Color(0xffe0e0e0), enabledBorder: OutlineInputBorder(borderSide: BorderSide(color: Color(0xffbdbdbd), style: BorderStyle.solid, width: 1)), focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.blue, style: BorderStyle.solid, width: 1)), border: OutlineInputBorder(borderSide: BorderSide(color: Colors.blue, style: BorderStyle.solid, width: 1))),
+                        decoration: InputDecoration(contentPadding: EdgeInsets.all(4), hintText: "أدخل  كلمة المرور هنا",
+                         prefixIcon: Icon(Icons.lock_outline, color: Colors.blue), filled: true, fillColor: Color(0xffe0e0e0),
+                          enabledBorder: OutlineInputBorder(borderSide: BorderSide(color: Color(0xffbdbdbd), style: BorderStyle.solid, width: 1)), focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.blue, style: BorderStyle.solid, width: 1)), border: OutlineInputBorder(borderSide: BorderSide(color: Colors.blue, style: BorderStyle.solid, width: 1))),
                       )
                       //End User Password----------
                     ],
