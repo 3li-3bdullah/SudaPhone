@@ -179,7 +179,7 @@ class LogInState extends State<LogIn> {
                           RaisedButton(
                               elevation: 10,
                               color: showsignin
-                                  ? Color(0xff424242)
+                                  ? kprimaryColor
                                   : Colors.purple,
                               padding: EdgeInsets.symmetric(
                                   vertical: 10, horizontal: 20),
@@ -348,7 +348,7 @@ class LogInState extends State<LogIn> {
                           validator: (value) {},
                           icon: Icons.email_outlined,
                           myhinttext: "ادخل البريد الالكتروني هنا",
-                          prefixColor: Colors.blue,
+                          prefixColor: kprimaryColor,
                           fillColor: kfillColor,
                           enabledColor:kenabledColor,
                           focusedColor: Colors.blue,
@@ -373,7 +373,7 @@ class LogInState extends State<LogIn> {
                         enabledColor: kenabledColor,
                         focusedColor: Colors.blue,
                         borderSideColor: Colors.blue,
-                        prefixColor: Colors.blue,
+                        prefixColor: kprimaryColor,
                       ),
                       //End User Password----------
                     ],
