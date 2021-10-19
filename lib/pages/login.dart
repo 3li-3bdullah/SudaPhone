@@ -314,25 +314,6 @@ class LogInState extends State<LogIn> {
                             enabledColor:  Color(0xffbdbdbd),
                              focusedColor: Colors.blue, 
                           borderSideColor: Colors.blue),
-                      TextFormField(
-                        onSaved: (value) {
-                        //email = value;
-                        },
-                        controller: email,
-                        validator: (val) {
-                          return validInput("email", 30, 15, "email");
-                        },
-                        decoration: InputDecoration(contentPadding: EdgeInsets.all(4),
-                         hintText: "ادخل البريد الالكتروني هنا",
-                          prefixIcon: Icon(Icons.email_outlined, color: Colors.blue),
-                           filled: true, fillColor: Color(0xffe0e0e0),
-                            enabledBorder: OutlineInputBorder(borderSide: BorderSide(color: Color(0xffbdbdbd),
-                             style: BorderStyle.solid, width: 1)),
-                              focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.blue, 
-                              style: BorderStyle.solid, width: 1)),
-                               border: OutlineInputBorder(borderSide: BorderSide(color: Colors.blue,
-                                style: BorderStyle.solid, width: 1))),
-                      ),
                       //End User Name----------
                       //Start User Password----------
                       CustomText(
