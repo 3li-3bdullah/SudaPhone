@@ -59,10 +59,10 @@ class LogInState extends State<LogIn> {
   /// bool isLoading = false;
 
   ///Start Controller
-  late TextEditingController username = new TextEditingController();
-  late TextEditingController email = new TextEditingController();
-  late TextEditingController password = new TextEditingController();
-  late TextEditingController confirmpassword = new TextEditingController();
+  // late TextEditingController username = new TextEditingController();
+  // late TextEditingController email = new TextEditingController();
+  // late TextEditingController password = new TextEditingController();
+  // late TextEditingController confirmpassword = new TextEditingController();
 
   GlobalKey<FormState> formstatesignin = new GlobalKey<FormState>();
   GlobalKey<FormState> formstatesignup = new GlobalKey<FormState>();
@@ -350,9 +350,9 @@ class LogInState extends State<LogIn> {
                           myhinttext: "ادخل البريد الالكتروني هنا",
                           prefixColor: kprimaryColor,
                           fillColor: kfillColor,
-                          enabledColor:kenabledColor,
+                          enabledColor:kprimaryColor,
                           focusedColor: Colors.blue,
-                          borderSideColor: Colors.blue),
+                          borderSideColor: kprimaryColor),
                       //End User Name----------
                       //Start User Password----------
                       CustomText(
@@ -370,9 +370,9 @@ class LogInState extends State<LogIn> {
                         icon: Icons.lock_outline,
                         myhinttext: "أدخل  كلمة المرور هنا",
                         fillColor: kfillColor,
-                        enabledColor: kenabledColor,
+                        enabledColor: kprimaryColor,
                         focusedColor: Colors.blue,
-                        borderSideColor: Colors.blue,
+                        borderSideColor:kprimaryColor,
                         prefixColor: kprimaryColor,
                       ),
                       //End User Password----------
@@ -500,61 +500,13 @@ class LogInState extends State<LogIn> {
               ),
             )));
   }
-
-  TextFormField buildTextFormFieldAll(bool pass, String myhinttext,
-      final IconData icon, myContorller, type, onClick) {
-    return TextFormField(
-      ///autovalidateMode: AutovalidateMode.always,
-      onSaved: (value) {
-        onClick();
-      },
-      controller: myContorller,
-      obscureText: pass,
-      validator: (val) {
-        if (type == "validusername") {
-          return validInput("username", 20, 4, "username");
-        }
-        if (type == "validemail") {
-          return validInput("email", 30, 15, "email");
-        }
-        if (type == "validpassword") {
-          return validInput("password", 20, 6, "password");
-        }
-        if (type == "validconfirmpassword") {
-          if (type != password.text) {
-            return "The password isn\'t identical";
-          }
-        }
-      },
-      decoration: InputDecoration(
-          contentPadding: EdgeInsets.all(4),
-          hintText: myhinttext,
-          prefixIcon: Icon(icon, color: Colors.green),
-          filled: true,
-          fillColor: Color(0xffe0e0e0),
-          enabledBorder: OutlineInputBorder(
-              borderSide: BorderSide(
-                  color: Color(0xffbdbdbd),
-                  style: BorderStyle.solid,
-                  width: 1)),
-          focusedBorder: OutlineInputBorder(
-              borderSide: BorderSide(
-                  color: Colors.purple, style: BorderStyle.solid, width: 1)),
-          border: OutlineInputBorder(
-              borderSide: BorderSide(
-                  color: Color(0xffbdbdbd),
-                  style: BorderStyle.solid,
-                  width: 1))),
-    );
-  }
-
   AnimatedContainer buildContainerAvatar(double mdw) {
     return AnimatedContainer(
       duration: Duration(milliseconds: 500),
       height: 100,
       width: 100,
       decoration: BoxDecoration(
-          color: showsignin ? Colors.yellow : Colors.purple,
+          color: showsignin ? Colors.blue : kprimaryColor,
           borderRadius: BorderRadius.circular(100),
           boxShadow: [
             BoxShadow(color: Colors.black, blurRadius: 3, spreadRadius: 0.1)
