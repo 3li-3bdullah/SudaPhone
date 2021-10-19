@@ -176,11 +176,13 @@ class LogInState extends State<LogIn> {
                                 )
                               : SizedBox(),
                           SizedBox(height: showsignin ? 20 : 5),
-                          RaisedButton(
+                          Material(
                               elevation: 10,
                               color: showsignin
                                   ? kprimaryColor
                                   : Colors.purple,
+                                  child: MaterialButton(
+                                    
                               padding: EdgeInsets.symmetric(
                                   vertical: 10, horizontal: 20),
                               onPressed: showsignin ? signin : signup,
@@ -200,7 +202,9 @@ class LogInState extends State<LogIn> {
                                         padding: EdgeInsets.only(right: 10),
                                         child: Icon(Icons.arrow_forward,
                                             color: Colors.white))
-                                  ])),
+                                  ])
+                                  )
+                                  ),
 
                           /// isLoading ? CircularProgressIndicator() : Padding(padding: EdgeInsets.all(0),),
                           Container(
@@ -238,10 +242,11 @@ class LogInState extends State<LogIn> {
                                     Padding(
                                         padding: EdgeInsets.only(right: 10)),
                                     Expanded(
-                                        child: RaisedButton(
+                                        child: Material(
                                             color:
                                                 Colors.green.withOpacity(0.3),
-                                            child: Row(
+                                            child: MaterialButton(
+                                              child: Row(
                                               mainAxisAlignment:
                                                   MainAxisAlignment.center,
                                               children: <Widget>[
@@ -263,7 +268,10 @@ class LogInState extends State<LogIn> {
                                                         height: 25)),
                                               ],
                                             ),
-                                            onPressed: () {})),
+                                            onPressed: () {}
+                                            ),
+                                            )
+                                            ),
                                     Padding(
                                         padding: EdgeInsets.only(right: 10)),
                                     Expanded(
