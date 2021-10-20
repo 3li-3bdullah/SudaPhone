@@ -206,27 +206,27 @@ class ScreenState extends State<Screen> {
                     children: [
                       LastProduct(
                           imageProduct: "example/images/product/huawei.jpg",
-                          text: "Huawei Mate 40 Pro : 1200\$",
+                          text: "Huawei Mate 40 Pro : 1000\$",
                           onTap: () {}),
                       LastProduct(
                           imageProduct: "example/images/product/samsung.jpg",
-                          text: "Samsung S20 Ultra : 1100\$",
+                          text: "Samsung S20 Ultra : 999\$",
                           onTap: () {}),
                       LastProduct(
                           imageProduct: "example/images/product/iphone.jpg",
-                          text: "iPhone 12 pro max : 1399\$",
+                          text: "iPhone 12 pro max : 1170\$",
                           onTap: () {}),
                       LastProduct(
                           imageProduct: "example/images/product/xiaomi.jpg",
-                          text: "Xaiomi Mi 10T  : 1050\$",
+                          text: "Xaiomi Mi 10T  : 950\$",
                           onTap: () {}),
                       LastProduct(
                           imageProduct: "example/images/product/oppo.jpg",
-                          text: "Oppo F17 Pro : 1100\$",
+                          text: "Oppo F17 Pro : 975\$",
                           onTap: () {}),
                       LastProduct(
                           imageProduct: "example/images/product/lenovo.jpg",
-                          text: "Lenovo K12 Pro : 1400\$",
+                          text: "Lenovo K12 Pro : 800\$",
                           onTap: () {}),
                       LastProduct(
                           imageProduct: "example/images/product/realme.jpg",
@@ -235,6 +235,14 @@ class ScreenState extends State<Screen> {
                       LastProduct(
                           imageProduct: "example/images/product/tecno.jpg",
                           text: "Tecno Spark6 : 850\$",
+                          onTap: () {}),
+                      LastProduct(
+                          imageProduct: "example/images/product/nokia.jpg",
+                          text: "Nokia G300 : 750\$",
+                          onTap: () {}),
+                      LastProduct(
+                          imageProduct: "example/images/product/vivo.jpg",
+                          text: "Vivo Y53s : 950\$",
                           onTap: () {}),
                     ]),
               ),
