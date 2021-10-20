@@ -236,44 +236,27 @@ class LogInState extends State<LogIn> {
                               ? Directionality(
                                   textDirection: TextDirection.ltr,
                                   child: Row(children: [
-                                    Padding(
-                                        padding: EdgeInsets.only(right: 10)),
+                                    // Padding(
+                                    //     padding: EdgeInsets.only(right: 10)),
                                     Expanded(
-                                      child: SocialLogin( imageSocial: "example/images/social/facebook.png" , text: "Login with Facebook" ),
+                                      child: Center(
+                                          child: SocialLogin(
+                                              imageSocial:
+                                                  "example/images/social/facebook.png",
+                                              text: "Login with Facebook")),
                                     ),
-                                    Padding(
-                                        padding: EdgeInsets.only(right: 10)),
+                                    const SizedBox(width: 10),
+                                    // Padding(
+                                    //     padding: EdgeInsets.only(right: 10)),
                                     Expanded(
-                                        child: Material(
-                                      color: Colors.red.withOpacity(0.3),
-                                      child: MaterialButton(
-                                        child: Row(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.center,
-                                          children: [
-                                            Expanded(
-                                              flex: 3,
-                                              child: CustomText(
-                                                text: "Sign In Google",
-                                                color: Colors.white,
-                                                fontSize: 15,
-                                                fontWeight: FontWeight.w600,
-                                                textAlign: TextAlign.center,
-                                              ),
-                                            ),
-                                            Expanded(
-                                                flex: 1,
-                                                child: Image.asset(
-                                                    "example/images/social/google.png",
-                                                    width: 25,
-                                                    height: 25)),
-                                          ],
-                                        ),
-                                        onPressed: () {},
-                                      ),
-                                    )),
-                                    Padding(
-                                        padding: EdgeInsets.only(right: 10)),
+                                      child: Center(
+                                          child: SocialLogin(
+                                              imageSocial:
+                                                  "example/images/social/google.png",
+                                              text: "Login with Google")),
+                                    ),
+                                    // Padding(
+                                    //     padding: EdgeInsets.only(right: 10)),
                                   ]),
                                 )
                               : const SizedBox(),
