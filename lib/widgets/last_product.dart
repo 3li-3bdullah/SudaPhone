@@ -12,23 +12,26 @@ class LastProduct extends StatelessWidget {
   final Function onTap;
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      child: GridTile(
-          child: Image.asset(imageProduct),
-          footer: Container(
-              height: 30,
-              color: Colors.black.withOpacity(0.3),
-              child: CustomText(
-                text: text,
-                color: Colors.white,
-                textAlign: TextAlign.center,
-                fontSize: 13,
-                fontWeight: FontWeight.normal,
-              ),
-              )),
-      onTap: () {
-        onTap();
-      },
+    return Padding(
+      padding: const EdgeInsets.all(5),
+      child: InkWell(
+        child: GridTile(
+            child: Image.asset(imageProduct),
+            footer: Container(
+                height: 30,
+                color: Colors.black.withOpacity(0.3),
+                child: CustomText(
+                  text: text,
+                  color: Colors.white,
+                  textAlign: TextAlign.center,
+                  fontSize: 13,
+                  fontWeight: FontWeight.normal,
+                ),
+                )),
+        onTap: () {
+          onTap();
+        },
+      ),
     );
   }
 }
