@@ -180,6 +180,11 @@ class ScreenState extends State<Screen> {
                      text: "Tecno",
                      onTap: () {},
                     ),
+                    CategoriesLogo(
+                     imageLogo: "example/images/logo/nokia.jpg",
+                     text: "Nokia",
+                     onTap: () {},
+                    ),
                   ])),
               // End The Long Container....
               Container(
