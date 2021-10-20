@@ -1,9 +1,8 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:mobetech/widgets/custom_text_form_field.dart';
-import '../compount/validinput.dart';
+import '../widgets/custom_text_form_field.dart';
+import '../widgets/social_login.dart';
 import '../constants.dart';
-import '../widgets/text_formfield_all.dart';
 import '../widgets/build_positioned_bottom.dart';
 import '../widgets/build_positioned_top.dart';
 import '../pages/screen.dart';
@@ -502,41 +501,5 @@ class LogInState extends State<LogIn> {
         ),
       ),
     );
-  }
-}
-
-class SocialLogin extends StatelessWidget {
-  const SocialLogin({
-    required this.imageSocial,
-    required this.text,
-  });
-  final String imageSocial;
-  final String text;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-        height: 80,
-        width: 80,
-        child: Container(
-          decoration: BoxDecoration(borderRadius: BorderRadius.circular(70)),
-          child: ListTile(
-              onTap: () {},
-              title: Image.asset(
-                imageSocial,
-                height: 70,
-                width: 70,
-                fit: BoxFit.cover,
-              ),
-              subtitle: Container(
-                child: CustomText(
-                  text: text,
-                  textAlign: TextAlign.center,
-                  color: kprimaryColor,
-                  fontSize: 15,
-                  fontWeight: FontWeight.normal,
-                ),
-              )),
-        ));
   }
 }
