@@ -20,7 +20,7 @@ class _MobileDetailsState extends State<MobileDetails> {
               textAlign: TextAlign.center,
               text: 'التفاصيل',
               fontSize: 25,
-              fontWeight: FontWeight.bold, color: Colors.grey.shade800,
+              fontWeight: FontWeight.bold, color: Colors.white,
             ),
             centerTitle: true,
           ),
