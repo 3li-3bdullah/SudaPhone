@@ -41,7 +41,7 @@ class ScreenState extends State<Screen> {
       width: double.infinity,
       child: Image.asset(
         imagesCarousel,
-        fit: BoxFit.cover,
+        fit: BoxFit.cover,width: double.infinity,
       ));
 
   Widget buildIndicator() => Container(
