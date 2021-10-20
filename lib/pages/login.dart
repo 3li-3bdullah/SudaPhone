@@ -178,33 +178,30 @@ class LogInState extends State<LogIn> {
                           SizedBox(height: showsignin ? 20 : 5),
                           Material(
                               elevation: 10,
-                              color: showsignin
-                                  ? kprimaryColor
-                                  : Colors.purple,
-                                  child: MaterialButton(
-                                    
-                              padding: EdgeInsets.symmetric(
-                                  vertical: 10, horizontal: 20),
-                              onPressed: showsignin ? signin : signup,
-                              child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  mainAxisSize: MainAxisSize.min,
-                                  children: [
-                                    Text(
-                                      showsignin
-                                          ? "تسجيل الدخول"
-                                          : "إنشاء حساب",
-                                      style: TextStyle(
-                                          color: Colors.white, fontSize: 18),
-                                    ),
-                                    Container(
-                                        margin: EdgeInsets.only(top: 4),
-                                        padding: EdgeInsets.only(right: 10),
-                                        child: Icon(Icons.arrow_forward,
-                                            color: Colors.white))
-                                  ])
-                                  )
-                                  ),
+                              color: showsignin ? kprimaryColor : Colors.purple,
+                              child: MaterialButton(
+                                  padding: EdgeInsets.symmetric(
+                                      vertical: 10, horizontal: 20),
+                                  onPressed: showsignin ? signin : signup,
+                                  child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      mainAxisSize: MainAxisSize.min,
+                                      children: [
+                                        Text(
+                                          showsignin
+                                              ? "تسجيل الدخول"
+                                              : "إنشاء حساب",
+                                          style: TextStyle(
+                                              color: Colors.white,
+                                              fontSize: 18),
+                                        ),
+                                        Container(
+                                            margin: EdgeInsets.only(top: 4),
+                                            padding: EdgeInsets.only(right: 10),
+                                            child: Icon(Icons.arrow_forward,
+                                                color: Colors.white))
+                                      ]))),
 
                           /// isLoading ? CircularProgressIndicator() : Padding(padding: EdgeInsets.all(0),),
                           Container(
@@ -242,28 +239,8 @@ class LogInState extends State<LogIn> {
                                     Padding(
                                         padding: EdgeInsets.only(right: 10)),
                                     Expanded(
-                                        child: TextButton(
-                                          onPressed: (){},
-                                          child: Column(
-                                            children: [
-                                              Container(
-                                                height: 80,
-                                                width: 80,
-                                                decoration: BoxDecoration(shape: BoxShape.circle,
-                                                  image: DecorationImage(
-                                                  image: AssetImage("example/images/social/facebook.png"
-                                                  )),
-                                                ),
-                                                
-                                              ),
-                                             const SizedBox(height:2),
-                                             CustomText(text: "Login with facebook" , textAlign: TextAlign.center,
-                                              color: kprimaryColor, fontSize: 15,fontWeight: FontWeight.bold,
-                                              )
-                                            ],
-                                          ),
-                                        ),
-                                            ),
+                                      child: SocialLogin( imageSocial: "example/images/social/facebook.png" , text: "Login with Facebook" ),
+                                    ),
                                     Padding(
                                         padding: EdgeInsets.only(right: 10)),
                                     Expanded(
@@ -350,7 +327,7 @@ class LogInState extends State<LogIn> {
                           myhinttext: "ادخل البريد الالكتروني هنا",
                           prefixColor: kprimaryColor,
                           fillColor: kfillColor,
-                          enabledColor:kprimaryColor,
+                          enabledColor: kprimaryColor,
                           focusedColor: Colors.blue,
                           borderSideColor: kprimaryColor),
                       //End User Name----------
@@ -372,7 +349,7 @@ class LogInState extends State<LogIn> {
                         fillColor: kfillColor,
                         enabledColor: kprimaryColor,
                         focusedColor: Colors.blue,
-                        borderSideColor:kprimaryColor,
+                        borderSideColor: kprimaryColor,
                         prefixColor: kprimaryColor,
                       ),
                       //End User Password----------
@@ -419,7 +396,7 @@ class LogInState extends State<LogIn> {
                         onSave: (vlaue) {},
                         pass: false,
                         validator: (value) {},
-                        icon:  Icons.person_outline_rounded,
+                        icon: Icons.person_outline_rounded,
                         myhinttext: "أدخل اسم المستخدم",
                         fillColor: kfillColor,
                         enabledColor: Colors.green.shade900,
@@ -442,8 +419,8 @@ class LogInState extends State<LogIn> {
                         onSave: (vlaue) {},
                         pass: false,
                         validator: (value) {},
-                        icon:  Icons.email_outlined,
-                        myhinttext:"أدخل عنوان البريد الالكتروني",
+                        icon: Icons.email_outlined,
+                        myhinttext: "أدخل عنوان البريد الالكتروني",
                         fillColor: kfillColor,
                         enabledColor: Colors.green.shade900,
                         focusedColor: kprimaryColor,
@@ -465,7 +442,7 @@ class LogInState extends State<LogIn> {
                         pass: true,
                         validator: (value) {},
                         icon: Icons.lock_outlined,
-                        myhinttext:"أدخل كلمة المرور",
+                        myhinttext: "أدخل كلمة المرور",
                         fillColor: kfillColor,
                         enabledColor: Colors.green.shade900,
                         focusedColor: kprimaryColor,
@@ -500,6 +477,7 @@ class LogInState extends State<LogIn> {
               ),
             )));
   }
+
   AnimatedContainer buildContainerAvatar(double mdw) {
     return AnimatedContainer(
       duration: Duration(milliseconds: 500),
@@ -541,5 +519,41 @@ class LogInState extends State<LogIn> {
         ),
       ),
     );
+  }
+}
+
+class SocialLogin extends StatelessWidget {
+  const SocialLogin({
+    required this.imageSocial,
+    required this.text,
+  });
+  final String imageSocial;
+  final String text;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+        height: 80,
+        width: 80,
+        child: Container(
+          decoration: BoxDecoration(borderRadius: BorderRadius.circular(70)),
+          child: ListTile(
+              onTap: () {},
+              title: Image.asset(
+                imageSocial,
+                height: 70,
+                width: 70,
+                fit: BoxFit.cover,
+              ),
+              subtitle: Container(
+                child: CustomText(
+                  text: text,
+                  textAlign: TextAlign.center,
+                  color: kprimaryColor,
+                  fontSize: 15,
+                  fontWeight: FontWeight.normal,
+                ),
+              )),
+        ));
   }
 }
