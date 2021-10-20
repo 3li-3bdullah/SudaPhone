@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:mobetech/widgets/custom_text.dart';
+import '../widgets/custom_text.dart';
 import '../widgets/categories_logo.dart';
 import '../widgets/last_product.dart';
 import '../widgets/data_search.dart';
@@ -153,6 +153,11 @@ class ScreenState extends State<Screen> {
                     CategoriesLogo(
                      imageLogo: "example/images/logo/lenovo.png",
                      text: "Lenovo",
+                     onTap: () {},
+                    ),
+                    CategoriesLogo(
+                     imageLogo: "example/images/logo/vivo.png",
+                     text: "Vivo",
                      onTap: () {},
                     ),
                     CategoriesLogo(
