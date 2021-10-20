@@ -143,131 +143,129 @@ class LogInState extends State<LogIn> {
               BuildPositionedTop(mdw: mdw, showsignin: showsignin),
               BuildPositionedBottom(mdw: mdw, showsignin: showsignin),
               
-                  Column(
-                    children: [
-                      SingleChildScrollView(
-                          child: Column(children: [
-                        Center(
-                            child: Container(
-                                margin: EdgeInsets.only(top: 30),
-                                child: Text(
-                                    showsignin ? "تسجيل الدخول" : "إنشاء حساب",
-                                    style: TextStyle(
-                                        color: Colors.white, fontSize: 20)))),
-                        Padding(padding: EdgeInsets.only(top: 20)),
-                        buildContainerAvatar(mdw),
-                        showsignin
-                            ? buildFormBoxSignIn(mdw)
-                            : buildFormBoxSignUp(mdw),
-                        Container(
-                          margin: EdgeInsets.only(top: 20),
-                          child: Column(
-                            children: [
-                              showsignin
-                                  ? InkWell(
-                                      onTap: () {},
-                                      child: CustomText(
-                                        text: "هل نسيت كلمة المرور ؟",
-                                        color: Colors.blue,
-                                        fontSize: 15,
-                                        fontWeight: FontWeight.w600,
-                                        textAlign: TextAlign.center,
-                                      ),
-                                    )
-                                  : SizedBox(),
-                              SizedBox(height: showsignin ? 20 : 5),
-                              Material(
-                                  elevation: 10,
-                                  color: showsignin ? kprimaryColor : Colors.green.shade900,
-                                  child: MaterialButton(
-                                      padding: EdgeInsets.symmetric(
-                                          vertical: 10, horizontal: 20),
-                                      onPressed: showsignin ? signin : signup,
-                                      child: Row(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.center,
-                                          mainAxisSize: MainAxisSize.min,
-                                          children: [
-                                            Text(
-                                              showsignin
-                                                  ? "تسجيل الدخول"
-                                                  : "إنشاء حساب",
-                                              style: TextStyle(
-                                                  color: Colors.white,
-                                                  fontSize: 18),
-                                            ),
-                                            Container(
-                                                margin: EdgeInsets.only(top: 4),
-                                                padding: EdgeInsets.only(right: 10),
-                                                child: Icon(Icons.arrow_forward,
-                                                    color: Colors.white))
-                                          ]))),
-
-                              /// isLoading ? CircularProgressIndicator() : Padding(padding: EdgeInsets.all(0),),
-                              Container(
-                                  margin: EdgeInsets.only(top: 10),
-                                  child: InkWell(
-                                    onTap: () {
-                                      setState(() {
-                                        showsignin = !showsignin;
-                                      });
-                                    },
-                                    child: RichText(
-                                        text: TextSpan(
+                  Container(
+                    height: 1150,
+                    child: SingleChildScrollView(
+                        child: Column(children: [
+                      Center(
+                          child: Container(
+                              margin: EdgeInsets.only(top: 30),
+                              child: Text(
+                                  showsignin ? "تسجيل الدخول" : "إنشاء حساب",
+                                  style: TextStyle(
+                                      color: Colors.white, fontSize: 20)))),
+                      Padding(padding: EdgeInsets.only(top: 20)),
+                      buildContainerAvatar(mdw),
+                      showsignin
+                          ? buildFormBoxSignIn(mdw)
+                          : buildFormBoxSignUp(mdw),
+                      Container(
+                        margin: EdgeInsets.only(top: 20),
+                        child: Column(
+                          children: [
+                            showsignin
+                                ? InkWell(
+                                    onTap: () {},
+                                    child: CustomText(
+                                      text: "هل نسيت كلمة المرور ؟",
+                                      color: Colors.blue,
+                                      fontSize: 15,
+                                      fontWeight: FontWeight.w600,
+                                      textAlign: TextAlign.center,
+                                    ),
+                                  )
+                                : SizedBox(),
+                            SizedBox(height: showsignin ? 20 : 5),
+                            Material(
+                                elevation: 10,
+                                color: showsignin ? kprimaryColor : Colors.green.shade900,
+                                child: MaterialButton(
+                                    padding: EdgeInsets.symmetric(
+                                        vertical: 10, horizontal: 20),
+                                    onPressed: showsignin ? signin : signup,
+                                    child: Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        mainAxisSize: MainAxisSize.min,
+                                        children: [
+                                          Text(
+                                            showsignin
+                                                ? "تسجيل الدخول"
+                                                : "إنشاء حساب",
                                             style: TextStyle(
-                                              color: Colors.black,
-                                              fontSize: 16,
-                                            ),
-                                            children: <TextSpan>[
-                                          TextSpan(
-                                              //recognizer: _changesign,
-                                              text: showsignin
-                                                  ? "إنشاء حساب جديد"
-                                                  : "تسجيل دخول",
-                                              style: TextStyle(
-                                                  color: showsignin
-                                                      ? Colors.blue
-                                                      : Colors.purple,
-                                                  fontWeight: FontWeight.w700)),
-                                        ])),
-                                  )),
-                              const SizedBox(height: 10),
-                              showsignin
-                                  ? Directionality(
-                                      textDirection: TextDirection.ltr,
-                                      child: Row(children: [
-                                        // Padding(
-                                        //     padding: EdgeInsets.only(right: 10)),
-                                        Expanded(
-                                          child: Center(
-                                              child: SocialLogin(
-                                                  imageSocial:
-                                                      "example/images/social/facebook.png",
-                                                  text: "Login with Facebook")),
-                                        ),
-                                        const SizedBox(width: 10),
-                                        // Padding(
-                                        //     padding: EdgeInsets.only(right: 10)),
-                                        Expanded(
-                                          child: Center(
-                                              child: SocialLogin(
-                                                  imageSocial:
-                                                      "example/images/social/google.png",
-                                                  text: "Login with Google")),
-                                        ),
-                                        // Padding(
-                                        //     padding: EdgeInsets.only(right: 10)),
-                                      ]),
-                                    )
-                                  : const SizedBox(),
-                            ],
-                          ),
-                        )
-                      ])),
-                     const SizedBox(height: 20),
-                    ],
-                  
+                                                color: Colors.white,
+                                                fontSize: 18),
+                                          ),
+                                          Container(
+                                              margin: EdgeInsets.only(top: 4),
+                                              padding: EdgeInsets.only(right: 10),
+                                              child: Icon(Icons.arrow_forward,
+                                                  color: Colors.white))
+                                        ]))),
+
+                            /// isLoading ? CircularProgressIndicator() : Padding(padding: EdgeInsets.all(0),),
+                            Container(
+                                margin: EdgeInsets.only(top: 10),
+                                child: InkWell(
+                                  onTap: () {
+                                    setState(() {
+                                      showsignin = !showsignin;
+                                    });
+                                  },
+                                  child: RichText(
+                                      text: TextSpan(
+                                          style: TextStyle(
+                                            color: Colors.black,
+                                            fontSize: 16,
+                                          ),
+                                          children: <TextSpan>[
+                                        TextSpan(
+                                            //recognizer: _changesign,
+                                            text: showsignin
+                                                ? "إنشاء حساب جديد"
+                                                : "تسجيل دخول",
+                                            style: TextStyle(
+                                                color: showsignin
+                                                    ? Colors.blue
+                                                    : Colors.purple,
+                                                fontWeight: FontWeight.w700)),
+                                      ])),
+                                )),
+                            const SizedBox(height: 10),
+                            showsignin
+                                ? Directionality(
+                                    textDirection: TextDirection.ltr,
+                                    child: Row(children: [
+                                      // Padding(
+                                      //     padding: EdgeInsets.only(right: 10)),
+                                      Expanded(
+                                        child: Center(
+                                            child: SocialLogin(
+                                                imageSocial:
+                                                    "example/images/social/facebook.png",
+                                                text: "Login with Facebook")),
+                                      ),
+                                      const SizedBox(width: 10),
+                                      // Padding(
+                                      //     padding: EdgeInsets.only(right: 10)),
+                                      Expanded(
+                                        child: Center(
+                                            child: SocialLogin(
+                                                imageSocial:
+                                                    "example/images/social/google.png",
+                                                text: "Login with Google")),
+                                      ),
+                                      // Padding(
+                                      //     padding: EdgeInsets.only(right: 10)),
+                                    ]),
+                                  )
+                                : const SizedBox(),
+                          ],
+                        ),
+                      )
+                    ])),
                   ),
+                     const SizedBox(height: 20),
             ],
           ),
         ));
