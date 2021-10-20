@@ -23,6 +23,62 @@ class _SamsungState extends State<Samsung> {
       'battery': '5000mha شحن سريع w15',
       'price': '1200\$',
       'memory': '128GB'
+    },
+    {
+      'name': 'S20 Ultra',
+      'camera': '108 Megapixel',
+      'cpu': 'Snapdragon 865 ثماني',
+      'battery': '5000mha شحن سريع w15',
+      'price': '1200\$',
+      'memory': '128GB'
+    },
+    {
+      'name': 'S20 Ultra',
+      'camera': '108 Megapixel',
+      'cpu': 'Snapdragon 865 ثماني',
+      'battery': '5000mha شحن سريع w15',
+      'price': '1200\$',
+      'memory': '128GB'
+    },
+    {
+      'name': 'S20 Ultra',
+      'camera': '108 Megapixel',
+      'cpu': 'Snapdragon 865 ثماني',
+      'battery': '5000mha شحن سريع w15',
+      'price': '1200\$',
+      'memory': '128GB'
+    },
+    {
+      'name': 'S20 Ultra',
+      'camera': '108 Megapixel',
+      'cpu': 'Snapdragon 865 ثماني',
+      'battery': '5000mha شحن سريع w15',
+      'price': '1200\$',
+      'memory': '128GB'
+    },
+    {
+      'name': 'S20 Ultra',
+      'camera': '108 Megapixel',
+      'cpu': 'Snapdragon 865 ثماني',
+      'battery': '5000mha شحن سريع w15',
+      'price': '1200\$',
+      'memory': '128GB'
+    },
+    {
+      'name': 'S20 Ultra',
+      'camera': '108 Megapixel',
+      'cpu': 'Snapdragon 865 ثماني',
+      'battery': '5000mha شحن سريع w15',
+      'price': '1200\$',
+      'memory': '128GB'
+    },
+    {
+      'name': 'S20 Ultra',
+      'camera': '108 Megapixel',
+      'cpu': 'Snapdragon 865 ثماني',
+      'battery': '5000mha شحن سريع w15',
+      'price': '1200\$',
+      'memory': '128GB'
     }
   ];
 
@@ -36,14 +92,18 @@ class _SamsungState extends State<Samsung> {
             title: Text("Samsung"),
             centerTitle: true,
           ),
-          body: ListView.builder(
-            itemCount: mobilelist.length,
-            itemBuilder: (context, i) {
-              return MobList(battery: mobilelist[i]['battery'],
-              name: mobilelist[i]['name'],cpu: mobilelist[i]['cpu'],
-              camera: mobilelist[i]['camera'],memory: mobilelist[i]['memory'],
-              price: mobilelist[i]['price'],);
-            },
+          body: Container(
+            height: double.infinity,
+            width: double.infinity,color: kbackGround,
+            child: ListView.builder(
+              itemCount: mobilelist.length,
+              itemBuilder: (context, i) {
+                return MobList(battery: mobilelist[i]['battery'],
+                name: mobilelist[i]['name'],cpu: mobilelist[i]['cpu'],
+                camera: mobilelist[i]['camera'],memory: mobilelist[i]['memory'],
+                price: mobilelist[i]['price'],);
+              },
+            ),
           ),
         ));
   }
