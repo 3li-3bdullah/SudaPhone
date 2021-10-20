@@ -147,7 +147,7 @@ class ScreenState extends State<Screen> {
                 child:CustomText(
                   text: "الأقسام",
                   textAlign: TextAlign.right,
-                  color: Colors.grey.shade900,
+                  color: Colors.grey.shade800,
                   fontSize: 30,
                   fontWeight: FontWeight.normal,
                 ),
@@ -214,7 +214,7 @@ class ScreenState extends State<Screen> {
                 child: CustomText(
                   text: "أحدث التلفونات",
                   textAlign: TextAlign.right,
-                  color: Colors.grey.shade900,
+                  color: Colors.grey.shade800,
                   fontSize: 30,
                   fontWeight: FontWeight.normal,
                 ),
