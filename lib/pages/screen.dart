@@ -112,7 +112,7 @@ class ScreenState extends State<Screen> {
             drawer: MyDrawer(),
             body: ListView(children: [
               Container(
-                height: 300,
+                height: 310,
                 width: double.infinity,
                 child: GridTile(
                   child: PageView.builder(
