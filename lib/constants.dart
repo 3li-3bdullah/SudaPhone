@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-const kiconSign = Color(0xff99bcc4);
+const kbackGround = Color(0xff80827d);
 const kiconRegister = Color(0xff99bcc4);
 const kprimaryColor = Color(0xff08535d);
 const kcontainerColor1 = Color(0xff9ca2ab);
