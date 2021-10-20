@@ -75,7 +75,7 @@ class _CategoriesState extends State<Categories> {
                     onTap: () {},
                   ),
                   CategoriesCard(
-                    imageCat: "example/images/category/vivo.png",
+                    imageCat: "example/images/category/vivo.jpg",
                     text: "Vivo",
                     onTap: () {},
                   ),
