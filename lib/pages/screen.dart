@@ -19,11 +19,11 @@ class Screen extends StatefulWidget {
 class ScreenState extends State<Screen> {
   int activeIndex = 0;
   final controller = PageController(viewportFraction: 0.8, keepPage: true);
-  final colors = const [
+  List<MaterialColor> colors = const [
     Colors.red,
     Colors.green,
-    Colors.greenAccent,
-    Colors.amberAccent,
+    Colors.lime,
+    Colors.purple,
     Colors.blue,
     Colors.amber,
   ];
@@ -43,18 +43,47 @@ class ScreenState extends State<Screen> {
         imagesCarousel,
         fit: BoxFit.cover,
       ));
+
   Widget buildIndicator() => Container(
           child: SmoothPageIndicator(
-        // activeIndex: activeIndex,
-        controller: controller,
-        count: imagesCarousel.length,
-
-        effect: SwapEffect(
-          dotHeight: 16,
-          dotWidth: 16,
-          type: SwapType.yRotation,
-        ),
-      ));
+                  controller: controller,
+                  count: imagesCarousel.length,
+                  effect: CustomizableEffect(
+                    activeDotDecoration: DotDecoration(
+                      width: 32,
+                      height: 12,
+                      color: kprimaryColor,
+                      rotationAngle: 180,
+                      verticalOffset: -10,
+                      borderRadius: BorderRadius.circular(24),
+                      dotBorder: DotBorder(
+                        padding: 2,
+                        width: 2,
+                        color: kprimaryColor,
+                      ),
+                    ),
+                    dotDecoration: DotDecoration(
+                      width: 24,
+                      height: 12,
+                      color: Colors.grey,
+                      dotBorder: DotBorder(
+                        padding: 2,
+                        width: 2,
+                        color: Colors.grey,
+                      ),
+                      borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(2),
+                          topRight: Radius.circular(16),
+                          bottomLeft: Radius.circular(16),
+                          bottomRight: Radius.circular(2)),
+                      //borderRadius: BorderRadius.circular(16),
+                      verticalOffset: 0,
+                    ),
+                    spacing: 6.0,
+                    // activeColorOverride: (i) => colors[i],
+                    inActiveColorOverride: (i) => colors[i],
+                  ),
+                ),);
 
   @override
   Widget build(BuildContext context) {
@@ -86,27 +115,19 @@ class ScreenState extends State<Screen> {
                 height: 300,
                 // width: double.infinity,
                 child: GridTile(
-                  child: CarouselSlider.builder(
-                    // carouselController: controller,
-                    options: CarouselOptions(
-                      height: 300,
-                      //initialPage: 0,
-                      // This will show up one picture on the page
-                      viewportFraction: 1,
-                      // This will show the pictures the left and right in small shape
-                      enlargeCenterPage: true,
-                      // This will show up in animated pictures
-                      enlargeStrategy: CenterPageEnlargeStrategy.height,
-                      autoPlay: true,
-                      autoPlayInterval: Duration(seconds: 2),
-                      onPageChanged: (index, reason) =>
-                          setState(() => activeIndex = index),
-                    ),
-                    itemCount: imagesCarousel.length,
-                    itemBuilder: (context, index, realIndex) {
+                  child: PageView.builder(
+                    controller: controller,
+                   itemCount: imagesCarousel.length,
+                    itemBuilder: (context, index ) {
                       String imagesCar = imagesCarousel[index];
                       return buildImage(imagesCar, index);
-                    },
+                    
+                  },
+                    // itemCount: imagesCarousel.length,
+                    // itemBuilder: (context, index, realIndex) {
+                    //   String imagesCar = imagesCarousel[index];
+                    //   return buildImage(imagesCar, index);
+                    // },
                   ),
                   footer: Container(
                     height: 60,
@@ -252,3 +273,39 @@ class ScreenState extends State<Screen> {
     );
   }
 }
+/*
+GridTile(
+                  child: CarouselSlider.builder(
+                    // carouselController: controller,
+                    options: CarouselOptions(
+                      height: 300,
+                      //initialPage: 0,
+                      // This will show up one picture on the page
+                      viewportFraction: 1,
+                      // This will show the pictures the left and right in small shape
+                      enlargeCenterPage: true,
+                      // This will show up in animated pictures
+                      enlargeStrategy: CenterPageEnlargeStrategy.height,
+                      autoPlay: true,
+                      autoPlayInterval: Duration(seconds: 2),
+                      onPageChanged: (index, reason) =>
+                          setState(() => activeIndex = index),
+                    ),
+                    itemCount: imagesCarousel.length,
+                    itemBuilder: (context, index, realIndex) {
+                      String imagesCar = imagesCarousel[index];
+                      return buildImage(imagesCar, index);
+                    },
+                  ),
+                  footer: Container(
+                    height: 60,
+                    color: Colors.black.withOpacity(0.4),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        buildIndicator(),
+                      ],
+                    ),
+                  ),
+                ), 
+*/
