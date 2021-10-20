@@ -113,7 +113,7 @@ class ScreenState extends State<Screen> {
             body: ListView(children: [
               Container(
                 height: 300,
-                // width: double.infinity,
+                width: double.infinity,
                 child: GridTile(
                   child: PageView.builder(
                     controller: controller,
@@ -273,39 +273,3 @@ class ScreenState extends State<Screen> {
     );
   }
 }
-/*
-GridTile(
-                  child: CarouselSlider.builder(
-                    // carouselController: controller,
-                    options: CarouselOptions(
-                      height: 300,
-                      //initialPage: 0,
-                      // This will show up one picture on the page
-                      viewportFraction: 1,
-                      // This will show the pictures the left and right in small shape
-                      enlargeCenterPage: true,
-                      // This will show up in animated pictures
-                      enlargeStrategy: CenterPageEnlargeStrategy.height,
-                      autoPlay: true,
-                      autoPlayInterval: Duration(seconds: 2),
-                      onPageChanged: (index, reason) =>
-                          setState(() => activeIndex = index),
-                    ),
-                    itemCount: imagesCarousel.length,
-                    itemBuilder: (context, index, realIndex) {
-                      String imagesCar = imagesCarousel[index];
-                      return buildImage(imagesCar, index);
-                    },
-                  ),
-                  footer: Container(
-                    height: 60,
-                    color: Colors.black.withOpacity(0.4),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        buildIndicator(),
-                      ],
-                    ),
-                  ),
-                ), 
-*/
