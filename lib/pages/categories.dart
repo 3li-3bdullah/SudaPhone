@@ -23,7 +23,7 @@ class _CategoriesState extends State<Categories> {
             child: Scaffold(
               appBar: AppBar(
                 backgroundColor: kprimaryColor,
-                title: CustomText(text: "text", textAlign: TextAlign.center, color: Colors.white,
+                title: CustomText(text: "الأقسام", textAlign: TextAlign.center, color: Colors.white,
                  fontSize: 30, fontWeight: FontWeight.normal),
                 centerTitle: true,
               ),
