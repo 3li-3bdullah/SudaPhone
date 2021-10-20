@@ -21,7 +21,7 @@ class CategoriesLogo extends StatelessWidget {
               title: Image.asset(
                 imageLogo,
                 height: 80,
-                width: 80,
+                width: 90,
                 fit: BoxFit.cover,
               ),
               subtitle:
@@ -29,7 +29,7 @@ class CategoriesLogo extends StatelessWidget {
                     child:CustomText(
                       text: text,
                       textAlign: TextAlign.center,
-                      color: Colors.grey.shade900,
+                      color: Colors.grey.shade800,
                       fontSize: 15,
                       fontWeight: FontWeight.normal,
                     ),
