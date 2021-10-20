@@ -241,7 +241,7 @@ class ScreenState extends State<Screen> {
                           text: "Nokia G300 : 750\$",
                           onTap: () {}),
                       LastProduct(
-                          imageProduct: "example/images/product/vivo.jpg",
+                          imageProduct: "example/images/product/vivo.jpeg",
                           text: "Vivo Y53s : 950\$",
                           onTap: () {}),
                     ]),
