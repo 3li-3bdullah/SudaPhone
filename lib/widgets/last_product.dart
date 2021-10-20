@@ -16,13 +16,13 @@ class LastProduct extends StatelessWidget {
       child: GridTile(
           child: Image.asset(imageProduct),
           footer: Container(
-              height: 25,
-              color: Colors.black.withOpacity(0.4),
+              height: 30,
+              color: Colors.black.withOpacity(0.3),
               child: CustomText(
                 text: text,
                 color: Colors.white,
                 textAlign: TextAlign.center,
-                fontSize: 15,
+                fontSize: 13,
                 fontWeight: FontWeight.normal,
               ),
               )),
