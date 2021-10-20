@@ -12,9 +12,9 @@ class CategoriesCard extends StatelessWidget {
   final Function onTap;
   @override
   Widget build(BuildContext context) {
-    return InkWell(
+    return InkWell( borderRadius: BorderRadius.all(Radius.circular(30)),
         child: Card(
-          elevation: 2,
+          elevation: 3,
             child: Column(
           children: [
             Expanded(
