@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mobetech/constants.dart';
+import '../constants.dart';
 
 class BuildPositionedBottom extends StatelessWidget {
   const BuildPositionedBottom({
@@ -22,7 +22,7 @@ class BuildPositionedBottom extends StatelessWidget {
         height: mdw,
         width: mdw,
         decoration: BoxDecoration(borderRadius: BorderRadius.circular(mdw),
-         color: showsignin ? Colors.blue.withOpacity(0.4) : kprimaryColor.withOpacity(.4)),
+         color: showsignin ? Colors.blue.withOpacity(.5) : kprimaryColor.withOpacity(.5)),
       ),
     );
   }
