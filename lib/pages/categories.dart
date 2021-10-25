@@ -31,7 +31,8 @@ class _CategoriesState extends State<Categories> {
               body: Container(
                 height: double.infinity,
                 width: double.infinity,
-                color: kbackGround,padding: EdgeInsets.all(10),
+                color: Colors.white,
+                padding: EdgeInsets.all(5),
                 child: GridView(
                   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 2),
