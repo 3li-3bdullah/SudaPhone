@@ -59,7 +59,7 @@ class ScreenState extends State<Screen> {
               dotBorder: DotBorder(
                 padding: 2,
                 width: 2,
-                color: kprimaryColor,
+                color: Colors.white,
               ),
             ),
             dotDecoration: DotDecoration(
