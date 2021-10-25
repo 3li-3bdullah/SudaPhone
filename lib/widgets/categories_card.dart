@@ -13,10 +13,10 @@ class CategoriesCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(10),
-      child: InkWell( borderRadius: BorderRadius.all(Radius.circular(30)),
+      padding: const EdgeInsets.all(5),
+      child: InkWell(
           child: Card(
-            elevation: 3,
+            elevation: 5,
               child: Column(
             children: [
               Expanded(
