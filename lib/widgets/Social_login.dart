@@ -14,16 +14,16 @@ class SocialLogin extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        height: 80,
-        width: 80,
+        height: 85,
+        width: 85,
         child: Container(
           decoration: BoxDecoration(borderRadius: BorderRadius.circular(70)),
           child: ListTile(
               onTap: () {},
               title: Image.asset(
                 imageSocial,
-                height: 70,
-                width: 70,
+                height: 80,
+                width: 84,
                 fit: BoxFit.cover,
               ),
               subtitle: Container(
