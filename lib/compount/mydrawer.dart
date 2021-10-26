@@ -40,7 +40,11 @@ class _MyDrawerState extends State<MyDrawer> {
           begin: Alignment.bottomCenter,
           end: Alignment.topCenter,
           )
-        ),)
+        ),),
+        SafeArea(child: Container(
+          width: 200.0,
+          padding: EdgeInsets.all(8.0),
+        ))
       ],),
     );
   }
