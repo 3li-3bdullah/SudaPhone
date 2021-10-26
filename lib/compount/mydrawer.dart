@@ -36,7 +36,10 @@ class _MyDrawerState extends State<MyDrawer> {
     return Scaffold(
       body: Stack(children: [
         Container(decoration: BoxDecoration(
-          gradient: LinearGradient(colors: [Colors.blue.shade400 , Colors.blue.shade800])
+          gradient: LinearGradient(colors: [Colors.blue.shade400 , Colors.blue.shade800],
+          begin: Alignment.bottomCenter,
+          end: Alignment.topCenter,
+          )
         ),)
       ],),
     );
