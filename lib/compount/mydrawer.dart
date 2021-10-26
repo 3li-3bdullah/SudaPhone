@@ -45,7 +45,14 @@ class _MyDrawerState extends State<MyDrawer> {
           width: 200.0,
           padding: EdgeInsets.all(8.0),
           child:Column(children:[
-            DrawerHeader(child: Column(children: [],))
+            DrawerHeader(child: Column(
+              mainAxisAlignment:MainAxisAlignment.center,
+              children: [
+                CircleAvatar(
+                  radius: 50,
+                
+                )
+              ],))
           ])
         ))
       ],),
