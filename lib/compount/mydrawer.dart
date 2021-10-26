@@ -44,6 +44,9 @@ class _MyDrawerState extends State<MyDrawer> {
         SafeArea(child: Container(
           width: 200.0,
           padding: EdgeInsets.all(8.0),
+          child:Column(children:[
+            DrawerHeader(child: Column(children: [],))
+          ])
         ))
       ],),
     );
