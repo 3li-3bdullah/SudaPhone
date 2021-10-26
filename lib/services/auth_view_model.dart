@@ -23,12 +23,12 @@ class AuthViewModel extends GetxController {
     super.onClose();
   }
 
-  signInWithEmailAndPassword() async {
-    try {
-      await _auth.signInWithEmailAndPassword(email: email, password: password);
-    } catch (e) {
-       print(e);
-      Get.snackbar("Error login account", "Try correct your data" ,colorText: Colors.black ,snackPosition: SnackPosition.BOTTOM );
-    }
-  }
+  // signInWithEmailAndPassword() async {
+  //   try {
+  //     await _auth.signInWithEmailAndPassword(email: email, password: password);
+  //   } catch (e) {
+  //      print(e);
+  //     Get.snackbar("Error login account", "Try correct your data" ,colorText: Colors.black ,snackPosition: SnackPosition.BOTTOM );
+  //   }
+  // }
 }
