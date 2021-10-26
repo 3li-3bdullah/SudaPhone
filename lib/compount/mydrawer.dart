@@ -33,8 +33,23 @@ class _MyDrawerState extends State<MyDrawer> {
 
   @override
   Widget build(BuildContext context) {
-    //ThemeData(fontFamily: 'Cairo');
-    return Drawer(
+    return Scaffold();
+  }
+
+  InkWell drawerItems(String text, IconData icon, Function onTap) {
+    return InkWell(
+      child: ListTile(
+        title: Text(text, style: TextStyle(color: Colors.black, fontSize: 18)),
+        leading: Icon(icon, color: kprimaryColor, size: 25),
+      ),
+      onTap: () {
+        onTap();
+      },
+    );
+  }
+}
+/*
+ return Drawer(
       child: ListView(
         children: <Widget>[
           UserAccountsDrawerHeader(
@@ -99,17 +114,4 @@ class _MyDrawerState extends State<MyDrawer> {
         ],
       ),
     );
-  }
-
-  InkWell drawerItems(String text, IconData icon, Function onTap) {
-    return InkWell(
-      child: ListTile(
-        title: Text(text, style: TextStyle(color: Colors.black, fontSize: 18)),
-        leading: Icon(icon, color: kprimaryColor, size: 25),
-      ),
-      onTap: () {
-        onTap();
-      },
-    );
-  }
-}
+*/
