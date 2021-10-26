@@ -50,7 +50,7 @@ class _MyDrawerState extends State<MyDrawer> {
               children: [
                 CircleAvatar(
                   radius: 50,
-                
+                backgroundImage: AssetImage("example/images/slider/ali.jpg")
                 )
               ],))
           ])
