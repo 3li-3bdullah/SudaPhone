@@ -33,7 +33,13 @@ class _MyDrawerState extends State<MyDrawer> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      body: Stack(children: [
+        Container(decoration: BoxDecoration(
+          gradient: LinearGradient(colors: [Colors.blue.shade400 , Colors.blue.shade800])
+        ),)
+      ],),
+    );
   }
 
   InkWell drawerItems(String text, IconData icon, Function onTap) {
