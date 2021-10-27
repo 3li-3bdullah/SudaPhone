@@ -22,7 +22,7 @@ class _CategoriesState extends State<Categories> {
             textDirection: TextDirection.rtl,
             child: Scaffold(
               appBar: AppBar(
-                backgroundColor: kprimaryColor,
+                backgroundColor: Colors.blue,
                 title: CustomText(text: "الأقسام", textAlign: TextAlign.center, color: Colors.white,
                  fontSize: 30, fontWeight: FontWeight.normal),
                 centerTitle: true,
@@ -41,7 +41,10 @@ class _CategoriesState extends State<Categories> {
                       imageCat: "example/images/category/samsung.png",
                       text: "Samsung",
                       onTap: () {
-                        Get.to(Samsung());
+                        Get.to(Samsung()
+                        ,transition: Transition.zoom,
+                        curve: Curves.bounceInOut
+                        );
                       },
                     ),
                     CategoriesCard(
