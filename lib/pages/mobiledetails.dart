@@ -181,13 +181,13 @@ class _MobileDetailsState extends State<MobileDetails> {
             //End second container
             //Start three container
             Container(
-              color: kprimaryColor,
+              color: Colors.white,
               padding: EdgeInsets.all(10),
               child: Center(
                 child: CustomText(
                   textAlign:TextAlign.center,
                   text: "العيوب",
-                  color: Colors.white,
+                  color: Colors.red,
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
                 ) ),
