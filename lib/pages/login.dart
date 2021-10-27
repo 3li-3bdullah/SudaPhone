@@ -1,7 +1,7 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import '../widgets/custom_text_form_field.dart';
-import '../widgets/social_login.dart';
+import '../widgets/custom_social_login.dart';
 import '../constants.dart';
 import '../widgets/build_positioned_bottom.dart';
 import '../widgets/build_positioned_top.dart';
