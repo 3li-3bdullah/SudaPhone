@@ -69,22 +69,23 @@ class _PostState extends State<Post> {
       textDirection: TextDirection.rtl,
       child: Scaffold(
         appBar: AppBar(
-          backgroundColor: kprimaryColor,
+          backgroundColor: Colors.blue,
 
           title: CustomText(
               text: "المنشورات",
               color: Colors.white,
               textAlign: TextAlign.center,
-              fontSize: 30,
+              fontSize: 25,
               fontWeight: FontWeight.normal),
+              centerTitle: true,
         ),
         body: ListView(children: [
           Card(
               child: Column(children:[
             ListTile(
-              leading: CircleAvatar(child: Icon(Icons.person)),
+              leading: CircleAvatar(backgroundImage: AssetImage("example/images/slider/ali.jpg"),),
               title: TextFormField(
-                maxLength: 255,
+                maxLength: 300,
                 maxLines: 10,
                 minLines: 1,
                 decoration: InputDecoration(
@@ -117,13 +118,13 @@ class _PostState extends State<Post> {
                         children: [
                           CustomText(
                             text: "اضف منشور",
-                            color: Colors.grey.shade900,
+                            color: Colors.grey.shade800,
                             fontSize: 20,
                             fontWeight: FontWeight.bold,
                             textAlign: TextAlign.center,
                           ),
                           Padding(padding: EdgeInsets.only(right: 10)),
-                          Icon(Icons.add_box, color: Colors.grey.shade900),
+                          Icon(Icons.add_box, color: Colors.grey.shade800),
                         ])),
               )),
             ]),
@@ -151,7 +152,7 @@ class _PostState extends State<Post> {
                     CustomText(
                       text:
                           "السلام عليكم شباب ،، لدي Huawei Mate 40 Pro إستعمال يومين فقط ، نضيف ومع كامل الملحقات البيع لأعلي سعر",
-                      color: Colors.grey.shade900,
+                      color: Colors.grey.shade800,
                       fontSize: 15,
                       fontWeight: FontWeight.normal,
                       textAlign: TextAlign.center,
@@ -170,13 +171,14 @@ class _PostState extends State<Post> {
                           children:[
                             CustomText(
                               text: "0",
-                              color: Colors.grey.shade900,
+                              color: Colors.grey.shade800,
                               fontSize: 15,
                               fontWeight: FontWeight.normal,
                               textAlign: TextAlign.center,
                             ),
                             const SizedBox(width: 4),
-                            Icon(Icons.thumb_up, color: Colors.blue),
+                            Icon(Icons.thumb_up_alt_outlined
+                            , color: Colors.blue),
                           ]),
                     ),
                     onTap: () {},
@@ -189,13 +191,14 @@ class _PostState extends State<Post> {
                         children: [
                           CustomText(
                             text: "0",
-                            color: Colors.grey.shade900,
+                            color: Colors.grey.shade800,
                             fontSize: 15,
                             fontWeight: FontWeight.normal,
                             textAlign: TextAlign.center,
                           ),
                           const SizedBox(width: 4),
-                          Icon(Icons.comment, color: Colors.purple),
+                          Icon(Icons.insert_comment_outlined
+                          , color: Colors.purple),
                         ]),
                     onTap: () {
                       Navigator.of(context)
