@@ -15,7 +15,7 @@ class _MobileDetailsState extends State<MobileDetails> {
         textDirection: TextDirection.rtl,
         child: Scaffold(
           appBar: AppBar(
-            backgroundColor: kprimaryColor,
+            backgroundColor: Colors.blue,
             title: CustomText(
               textAlign: TextAlign.center,
               text: 'التفاصيل',
@@ -67,7 +67,7 @@ class _MobileDetailsState extends State<MobileDetails> {
             Container(
                 padding: EdgeInsets.all(10),
                 child: CustomText(
-                  textAlign: TextAlign.center,
+                  textAlign: TextAlign.right,
                   text: "المواصفات",
                   color: Colors.grey.shade800,
                   fontSize: 25,
@@ -119,13 +119,13 @@ class _MobileDetailsState extends State<MobileDetails> {
                 )),
             //start the second container
             Container(
-              color: kprimaryColor,
+              color: Colors.white,
               padding: EdgeInsets.all(10),
               child: Center(
                 child: CustomText(
                   textAlign: TextAlign.center,
                   text:  "المميزات",
-                  color: Colors.white,
+                  color: Colors.green,
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
                 ) ,),
