@@ -52,7 +52,7 @@ class ScreenState extends State<Screen> {
             activeDotDecoration: DotDecoration(
               width: 32,
               height: 12,
-              color: kprimaryColor,
+              color: Colors.blue,
               rotationAngle: 180,
               verticalOffset: -10,
               borderRadius: BorderRadius.circular(24),
@@ -97,7 +97,7 @@ class ScreenState extends State<Screen> {
           child: Scaffold(
             appBar: AppBar(
               title: Text("SudaPhone"),
-              backgroundColor: kprimaryColor,
+              backgroundColor: Colors.blue,
               centerTitle: true,
               elevation: 6,
               actions: [
@@ -114,7 +114,7 @@ class ScreenState extends State<Screen> {
             body: ListView(children: [
               Container(
                 height: 310,
-                width: double.infinity,
+                width: MediaQuery.of(context).size.width,
                 child: GridTile(
                   child: PageView.builder(
                     controller: controller,
