@@ -54,7 +54,6 @@ class _AboutAppState extends State<AboutApp> {
                   Container(
                     padding: EdgeInsets.symmetric(horizontal: 30),
                     child: TextButton(
-                     // color: Colors.cyanAccent,
                       onPressed: () {
                         showModalBottomSheet(
                             context: context,
