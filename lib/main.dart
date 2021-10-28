@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import './pages/screen.dart';
+import '../compount/mydrawer.dart';
+// import './pages/screen.dart';
 // import 'package:firebase_core/firebase_core.dart';
 
 
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: "SudaPhone",
      // theme: ThemeData(fontFamily: 'Cairo'),
-      home: Screen(),
+      home: MyDrawer(),
     );
   }
 }
