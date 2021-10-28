@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:mobetech/widgets/custom_text.dart';
-import '../constants.dart';
 import '../widgets/categories_card.dart';
 import '../pages/samsung.dart';
-import '../compount/mydrawer.dart';
+// import '../compount/mydrawer.dart';
 
 class Categories extends StatefulWidget {
   @override
@@ -27,7 +26,7 @@ class _CategoriesState extends State<Categories> {
                  fontSize: 30, fontWeight: FontWeight.normal),
                 centerTitle: true,
               ),
-              drawer: MyDrawer(),
+              /// drawer: MyDrawer(),
               body: Container(
                 height: double.infinity,
                 width: double.infinity,
