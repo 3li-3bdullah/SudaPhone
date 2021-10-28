@@ -126,20 +126,25 @@ class _MyDrawerState extends State<MyDrawer> {
                   ]))),
           TweenAnimationBuilder(
               tween: Tween<double>(begin: 0, end: value),
-              duration: Duration(milliseconds:500),
-              builder: (_,double val,__){
-                return (Transform(transform: (
-                  Matrix4.identity()
-                  ..setEntry(3, 2, 0.001)
-                  ..setEntry(0,3, 200 * val) //This will allows us to translate the screen
-                  ..rotateY((pi/6) * val)
-                  ),
-                 child: Screen(),
-
-                  )
-                  );
-              }
-              ),
+              duration: Duration(milliseconds: 500),
+              builder: (_, double val, __) {
+                return (Transform(
+                  transform: (Matrix4.identity()
+                    ..setEntry(3, 2, 0.001)
+                    ..setEntry(0, 3,
+                        200 * val) //This will allows us to translate the screen
+                    ..rotateY((pi / 6) * val)),
+                  child: Screen(),
+                ));
+              }),
+              ///The GestureDectector will allows to me open the drawer
+          GestureDetector(onTap: () {
+            ///If the value equal to 0 then when we tap it will become 1
+            ///else it will become 0
+            setState(() {
+              value == 0 ? value = 1 : value = 0;
+            });
+          })
         ],
       ),
     );
