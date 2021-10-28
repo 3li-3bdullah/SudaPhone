@@ -132,6 +132,7 @@ class _MyDrawerState extends State<MyDrawer> {
               duration: Duration(milliseconds: 500),
               builder: (_, double val, __) {
                 return (Transform(
+                  alignment: Alignment.center,
                   transform: (Matrix4.identity()
                     ..setEntry(3, 2, 0.001)
                     ..setEntry(0, 3,
