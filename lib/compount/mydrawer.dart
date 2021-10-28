@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:mobetech/widgets/custom_text.dart';
 import '../constants.dart';
 import '../pages/post.dart';
 import '../pages/categories.dart';
@@ -34,28 +35,38 @@ class _MyDrawerState extends State<MyDrawer> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(children: [
-        Container(decoration: BoxDecoration(
-          gradient: LinearGradient(colors: [Colors.blue.shade400 , Colors.blue.shade800],
-          begin: Alignment.bottomCenter,
-          end: Alignment.topCenter,
-          )
-        ),),
-        SafeArea(child: Container(
-          width: 200.0,
-          padding: EdgeInsets.all(8.0),
-          child:Column(children:[
-            DrawerHeader(child: Column(
-              mainAxisAlignment:MainAxisAlignment.center,
-              children: [
-                CircleAvatar(
-                  radius: 50,
-                backgroundImage: AssetImage("example/images/slider/ali.jpg")
-                )
-              ],))
-          ])
-        ))
-      ],),
+      body: Stack(
+        children: [
+          Container(
+            decoration: BoxDecoration(
+                gradient: LinearGradient(
+              colors: [Colors.blue.shade400, Colors.blue.shade800],
+              begin: Alignment.bottomCenter,
+              end: Alignment.topCenter,
+            )),
+          ),
+          SafeArea(
+              child: Container(
+                  width: 200.0,
+                  padding: EdgeInsets.all(8.0),
+                  child: Column(children: [
+                    DrawerHeader(
+                        child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        CircleAvatar(
+                          radius: 50,
+                          backgroundImage:
+                              AssetImage("example/images/slider/ali.jpg"),
+                        ),
+                        const SizedBox(height:10),
+                        CustomText(text: "Ali Abdullah", textAlign: TextAlign.start, color: Colors.white,
+                         fontSize: 20, fontWeight: FontWeight.normal)
+                      ],
+                    ))
+                  ])))
+        ],
+      ),
     );
   }
 
