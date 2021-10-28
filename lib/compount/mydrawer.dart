@@ -100,8 +100,11 @@ class _MyDrawerState extends State<MyDrawer> {
                           Get.to(Post());
                         },
                       ),
-                      Divider(
-                        color: Colors.white,
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal:30),
+                        child: Divider(
+                          color: Colors.white,
+                        ),
                       ),
                       drawerItems(
                         "حول التطبيق",
