@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../compount/mydrawer.dart';
+// import '../compount/mydrawer.dart';
 
 class AboutApp extends StatefulWidget {
   @override
@@ -17,7 +17,7 @@ class _AboutAppState extends State<AboutApp> {
                 title: Text('حول التطبيق'),
                 centerTitle: true,
               ),
-              drawer: MyDrawer(),
+              ///drawer: MyDrawer(),
               body: ListView(
                 children: [
                   Container(
