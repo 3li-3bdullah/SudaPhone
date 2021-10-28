@@ -101,7 +101,7 @@ class _MyDrawerState extends State<MyDrawer> {
                         },
                       ),
                       Padding(
-                        padding: const EdgeInsets.symmetric(horizontal:30),
+                        padding: const EdgeInsets.symmetric(horizontal: 30),
                         child: Divider(
                           color: Colors.white,
                         ),
@@ -141,14 +141,29 @@ class _MyDrawerState extends State<MyDrawer> {
                   child: Screen(),
                 ));
               }),
-              ///The GestureDectector will allows to me open the drawer
-          GestureDetector(onTap: () {
-            ///If the value equal to 0 then when we tap it will become 1
-            ///else it will become 0
-            setState(() {
-              value == 0 ? value = 1 : value = 0;
-            });
-          })
+
+          ///The GestureDectector will allows to me open the drawer
+          GestureDetector(
+            onHorizontalDragUpdate: (e) {
+              if (e.delta.dx > 0) {
+                setState(() {
+                  value = 1;
+                });
+              } else {
+                setState(() {
+                  value = 0;
+                });
+              }
+            },
+
+            //   onTap: () {
+            //   ///If the value equal to 0 then when we tap it will become 1
+            //   ///else it will become 0
+            //   setState(() {
+            //     value == 0 ? value = 1 : value = 0;
+            //   });
+            // }
+          )
         ],
       ),
     );
