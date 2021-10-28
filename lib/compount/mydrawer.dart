@@ -31,6 +31,7 @@ class _MyDrawerState extends State<MyDrawer> {
   //   getPreDra();
   //   super.dispose();
   // }
+  double value = 0.0;
 
   @override
   Widget build(BuildContext context) {
@@ -59,59 +60,77 @@ class _MyDrawerState extends State<MyDrawer> {
                           backgroundImage:
                               AssetImage("example/images/slider/ali.jpg"),
                         ),
-                        const SizedBox(height:10),
-                        CustomText(text: "Ali Abdullah", textAlign: TextAlign.center, color: Colors.white,
-                         fontSize: 20, fontWeight: FontWeight.normal),
-                         CustomText(text: "Alieko.soul@gamil.com", textAlign: TextAlign.center, color: Colors.white,
-                         fontSize: 18, fontWeight: FontWeight.normal),
+                        const SizedBox(height: 10),
+                        CustomText(
+                            text: "Ali Abdullah",
+                            textAlign: TextAlign.center,
+                            color: Colors.white,
+                            fontSize: 20,
+                            fontWeight: FontWeight.normal),
+                        CustomText(
+                            text: "Alieko.soul@gamil.com",
+                            textAlign: TextAlign.center,
+                            color: Colors.white,
+                            fontSize: 18,
+                            fontWeight: FontWeight.normal),
                       ],
                     )),
-                    Expanded(child:ListView(children:[
+                    Expanded(
+                        child: ListView(children: [
                       drawerItems(
-            "الصفحة الرئيسية",
-            Icons.home_outlined,
-            () {
-              Get.to(Screen());
-            },
-          ),
-          drawerItems(
-            "الأقسام",
-            Icons.category_outlined,
-            () {
-              Get.to(Categories());
-            },
-          ),
-          drawerItems(
-            "إضافة منشور",
-            Icons.post_add_outlined,
-            () {
-              Get.to(Post());
-            },
-          ),
-          Divider(
-            color: Colors.white,
-          ),
-          drawerItems(
-            "حول التطبيق",
-            Icons.info_outline,
-            () {
-              Get.to(AboutApp());
-            },
-          ),
-          drawerItems(
-            "الإعدادات",
-            Icons.settings_outlined,
-            () {},
-          ),
-          drawerItems(
-            "تسجيل الدخول",
-            Icons.exit_to_app_outlined,
-            () {
-              Get.to(LogIn());
-            },
-          ),
+                        "الصفحة الرئيسية",
+                        Icons.home_outlined,
+                        () {
+                          Get.to(Screen());
+                        },
+                      ),
+                      drawerItems(
+                        "الأقسام",
+                        Icons.category_outlined,
+                        () {
+                          Get.to(Categories());
+                        },
+                      ),
+                      drawerItems(
+                        "إضافة منشور",
+                        Icons.post_add_outlined,
+                        () {
+                          Get.to(Post());
+                        },
+                      ),
+                      Divider(
+                        color: Colors.white,
+                      ),
+                      drawerItems(
+                        "حول التطبيق",
+                        Icons.info_outline,
+                        () {
+                          Get.to(AboutApp());
+                        },
+                      ),
+                      drawerItems(
+                        "الإعدادات",
+                        Icons.settings_outlined,
+                        () {},
+                      ),
+                      drawerItems(
+                        "تسجيل الدخول",
+                        Icons.exit_to_app_outlined,
+                        () {
+                          Get.to(LogIn());
+                        },
+                      ),
                     ]))
-                  ])))
+                  ]))),
+          TweenAnimationBuilder(
+              tween: Tween<double>(begin: 0, end: value),
+              duration: Duration(milliseconds:500),
+              builder: (_,double val,__){
+                return (Transform(transform: (
+                  Matrix4.identity(),
+                  )));
+              }
+              )
         ],
       ),
     );
