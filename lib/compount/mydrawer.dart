@@ -60,13 +60,57 @@ class _MyDrawerState extends State<MyDrawer> {
                               AssetImage("example/images/slider/ali.jpg"),
                         ),
                         const SizedBox(height:10),
-                        CustomText(text: "Ali Abdullah", textAlign: TextAlign.start, color: Colors.white,
+                        CustomText(text: "Ali Abdullah", textAlign: TextAlign.center, color: Colors.white,
                          fontSize: 20, fontWeight: FontWeight.normal),
-                         CustomText(text: "Alieko.soul@gamil.com", textAlign: TextAlign.start, color: Colors.white,
+                         CustomText(text: "Alieko.soul@gamil.com", textAlign: TextAlign.center, color: Colors.white,
                          fontSize: 18, fontWeight: FontWeight.normal),
-                         
                       ],
-                    ))
+                    )),
+                    Expanded(child:ListView(children:[
+                      drawerItems(
+            "الصفحة الرئيسية",
+            Icons.home_outlined,
+            () {
+              Get.to(Screen());
+            },
+          ),
+          drawerItems(
+            "الأقسام",
+            Icons.category_outlined,
+            () {
+              Get.to(Categories());
+            },
+          ),
+          drawerItems(
+            "إضافة منشور",
+            Icons.post_add_outlined,
+            () {
+              Get.to(Post());
+            },
+          ),
+          Divider(
+            color: Colors.white,
+          ),
+          drawerItems(
+            "حول التطبيق",
+            Icons.info_outline,
+            () {
+              Get.to(AboutApp());
+            },
+          ),
+          drawerItems(
+            "الإعدادات",
+            Icons.settings_outlined,
+            () {},
+          ),
+          drawerItems(
+            "تسجيل الدخول",
+            Icons.exit_to_app_outlined,
+            () {
+              Get.to(LogIn());
+            },
+          ),
+                    ]))
                   ])))
         ],
       ),
@@ -76,8 +120,8 @@ class _MyDrawerState extends State<MyDrawer> {
   InkWell drawerItems(String text, IconData icon, Function onTap) {
     return InkWell(
       child: ListTile(
-        title: Text(text, style: TextStyle(color: Colors.black, fontSize: 18)),
-        leading: Icon(icon, color: kprimaryColor, size: 25),
+        title: Text(text, style: TextStyle(color: Colors.white, fontSize: 18)),
+        leading: Icon(icon, color: Colors.white, size: 25),
       ),
       onTap: () {
         onTap();
