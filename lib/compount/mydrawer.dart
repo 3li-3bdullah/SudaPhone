@@ -61,7 +61,10 @@ class _MyDrawerState extends State<MyDrawer> {
                         ),
                         const SizedBox(height:10),
                         CustomText(text: "Ali Abdullah", textAlign: TextAlign.start, color: Colors.white,
-                         fontSize: 20, fontWeight: FontWeight.normal)
+                         fontSize: 20, fontWeight: FontWeight.normal),
+                         CustomText(text: "Alieko.soul@gamil.com", textAlign: TextAlign.start, color: Colors.white,
+                         fontSize: 18, fontWeight: FontWeight.normal),
+                         
                       ],
                     ))
                   ])))
