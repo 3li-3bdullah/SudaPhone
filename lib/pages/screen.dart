@@ -4,9 +4,8 @@ import '../widgets/custom_text.dart';
 import '../widgets/categories_logo.dart';
 import '../widgets/last_product.dart';
 import '../widgets/data_search.dart';
-import '../constants.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-import '../compount/mydrawer.dart';
+// import '../compount/mydrawer.dart';
 import 'dart:core';
 
 class Screen extends StatefulWidget {
@@ -20,8 +19,8 @@ class ScreenState extends State<Screen> {
   int activeIndex = 0;
   final controller = PageController(viewportFraction: 0.8, keepPage: true);
   List<MaterialColor> colors = const [
-    Colors.red,
     Colors.green,
+    Colors.red,
     Colors.lime,
     Colors.purple,
     Colors.blue,
@@ -110,7 +109,7 @@ class ScreenState extends State<Screen> {
 
               // leading: IconButton(icon: Icon(Icons.search), onPressed: () {}),
             ),
-            drawer: MyDrawer(),
+           /// drawer: MyDrawer(),
             body: ListView(children: [
               Container(
                 height: 310,
