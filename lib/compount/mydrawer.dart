@@ -33,7 +33,7 @@ class _MyDrawerState extends State<MyDrawer> {
   //   getPreDra();
   //   super.dispose();
   // }
-  double value = 0.0;
+  double value = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -130,6 +130,7 @@ class _MyDrawerState extends State<MyDrawer> {
           TweenAnimationBuilder(
               tween: Tween<double>(begin: 0, end: value),
               duration: Duration(milliseconds: 500),
+              curve:Curves.easeIn,
               builder: (_, double val, __) {
                 return (Transform(
                   alignment: Alignment.center,
