@@ -16,7 +16,7 @@ class CategoriesCard extends StatelessWidget {
       padding: const EdgeInsets.all(5),
       child: InkWell(
           child: Card(
-            elevation: 5,
+            elevation: 8,
               child: Column(
             children: [
               Expanded(
